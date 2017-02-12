@@ -1,4 +1,4 @@
-##Int-Structables
+##INT-Structables
 
 Clone of: https://www.instructables.com/
 
