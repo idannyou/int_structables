@@ -15,7 +15,7 @@ This is the proposal README. [Go to the production README](https://github.com/id
   - [ ] Production README
 
 ## Design Docs
-* [View Wireframes][wireframes]
+* Wireframes
 * React Components
 * API Endpoints
 * DB schema
