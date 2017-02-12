@@ -4,13 +4,13 @@ This is the proposal README. [Go to the production README](https://github.com/id
 
 ## Minimum Viable Product
 
-  INT-Structables is a web application providing visual and simple step by step guide in inspired by Instructables built using Ruby on Rails and React/Redux. By the end of this project, the app will satisfy the following criteria:
+  INT-Structables is a web application providing visual and simple step by step guide in doing Basic Calculus inspired by Instructables built using Ruby on Rails and React/Redux. By the end of this project, the app will satisfy the following criteria:
 
   - [ ] Hosting on Heroku
   - [ ] New account creation, login, and guest/demo login
   - [ ] Calculus Concepts
   - [ ] Commenting on the Concepts
-  - [ ] Adding equations, photos, and videos to the Concepts
+  - [ ] Adding equations, photos/graphs, and videos to the Concepts
   - [ ] Searching Concepts by keyword
   - [ ] Production README
 
