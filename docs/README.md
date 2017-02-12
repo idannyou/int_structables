@@ -1,6 +1,6 @@
 This is the proposal README. [Go to the production README](https://github.com/idannyou/int_structables).
 
-#Heroku Link
+##Heroku Link
 
 ## Minimum Viable Product
   Projects
