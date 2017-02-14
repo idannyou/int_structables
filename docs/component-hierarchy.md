@@ -1,10 +1,7 @@
 ## Component Heirarchy
 
-**SignUpFormContainer**
-- SignUpForm
-
-**SignInFormContainer**
-- SignInForm
+**SessionFormContainer**
+- SignUp/SignInForm
 
 **HomeContainer**
 - Home

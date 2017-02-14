@@ -38,5 +38,5 @@
 ### Comments
 
 - `POST /api/concepts/:concept_id/comments`
-- `PATCH /api/concepts/:concept_id/comments_id`
-- `DELETE /api/concepts/:concept_idcomments/:id`
+- `PATCH /api/concepts/:concept_id/:comments_id`
+- `DELETE /api/concepts/:concept_id/:comments_id`

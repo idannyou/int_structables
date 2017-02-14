@@ -1,0 +1,12 @@
+<script type='text/javascript'>
+  <% if logged_in? %>
+    window.currentUser = <%= render(
+      'api/users/user.json.jbuilder',
+      user: current_user
+    ).html_safe %>
+  <% end %>
+  window.headimage = "<%= image_url("heroImage.jpg") %>"
+  window.loginimage ="<%= image_url("loginimage.jpg") %>"
+</script>
+
+<main id='root'> </main>

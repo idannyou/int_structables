@@ -1,0 +1,70 @@
+// Place all the styles related to the api/sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#form{
+  border: 1px solid #555;
+  border-radius: 10px;
+
+  width: 280px;
+  height: 420px;
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: 18px;
+
+  padding: 20px;
+}
+
+#username{
+  border: 1px solid light-gray;
+}
+
+#password{
+  border: 1px solid light-gray;
+}
+
+#submit{
+
+  padding: 11px 19px;
+  font-size: 17.5px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+
+  font-weight: 400;
+  margin-bottom: 20px;
+
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-shadow: none;
+
+  background-color: #e86c00;
+
+  color: #fff;
+}
+
+#textbox{
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  border-radius: 4px;
+  vertical-align: middle;
+
+
+  width: 266px;
+  height: 18px;
+  border: 1px solid #555;
+
+}
+
+#login-img {
+  width: 280px;
+  height: auto;
+}

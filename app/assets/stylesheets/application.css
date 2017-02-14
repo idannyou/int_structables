@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+/*CSS RESET*/
+@import "base/reset.scss";
+
+/*Core*/
+@import "base/colors.scss";
+@import "base/fonts.scss";
+
+/*Session Form*/
+@import "api/sessions.scss";
