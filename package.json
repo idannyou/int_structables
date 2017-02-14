@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "postinstall": "./node_modules/.bin/webpack"
   },
   "keywords": [],
   "author": "",
@@ -28,4 +29,8 @@
     "webpack": "^2.2.1"
   },
   "devDependencies": {}
+},
+"engines": {
+  "node": "7.4.0",
+  "npm": "4.0.5"
 }
