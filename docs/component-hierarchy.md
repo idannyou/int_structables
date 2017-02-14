@@ -14,9 +14,6 @@
   - CategoryDetailContainer
     - CategoryDetail
 
-**UserInfoContainer**
-- UserInfo
-
 **ConceptIndexContainer**
 - ConceptIndex
   - ConceptIndexItem

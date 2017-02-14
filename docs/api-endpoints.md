@@ -17,7 +17,6 @@
 
 - `POST /api/session`
 - `DELETE /api/session`
-- `GET /api/session`
 
 ### Categories
 
@@ -38,6 +37,6 @@
 
 ### Comments
 
-- `POST /api/recipes/:recipe_id/comments`
-- `PATCH /api/recipes/:recipe_id/comments`
-- `DELETE /api/comments/:id`
+- `POST /api/concepts/:concept_id/comments`
+- `PATCH /api/concepts/:concept_id/comments_id`
+- `DELETE /api/concepts/:concept_idcomments/:id`
