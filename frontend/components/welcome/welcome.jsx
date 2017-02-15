@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import {hashHistory} from 'react-router';
 import SessionFormContainer from '../session/session_form_container';
 import ModalStyle from './modal_style';
+import FeatureBar from './feature_bar';
 
 class Welcome extends React.Component{
 
@@ -18,15 +19,19 @@ class Welcome extends React.Component{
     };
     this._handleClick = this._handleClick.bind(this);
     this.onModalClose = this.onModalClose.bind(this);
+    this.setFormType = this.setFormType.bind(this);
+    this.backToHomePage = this.backToHomePage.bind(this);
   }
 
   loggedin(){
     return (
-      <div>
-        <h1>Welcome {this.props.currentUser.username}</h1>
-        <button onClick={this.props.logout}>
-        Log Out
+      <div className='right-nav'>
+        <button onClick={this.props.logout}
+          id='nav-login'>
+          Log Out
         </button>
+        <p id='nav-signup'
+          >Welcome {this.props.currentUser.username}</p>
       </div>
     );
   }
@@ -58,27 +63,45 @@ class Welcome extends React.Component{
     this.setState({modalOpen: false})
   }
 
+  setFormType(formType){
+    this.setState({formType});
+  }
+
+  backToHomePage(event){
+    event.preventDefault();
+    let url=''
+    hashHistory.push(url)
+  }
+
+
   render(){
 
     return (
-      <div id='nav-bar'>
-        <div className='left-nav'>
-          <img id='navbarlogo-img' src={window.navbarlogoimage}/>
-          <h2>intStructables</h2>
-        </div>
+      <div>
+        <div id='nav-bar'>
+          <div className='left-nav'>
+            <img id='navbarlogo-img' src={window.navbarlogoimage}
+                  onClick={this.backToHomePage}
+              />
+            <h2>intStructables</h2>
+          </div>
 
-      {
-        !!this.props.currentUser ?
-          this.loggedin() :
-          this.notloggedin()
-      }
-      <Modal
-        isOpen={this.state.modalOpen}
-        contentLabel="Modal"
-        style={ModalStyle}
-        onRequestClose={this.onModalClose}>
-        <SessionFormContainer formType={this.state.formType}/>
-      </Modal>
+          {
+            !!this.props.currentUser ?
+            this.loggedin() :
+            this.notloggedin()
+          }
+          <Modal
+            isOpen={this.state.modalOpen}
+            contentLabel="Modal"
+            style={ModalStyle}
+            onRequestClose={this.onModalClose}>
+            <SessionFormContainer setFormType={this.setFormType}
+              closeModal={this.onModalClose}
+              formType={this.state.formType}/>
+          </Modal>
+        </div>
+        <FeatureBar />
       </div>
     );
   }

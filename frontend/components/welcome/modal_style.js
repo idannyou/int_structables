@@ -10,12 +10,13 @@ const ModalStyle = {
 
   },
   content : {
-    position        : 'fixed',
-    top             : '100px',
-    left            : '450px',
-    bottom          : '100px',
+    position        : 'absolute',
+    top             : '36px',
+    left            : '50%',
+    transform       : 'translateX(-50%)',
+    bottom          : 'auto',
     backgroundColor : 'transparent',
     border          : 'none'
   }
-}
-export default ModalStyle
+};
+export default ModalStyle;

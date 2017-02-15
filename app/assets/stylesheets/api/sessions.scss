@@ -5,9 +5,8 @@
 #form{
   border: 1px solid #555;
   border-radius: 10px;
-
+  margin: 0 auto;
   width: 280px;
-  height: 460px;
 
   display: flex;
   flex-direction: column;
@@ -47,6 +46,11 @@
   color: #fff;
 }
 
+#submit:hover{
+
+  background-color: #cf6000;
+}
+
 #textbox{
   display: inline-block;
   height: 20px;
@@ -68,4 +72,15 @@
 #login-img {
   width: 280px;
   height: auto;
+}
+
+#signinasguest, #signup {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+
+
+#signinasguest:hover,#signup:hover {
+  text-decoration: underline;
 }

@@ -1,37 +1,52 @@
+$nav_bar_height: 61px;
+
 .left-nav{
   display: flex;
   flex-direction: row;
-  line-height: 100px;
+  line-height: $nav_bar_height;
+  margin-left: 5%;
 }
 
 .right-nav{
-
+  display: flex;
+  flex-direction: row;
   width: auto;
   height: 20px;
+  line-height: 70px;
+  margin-right: 2.5%;
 }
 
 #nav-bar{
   font-family: sans-serif;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: auto;
-  height: 100px;
+  height: $nav_bar_height;
+  background-color: #eee;
+  overflow: visible;
+  justify-content: space-between;
 }
 
 #nav-signup{
   font-size: 12px;
   padding-right: 10px;
-  padding-left: 10px;
+
 }
 
 #nav-login{
   font-size: 12px;
+}
+
+#nav-login:after{
+  content: '|';
+  color: gray;
   padding-right: 10px;
-  border-right: 1px solid black;
+  padding-left: 10px;
 }
 
 #navbarlogo-img{
-  width: 90px;
-  height: auto;
+  width: auto;
+  height: 100px;
+  z-index: 2;
+  cursor: pointer;
 }

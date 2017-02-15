@@ -3,6 +3,7 @@ import {RECEIVE_CURRENT_USER,
       } from '../actions/session_actions';
 
 import {merge} from 'lodash';
+// window.merge = merge;
 
 
 const initialState = {
@@ -26,10 +27,13 @@ const SessionReducer = (oldState = initialState, action) => {
       });
 
     case RECEIVE_ERRORS:
-      return merge({}, oldState, {
-        currentUser: null,
-        errors: action.errorsArray
-      });
+      const newState = merge({}, oldState);
+      newState.errors = action.errorsArray;
+      return newState;
+      // return merge({}, oldState, {
+      //   currentUser: null,
+      //   errors: action.errorsArray
+      // });
 
     default:
       return oldState;
