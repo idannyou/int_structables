@@ -21,11 +21,18 @@ column name  | data type | details
 -------------|-----------|-----------------------
 id           | integer   | not null, primary key
 title        | string    | not null
-description  | string    | not null
-equations    | string    | not null
+description  | text      | not null
+equations    | string    |
 user_id      | integer   | not null, foreign key (references users), indexed
-category_id  | integer   | not null, foreign key (references categories), indexed
+
 has_many steps, comments
+
+## concepts_categories
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+concept_id  | integer   | not null
+category_id | integer   | not null
 
 
 ## steps
