@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { hashHistory } from 'react-router';
 
+
 class SessionForm extends React.Component{
 
   constructor(props){
@@ -49,9 +50,10 @@ class SessionForm extends React.Component{
             />
         </label>
         <button id='submit'>
-          {this.props.formType === '/login' ? 'Login' : 'Sign Up'}
+          {this.props.formType === 'old' ? 'Login' : 'Sign Up'}
         </button>
         <img id='login-img' src={window.loginimage}/>
+
       </form>
     );
   }

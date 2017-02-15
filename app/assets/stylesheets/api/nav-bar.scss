@@ -1,0 +1,37 @@
+.left-nav{
+  display: flex;
+  flex-direction: row;
+  line-height: 100px;
+}
+
+.right-nav{
+
+  width: auto;
+  height: 20px;
+}
+
+#nav-bar{
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  height: 100px;
+}
+
+#nav-signup{
+  font-size: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#nav-login{
+  font-size: 12px;
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
+
+#navbarlogo-img{
+  width: 90px;
+  height: auto;
+}
