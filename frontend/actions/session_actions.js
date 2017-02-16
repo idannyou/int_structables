@@ -1,4 +1,4 @@
-import * as ApiUtil from '../util/session_api_util';
+import * as SessionApiUtil from '../util/session_api_util';
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
@@ -17,7 +17,7 @@ export const receiveErrors = (errorsArray) => {
 };
 
 export const login = (user) => (dispatch) => {
-  return (ApiUtil.newSession(user)).then(
+  return (SessionApiUtil.newSession(user)).then(
     (user) => {
       return dispatch(receiveCurrentUser(user));
     },
@@ -28,7 +28,7 @@ export const login = (user) => (dispatch) => {
 };
 
 export const logout = () => (dispatch) => {
-  return (ApiUtil.deleteSession()).then(
+  return (SessionApiUtil.deleteSession()).then(
     () => {
       return dispatch(receiveCurrentUser(null));
     }
@@ -36,7 +36,7 @@ export const logout = () => (dispatch) => {
 };
 
 export const signup = (user) => (dispatch) => {
-  return (ApiUtil.createUser(user)).then(
+  return (SessionApiUtil.createUser(user)).then(
     (user) => {
       return dispatch(receiveCurrentUser(user));
     },

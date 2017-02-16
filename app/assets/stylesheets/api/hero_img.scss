@@ -1,0 +1,25 @@
+.head-image{
+  width: 100%;
+  height: 650px;
+  position: relative;
+}
+
+#head-image-img{
+  width: 100%;
+  // height: auto;
+  height: 600px;
+}
+
+#make-it-search-bar{
+    left: 4px;
+    font-size: 93px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    color: white;
+    letter-spacing: 4px;
+    top: 10%;
+    left: 25%;
+    padding: 0;
+    z-index: 2;
+    position: absolute;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
