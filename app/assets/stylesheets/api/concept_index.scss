@@ -1,0 +1,44 @@
+#concept-index-container{
+
+}
+
+#concept-index{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#concept-index-item{
+  width: 324px;
+  height: 363px;
+  padding-bottom: 10px;
+  padding: 12px;
+  margin: auto;
+}
+
+#concept-index-img{
+  width: 324px;
+  height: 270px;
+
+}
+
+#concept-index-text{
+  padding: 10px 13px;
+  margin-bottom: 10px;
+  height: 50px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+#concept-index-title{
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+#concept-index-title:hover{
+  text-decoration: underline;
+}

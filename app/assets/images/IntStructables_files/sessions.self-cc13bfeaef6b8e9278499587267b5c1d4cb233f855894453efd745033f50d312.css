@@ -1,0 +1,78 @@
+/* line 5, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#form {
+  border: 1px solid #555;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  padding: 20px;
+  background-color: white;
+  z-index: 100;
+}
+
+/* line 21, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#username {
+  border: 1px solid light-gray;
+}
+
+/* line 25, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#password {
+  border: 1px solid light-gray;
+}
+
+/* line 29, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#submit {
+  padding: 11px 19px;
+  font-size: 17.5px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-shadow: none;
+  background-color: #e86c00;
+  color: #fff;
+}
+
+/* line 50, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#submit:hover {
+  background-color: #cf6000;
+}
+
+/* line 55, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#textbox {
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  border-radius: 4px;
+  vertical-align: middle;
+  width: 266px;
+  height: 18px;
+  border: 1px solid #555;
+}
+
+/* line 73, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#login-img {
+  width: 280px;
+  height: auto;
+}
+
+/* line 78, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#signinasguest, #signup {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+/* line 85, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/sessions.scss */
+#signinasguest:hover, #signup:hover {
+  text-decoration: underline;
+}

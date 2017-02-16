@@ -14,7 +14,7 @@ const ConceptReducer = (state = {}, action) => {
       return action.concepts;
     case RECEIVE_CONCEPT:
       return merge({}, state, {
-        [concept]: action.concept,
+        [action.concept.id]: action.concept,
         errors:[]
       });
 

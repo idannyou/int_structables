@@ -19,7 +19,7 @@ const ModalStyle = {
     backgroundColor : 'transparent',
     border          : 'none',
     width           : '322px',
-    height          : '514px'
+    height          : '580px'
   }
 };
 export default ModalStyle;

@@ -1,0 +1,56 @@
+/* line 3, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/nav-bar.scss */
+.left-nav {
+  display: flex;
+  flex-direction: row;
+  line-height: 61px;
+  margin-left: 5%;
+}
+
+/* line 10, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/nav-bar.scss */
+.right-nav {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 20px;
+  line-height: 70px;
+  margin-right: 2.5%;
+}
+
+/* line 19, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/nav-bar.scss */
+#nav-bar {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 61px;
+  background-color: #eee;
+  overflow: visible;
+  justify-content: space-between;
+}
+
+/* line 30, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/nav-bar.scss */
+#nav-signup {
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+/* line 36, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/nav-bar.scss */
+#nav-login {
+  font-size: 12px;
+}
+
+/* line 40, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/nav-bar.scss */
+#nav-login:after {
+  content: '|';
+  color: gray;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* line 47, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/nav-bar.scss */
+#navbarlogo-img {
+  width: auto;
+  height: 100px;
+  z-index: 2;
+  cursor: pointer;
+}

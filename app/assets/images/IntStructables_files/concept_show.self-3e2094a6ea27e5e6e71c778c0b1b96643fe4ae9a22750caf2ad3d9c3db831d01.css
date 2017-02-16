@@ -1,0 +1,64 @@
+/* line 1, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-show-container {
+  background-color: #d4e1e7;
+}
+
+/* line 5, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-show {
+  margin-left: 17%;
+  margin-right: 17%;
+  border: 1px solid black;
+}
+
+/* line 12, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-nav {
+  margin-top: 5%;
+  border: 1px solid red;
+  height: 93px;
+  background-color: white;
+}
+
+/* line 20, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-nav a {
+  color: black;
+}
+
+/* line 24, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-nav-title {
+  border: 1px solid blue;
+  color: #333333;
+  display: inline;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  height: auto;
+  line-height: normal;
+}
+
+/* line 35, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-nav-author, #concept-nav-category {
+  color: #999999;
+  display: inline;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  height: auto;
+  line-height: 20px;
+  margin-left: 5px;
+  text-size-adjust: 100%;
+  font-weight: normal;
+}
+
+/* line 48, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-nav-left {
+  border: 1px solid green;
+}
+
+/* line 51, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-nav-all {
+  border: 1px solid red;
+}
+
+/* line 54, /Users/iDannyOu/Documents/app_academy/int_structables/app/assets/stylesheets/api/concept_show.scss */
+#concept-nav-hide {
+  border: 1px solid green;
+}

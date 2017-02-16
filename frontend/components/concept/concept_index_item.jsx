@@ -1,15 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const ConceptIndexItem = ({concept}) => {
   return (
     <li id='concept-index-item'>
       <img src={concept.image_url}
         id='concept-index-img'/>
-      <div id='concept-index-text'>
 
-        <label id='concept-index-title'>
-          {concept.title}
-        </label>
+      <div id='concept-index-text'>
+        <div>
+          <Link to={`/concepts/${concept.id}`}
+            id='concept-index-title'>
+            {concept.title}
+          </Link>
+        </div>
+
         <label id='concept-index-username'>
           by
           <a>
