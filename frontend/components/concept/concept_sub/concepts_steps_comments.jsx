@@ -8,8 +8,14 @@ class ConceptsStepsComments extends React.Component{
 
   render(){
     return(
-      <div>
-        CONCEPTS STEPS AND COMMENTS
+      <div id='concept-show-concept-step'>
+        <div id='concept-show-concept'>
+          CONCEPTS
+        </div>
+        <div id='concept-show-step-comments'>
+
+          STEPS AND COMMENTS GO HERE!
+        </div>
       </div>
     );
   }

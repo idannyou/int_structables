@@ -62,3 +62,43 @@
 #concept-nav-hide{
   border: 1px solid green;
 }
+
+#concept-show-concept-step{
+  background: white;
+  padding-left: 23px;
+  padding-top: 23px;
+  width: 60%;
+}
+
+#concept-show-user-info{
+  background: white;
+  width: 35%;
+  padding-right: 23px;
+  padding-top: 23px;
+  border-radius: 4px;
+}
+
+#concept-show-heading, #concept-show-username,
+#concept-show-step-comments, #concept-show-concept,
+#concept-show-userconcepts{
+  border: 1px solid rgb(221, 221, 221);
+  padding: 15px;
+}
+
+#concept-show-step-comments{
+  border: none;
+}
+
+#concept-show-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+}
+
+#concept-show-concept{
+  border-bottom-left: 1px solid rgb(221, 221, 221);
+  border-bottom-right: 1px solid rgb(221, 221, 221);
+  padding: 15px;
+  margin-right: 23px;
+}
