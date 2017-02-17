@@ -28,9 +28,11 @@ class ConceptShow extends React.Component{
     return(
       <div id='concept-show-container'>
         <div id='concept-show' >
-          <ConceptNav
-            title={this.props.concept.title}
-            username={concept.username}/>
+
+            <ConceptNav
+              title={this.props.concept.title}
+              username={concept.username}/>
+
           <div id='concept-show-body'>
             <ConceptsStepsComments
               image_url={concept.image_url}

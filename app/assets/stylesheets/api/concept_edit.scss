@@ -1,0 +1,88 @@
+#concept-edit-container{
+  background-color: rgb(212, 225, 231);
+  border: 1px solid #ddd;
+}
+
+#concept-edit{
+  margin-top: 2.5%;
+  margin-left: 14%;
+  margin-right: 14%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+#concept-edit-header{
+  background-color: #f6f6f6;
+  border-radius: 10px 10px 0 0;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+#concept-edit-header-image{
+  background-color: #eee;
+  box-shadow: inset 0 0 3px 3px #dfdfdf;
+  height: 110px;
+  width: 98%;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 110px;
+  font-size: 20px;
+  color: #AAA;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+#concept-edit-body{
+  width: 80%;
+  margin: auto;
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+#concept-edit-body-img{
+  width: 98%;
+  margin: auto;
+  background: white;
+  border: 1px solid #dedede;
+  font-size: 20px;
+  color: #AAA;
+  font-family: sans-serif;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  height: 90px;
+  line-height: 90px;
+}
+
+#concept-edit-body-title{
+  width: 98%;
+  font-weight: bold;
+  font-size: 18px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  color: #555;
+  text-align: start;
+  padding: 4px 6px;
+  box-sizing: border-box;
+}
+
+#concept-edit-body-description{
+  width: 98%;
+  background-color: white;
+  height: 300px;
+  margin: auto;
+  border: 1px solid #dedede;
+  display: flex;
+  align-self: center;
+  margin-bottom: 1%; 
+}
