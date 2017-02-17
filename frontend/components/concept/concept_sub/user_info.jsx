@@ -7,25 +7,33 @@ class UserInfo extends React.Component{
 
 
   render(){
+    let concept=this.props;
     return(
       <div id='concept-show-user-info'>
         <div id='concept-show-heading'>
           About This Concept
         </div>
         <div id='concept-show-username'>
-          USER INFO
+          {concept.username}
         </div>
         <div id='concept-show-userconcepts'>
-          OTHER CONCEPTS BY THIS USER
-          TURN UP
-          TURN UP
-          TURN UP
-          TURN UP
-          TURN UP
-          TURN UP
-          TURN UP
-          TURN UP
-          TURN UP
+          <div>
+            {`Other Concepts By ${concept.username}`}
+          </div>
+          <div id='concept-show-concepts-imgs'>
+            {
+              (!concept.concepts)? (null) : concept.concepts.map((ele) => {
+                if (ele.id !== concept.id){
+                  return(
+                    <Link to={`/concepts/${ele.id}`}
+                      key={ele.id}>
+                      <img src={ele.image_url}/>
+                    </Link>
+                  );
+                }
+              })
+            }
+          </div>
         </div>
 
       </div>

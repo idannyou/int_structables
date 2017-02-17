@@ -4,8 +4,10 @@ import { Link } from 'react-router';
 const ConceptIndexItem = ({concept}) => {
   return (
     <li id='concept-index-item'>
-      <img src={concept.image_url}
-        id='concept-index-img'/>
+      <Link to={`/concepts/${concept.id}`}>
+        <img src={concept.image_url}
+          id='concept-index-img'/>
+      </Link>
 
       <div id='concept-index-text'>
         <div>

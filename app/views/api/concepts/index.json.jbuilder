@@ -1,6 +1,7 @@
 
 @concepts.each do |concept|
   json.set! concept.id do
-    json.partial! 'api/concepts/concept', concept: concept
+    json.extract! concept, :id, :image_url, :title
+    json.username concept.user.username
   end
 end

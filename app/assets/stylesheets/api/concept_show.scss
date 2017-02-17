@@ -1,23 +1,23 @@
 #concept-show-container{
   background-color: rgb(212, 225, 231);
+  border: 1px solid #ddd;
 }
 
 #concept-show{
   margin-left: 17%;
   margin-right: 17%;
-  border: 1px solid black;
-
 }
 
 #concept-nav{
   margin-top: 5%;
-  border: 1px solid red;
-  background-color: white;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px 10px 0 0;
 }
 
 #concept-nav a {
@@ -25,7 +25,7 @@
 }
 
 #concept-nav-title{
-  border: 1px solid blue;
+
   color: rgb(51, 51, 51);
   display: inline;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -50,17 +50,17 @@
 #concept-nav-buttons{
   padding-top: 12px;
   padding-bottom: 18px;
-  border: 3px solid yellow;
+
 }
 
 #concept-nav-right{
-  border: 1px solid green;
+
 }
 #concept-nav-all{
-  border: 1px solid red;
+
 }
 #concept-nav-hide{
-  border: 1px solid green;
+
 }
 
 #concept-show-concept-step{
@@ -68,6 +68,7 @@
   padding-left: 23px;
   padding-top: 23px;
   width: 60%;
+
 }
 
 #concept-show-user-info{
@@ -76,17 +77,51 @@
   padding-right: 23px;
   padding-top: 23px;
   border-radius: 4px;
+
 }
 
-#concept-show-heading, #concept-show-username,
-#concept-show-step-comments, #concept-show-concept,
+#concept-show-concept{
+  border: 1px solid #ddd;
+  background: #f6f6f6;
+  border-radius: 5px;
+}
+
+#concept-show-username,
+#concept-show-step-comments,
 #concept-show-userconcepts{
   border: 1px solid rgb(221, 221, 221);
   padding: 15px;
 }
 
+#concept-show-userconcepts img{
+  display: block;
+  width: 84px;
+  height: 84px;
+}
+
+#concept-show-concepts-imgs{
+  display: flex;
+  flex-direction: row;
+}
+
+#concept-show-heading{
+  padding: .5em .5em .4em .8em;
+  border-bottom: 1px solid #ddd;
+  background: #f6f6f6;
+  border-radius: 5px 5px 0 0;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+
+#concept-show-description{
+  background: white;
+  padding: 15px;
+  font-size: 17px;
+}
+
 #concept-show-step-comments{
   border: none;
+
 }
 
 #concept-show-body{
