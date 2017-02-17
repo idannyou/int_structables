@@ -5,6 +5,7 @@ import App from './app';
 import SessionFormContainer from './session/session_form_container';
 import ConceptShowContainer from './concept/concept_show_container';
 import Home from './home/home'
+import ConceptNewEditContainer from './concept/new_edit/concept_new_edit_container';
 
 const Root = ( {store} ) => {
 
@@ -19,8 +20,10 @@ const Root = ( {store} ) => {
       <Router history={ hashHistory }>
         <Route path='/' component={ App } >
           <IndexRoute component={Home} />
-          <Route path='/concepts/:conceptId' component={ConceptShowContainer}/>
-        </Route>
+          <Route path='concepts/new' component={ConceptNewEditContainer} />
+          <Route path='concepts/:conceptId' component={ConceptShowContainer}/>
+          <Route path='concepts/:conceptId/edit' component={ConceptNewEditContainer}/>
+      </Route>
       </Router>
     </Provider>
   );

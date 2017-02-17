@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 import ConceptIndex from './concept_index';
-import { fetchConcepts, fetchConcept,
-        createConcept, updateConcept,
-        deleteConcept } from '../../actions/concept_actions';
+import { fetchConcepts } from '../../actions/concept_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -16,11 +14,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchConcepts: () => dispatch(fetchConcepts()),
-    fetchConcept: (id) => dispatch(fetchConcept()),
-    createConcept: (concept) => dispatch(createConcept(concept)),
-    updateConcept: (concept) => dispatch(updateConcept(concept)),
-    deleteConcept: (id) => dispatch(deleteConcept(id))
+    fetchConcepts: () => dispatch(fetchConcepts())
   };
 };
 
