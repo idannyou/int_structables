@@ -10,6 +10,7 @@
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 #concept-edit-header{
@@ -74,6 +75,8 @@
   text-align: start;
   padding: 4px 6px;
   box-sizing: border-box;
+  display: flex;
+  align-self: center;
 }
 
 #concept-edit-body-description{
@@ -84,5 +87,5 @@
   border: 1px solid #dedede;
   display: flex;
   align-self: center;
-  margin-bottom: 1%; 
+  margin-bottom: 1%;
 }

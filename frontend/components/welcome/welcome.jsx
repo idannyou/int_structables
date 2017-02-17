@@ -21,11 +21,17 @@ class Welcome extends React.Component{
     this.onModalClose = this.onModalClose.bind(this);
     this.setFormType = this.setFormType.bind(this);
     this.backToHomePage = this.backToHomePage.bind(this);
+    this.toConceptNew = this.toConceptNew.bind(this);
   }
 
   loggedin(){
+    debugger
     return (
       <div className='right-nav'>
+        <button id='createConcept'
+          onClick={this.toConceptNew}>
+          New Concept
+        </button>
         <button onClick={this.props.logout}
           id='nav-login'>
           Log Out
@@ -73,6 +79,12 @@ class Welcome extends React.Component{
     hashHistory.push(url)
   }
 
+  toConceptNew(event){
+    event.preventDefault();
+    let url='concepts/new'
+    hashHistory.push(url)
+  }
+
 
   render(){
 
@@ -85,6 +97,8 @@ class Welcome extends React.Component{
               />
             <h2>intStructables</h2>
           </div>
+
+
 
           {
             !!this.props.currentUser ?

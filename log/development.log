@@ -38245,3 +38245,863 @@ Processing by Api::ConceptsController#show as JSON
 Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:41:23 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (0.9ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (39.4ms)
+Completed 200 OK in 106ms (Views: 98.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/concepts/10" for 127.0.0.1 at 2017-02-17 16:41:25 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mConcept Load (1.3ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (6.1ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (17.3ms)
+  Rendered api/concepts/show.json.jbuilder (23.1ms)
+Completed 200 OK in 44ms (Views: 25.9ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/api/concepts/9" for 127.0.0.1 at 2017-02-17 16:42:09 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mConcept Load (3.7ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (0.8ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (8.1ms)
+  Rendered api/concepts/show.json.jbuilder (9.9ms)
+Completed 200 OK in 30ms (Views: 19.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/concepts/9" for 127.0.0.1 at 2017-02-17 16:42:16 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mConcept Load (0.4ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (0.7ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (17.3ms)
+  Rendered api/concepts/show.json.jbuilder (20.8ms)
+Completed 200 OK in 41ms (Views: 26.7ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:43:29 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WE1EPvv2XqEUnFKaN1DrqQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 160ms (Views: 156.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:44:56 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WE1EPvv2XqEUnFKaN1DrqQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 149ms (Views: 145.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:45:09 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WE1EPvv2XqEUnFKaN1DrqQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/concepts/9" for 127.0.0.1 at 2017-02-17 16:45:09 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mConcept Load (9.4ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (0.8ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (8.0ms)
+  Rendered api/concepts/show.json.jbuilder (11.2ms)
+Completed 200 OK in 35ms (Views: 19.7ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:45:21 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WE1EPvv2XqEUnFKaN1DrqQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts/10" for 127.0.0.1 at 2017-02-17 16:45:22 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mConcept Load (1.1ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (2.4ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (16.7ms)
+  Rendered api/concepts/show.json.jbuilder (20.1ms)
+Completed 200 OK in 35ms (Views: 21.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:45:29 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WE1EPvv2XqEUnFKaN1DrqQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts/11" for 127.0.0.1 at 2017-02-17 16:45:29 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mConcept Load (3.3ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConcept Load (6.0ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered api/concepts/_concept.json.jbuilder (12.4ms)
+  Rendered api/concepts/show.json.jbuilder (14.5ms)
+Completed 200 OK in 32ms (Views: 18.2ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:45:34 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WE1EPvv2XqEUnFKaN1DrqQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 79ms (Views: 76.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:46:23 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WE1EPvv2XqEUnFKaN1DrqQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 94ms (Views: 92.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:46:30 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (7.2ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (27.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (50.0ms)
+Completed 200 OK in 64ms (Views: 26.0ms | ActiveRecord: 35.0ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2017-02-17 16:46:33 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WE1EPvv2XqEUnFKaN1DrqQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "lFTJRNmSPSSnjeXjLt7ecw"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lFTJRNmSPSSnjeXjLt7ecw"], ["updated_at", 2017-02-17 21:46:33 UTC], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 17ms (Views: 8.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/concepts/8" for 127.0.0.1 at 2017-02-17 16:46:46 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mConcept Load (0.4ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (1.1ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (6.9ms)
+  Rendered api/concepts/show.json.jbuilder (9.1ms)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/concepts/9" for 127.0.0.1 at 2017-02-17 16:46:50 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mConcept Load (0.6ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (0.5ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (8.3ms)
+  Rendered api/concepts/show.json.jbuilder (11.2ms)
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/concepts/10" for 127.0.0.1 at 2017-02-17 16:46:51 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mConcept Load (12.4ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (0.2ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (5.2ms)
+  Rendered api/concepts/show.json.jbuilder (8.2ms)
+Completed 200 OK in 34ms (Views: 16.5ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/api/concepts/10" for 127.0.0.1 at 2017-02-17 16:46:58 -0500
+Processing by Api::ConceptsController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mConcept Load (0.6ms)[0m  [1m[34mSELECT  "concepts".* FROM "concepts" WHERE "concepts"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering api/concepts/show.json.jbuilder
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcept Load (0.6ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts" WHERE "concepts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered api/concepts/_concept.json.jbuilder (9.9ms)
+  Rendered api/concepts/show.json.jbuilder (14.3ms)
+Completed 200 OK in 37ms (Views: 30.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:49:22 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (4.5ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (34.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (60.5ms)
+Completed 200 OK in 83ms (Views: 25.3ms | ActiveRecord: 47.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:51:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 646ms (Views: 643.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:51:46 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (2.9ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (26.5ms)
+Completed 200 OK in 38ms (Views: 26.9ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:52:59 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 739ms (Views: 734.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:53:00 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (0.9ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (14.3ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:53:25 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 615ms (Views: 612.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:53:26 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (7.6ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (36.1ms)
+Completed 200 OK in 51ms (Views: 33.0ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:53:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 703ms (Views: 699.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:53:58 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (0.6ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (16.7ms)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:54:02 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:54:02 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (7.6ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (44.6ms)
+Completed 200 OK in 59ms (Views: 20.8ms | ActiveRecord: 34.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:54:21 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 84ms (Views: 74.9ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:54:22 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (0.6ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (11.2ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:54:25 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 553ms (Views: 550.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:54:26 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (1.4ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (24.3ms)
+Completed 200 OK in 42ms (Views: 24.6ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:54:32 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:54:32 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (9.3ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (19.6ms)
+Completed 200 OK in 45ms (Views: 31.0ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:54:42 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:54:46 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (0.7ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (15.2ms)
+Completed 200 OK in 26ms (Views: 19.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:55:13 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 557ms (Views: 554.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:55:15 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (6.0ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (27.7ms)
+Completed 200 OK in 41ms (Views: 26.5ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:56:36 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 547ms (Views: 543.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2017-02-17 16:56:39 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"guest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guest"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "fYOi4BvTuChJp0JXGuKnRQ"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "fYOi4BvTuChJp0JXGuKnRQ"], ["updated_at", 2017-02-17 21:56:39 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 94ms (Views: 6.3ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2017-02-17 16:56:59 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fYOi4BvTuChJp0JXGuKnRQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "jOzg7IRASf6evvjZUZia9w"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jOzg7IRASf6evvjZUZia9w"], ["updated_at", 2017-02-17 21:56:59 UTC], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 17ms (Views: 6.8ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2017-02-17 16:57:02 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"guest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guest"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["updated_at", 2017-02-17 21:57:02 UTC], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 103ms (Views: 6.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:57:06 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (20.4ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (56.9ms)
+Completed 200 OK in 78ms (Views: 34.9ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:58:14 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 139ms (Views: 135.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:58:15 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (4.2ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (15.4ms)
+Completed 200 OK in 28ms (Views: 19.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:58:36 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 120ms (Views: 117.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:58:36 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (0.6ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (13.2ms)
+Completed 200 OK in 26ms (Views: 18.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:58:49 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 166ms (Views: 162.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:58:50 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (7.9ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (17.8ms)
+Completed 200 OK in 32ms (Views: 20.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:59:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 131ms (Views: 127.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:59:18 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (0.5ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (10.3ms)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:59:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 140ms (Views: 136.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 16:59:47 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 16:59:48 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (13.7ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (35.6ms)
+Completed 200 OK in 61ms (Views: 42.3ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:01:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:03:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 147ms (Views: 143.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:03:38 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:04:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 139ms (Views: 136.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:04:20 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 120ms (Views: 117.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:06:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 124ms (Views: 121.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2017-02-17 17:06:16 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s4zpmI-yx6YG0EPTWHYgvw"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "KVkz_C9tGywSJg5d8aT4vw"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "KVkz_C9tGywSJg5d8aT4vw"], ["updated_at", 2017-02-17 22:06:16 UTC], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 14ms (Views: 6.4ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2017-02-17 17:06:19 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"guest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guest"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["updated_at", 2017-02-17 22:06:19 UTC], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 92ms (Views: 6.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:07:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 107ms (Views: 104.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:07:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 118ms (Views: 116.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:07:46 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 141ms (Views: 137.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:07:57 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 118ms (Views: 113.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:08:34 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 144ms (Views: 141.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:09:01 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 145ms (Views: 141.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 17:09:08 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (6.1ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (16.8ms)
+Completed 200 OK in 32ms (Views: 21.6ms | ActiveRecord: 6.9ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2017-02-17 17:09:09 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bk2HxLBrYr-HQbyihwVYtg"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "OTXy0Oq9bsA6apbwUOFZ-A"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OTXy0Oq9bsA6apbwUOFZ-A"], ["updated_at", 2017-02-17 22:09:09 UTC], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered api/users/show.json.jbuilder (3.2ms)
+Completed 200 OK in 19ms (Views: 8.9ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2017-02-17 17:09:11 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"guest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guest"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "8MzeXETUM7mW1M_Y8MqfXA"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "8MzeXETUM7mW1M_Y8MqfXA"], ["updated_at", 2017-02-17 22:09:11 UTC], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 96ms (Views: 7.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:13:22 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8MzeXETUM7mW1M_Y8MqfXA"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 106ms (Views: 103.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2017-02-17 17:13:23 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8MzeXETUM7mW1M_Y8MqfXA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "GXYEXoWT3_adEOLCyyWawA"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "GXYEXoWT3_adEOLCyyWawA"], ["updated_at", 2017-02-17 22:13:23 UTC], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 15ms (Views: 6.6ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2017-02-17 17:13:27 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"guest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guest"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "guest"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["session_token", "eaRMnO8o6EBklil6ZaMDMQ"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "eaRMnO8o6EBklil6ZaMDMQ"], ["updated_at", 2017-02-17 22:13:27 UTC], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 102ms (Views: 7.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 17:14:51 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (6.7ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (41.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (63.2ms)
+Completed 200 OK in 83ms (Views: 28.3ms | ActiveRecord: 49.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-17 17:14:52 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eaRMnO8o6EBklil6ZaMDMQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 712ms (Views: 708.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/concepts" for 127.0.0.1 at 2017-02-17 17:15:24 -0500
+Processing by Api::ConceptsController#index as JSON
+  Rendering api/concepts/index.json.jbuilder
+  [1m[36mConcept Load (2.2ms)[0m  [1m[34mSELECT "concepts".* FROM "concepts"[0m
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered api/concepts/index.json.jbuilder (23.2ms)
+Completed 200 OK in 36ms (Views: 22.5ms | ActiveRecord: 11.6ms)
+
+

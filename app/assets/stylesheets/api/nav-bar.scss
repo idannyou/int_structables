@@ -10,11 +10,13 @@ $nav_bar_height: 61px;
 .right-nav{
   display: flex;
   flex-direction: row;
+  align-self: center;
   width: auto;
   height: 20px;
-  line-height: 70px;
   margin-right: 2.5%;
 }
+
+
 
 #nav-bar{
   font-family: sans-serif;
@@ -35,6 +37,18 @@ $nav_bar_height: 61px;
 
 #nav-login{
   font-size: 12px;
+}
+
+#createConcept{
+  font-size: 12px;
+  margin-right: 12px;
+  border-radius: 2px;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-shadow: none;
+  background-color: #e86c00;
+  color: #fff;
 }
 
 #nav-login:after{
