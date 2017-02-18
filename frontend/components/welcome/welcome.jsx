@@ -25,7 +25,7 @@ class Welcome extends React.Component{
   }
 
   loggedin(){
-    debugger
+
     return (
       <div className='right-nav'>
         <button id='createConcept'
@@ -80,6 +80,7 @@ class Welcome extends React.Component{
   }
 
   toConceptNew(event){
+    debugger
     event.preventDefault();
     let url='concepts/new'
     hashHistory.push(url)

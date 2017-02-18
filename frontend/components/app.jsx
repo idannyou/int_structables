@@ -3,11 +3,11 @@ import WelcomeContainer from './welcome/welcome_container';
 
 
 
-const App = ({children}) => {
+const App = (props) => {
   return (
     <div>
-      <WelcomeContainer />
-      { children }
+      <WelcomeContainer pathname={props.location.pathname}/>
+      { props.children }
     </div>
   );
 };
