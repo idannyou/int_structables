@@ -17,6 +17,8 @@ class Images extends React.Component{
     this.onDrop = this.onDrop.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.handlePropImgDelete = this.handlePropImgDelete.bind(this);
+    this.publishOrNot = this.publishOrNot.bind(this);
+    this.handlePublish = this.handlePublish.bind(this);
   }
 
   componentDidMount(){
@@ -31,8 +33,6 @@ class Images extends React.Component{
     let newImages = Object.assign({}, newProps.images);
     this.setState({images: newProps.images});
   }
-
-
 
   onDrop(files) {
       let fileReader = new FileReader();
@@ -150,6 +150,23 @@ class Images extends React.Component{
     this.setState({imageFileUrl: []});
   }
 
+  publishOrNot(){
+    return (this.props.state.publish===false) ?
+      <button id='concept-edit-save'
+              onClick={this.handlePublish}>
+        Publish
+      </button> :
+      <button id='concept-edit-save'
+              onClick={this.handlePublish}>
+        UnPublish
+      </button> ;
+  }
+
+  handlePublish(){
+    this.handleSave();
+    this.props.handlePublish();
+  }
+
 
   render(){
     return(
@@ -161,6 +178,7 @@ class Images extends React.Component{
                     onClick={this.handleSave}>
               Save
             </button>
+            {this.publishOrNot()}
           </div>
         </div>
         <div id='concept-edit-body-img'>

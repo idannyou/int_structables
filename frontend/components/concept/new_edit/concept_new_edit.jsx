@@ -16,6 +16,7 @@ class ConceptNewEdit extends React.Component{
     this.update = this.update.bind(this);
     this.onModalClose = this.onModalClose.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handlePublish = this.handlePublish.bind(this);
   }
 
   componentDidMount(){
@@ -27,7 +28,11 @@ class ConceptNewEdit extends React.Component{
   }
 
   componentWillReceiveProps(newProps){
-    this.setState(newProps.concept);
+    if (this.props.params.conceptId){
+      this.setState(newProps.concept);
+    } else {
+      this.setState({modalOpen: true});
+    }
   }
 
   update(field){
@@ -66,10 +71,17 @@ class ConceptNewEdit extends React.Component{
     );
   }
 
-
-
   onModalClose(){
     this.setState({modalOpen: false});
+  }
+
+  handlePublish(){
+    if(this.state.publish === false){
+      this.setState({publish: true}, () => this.props.updateConcept(this.state));
+    } else {
+      this.setState({publish: false}, () => this.props.updateConcept(this.state));
+    }
+
   }
 
 
@@ -93,7 +105,8 @@ class ConceptNewEdit extends React.Component{
           <div id='concept-edit'>
             <ImagesContainer params={this.props.params}
                             state = {this.state}
-                            submitConcept = {this.props.action}/>
+                            submitConcept = {this.props.action}
+                            handlePublish = {this.handlePublish}/>
             <div id='concept-edit-body'>
               <input type='text' id='concept-edit-body-title'
                 value= {this.state.title}

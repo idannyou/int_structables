@@ -27,7 +27,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchConcept: (id) => dispatch(fetchConcept(id)),
     action: (concept) => dispatch(action(concept)),
-    deleteConcept: (id) => dispatch(deleteConcept(id))
+    deleteConcept: (id) => dispatch(deleteConcept(id)),
+    updateConcept: (concept) => dispatch(updateConcept(concept))
   };
 };
 

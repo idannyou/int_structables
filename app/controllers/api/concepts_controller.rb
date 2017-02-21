@@ -27,7 +27,6 @@ class Api::ConceptsController < ApplicationController
 
   def update
     @concept = Concept.find(params[:id])
-
     if @concept.update(concept_params)
       render 'api/concepts/show'
     else
@@ -37,7 +36,7 @@ class Api::ConceptsController < ApplicationController
 
   private
   def concept_params
-    params.require(:concept).permit(:title, :description, :equations)
+    params.require(:concept).permit(:title, :description, :equations, :publish)
   end
 
 end

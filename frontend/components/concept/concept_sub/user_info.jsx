@@ -23,7 +23,7 @@ class UserInfo extends React.Component{
           <div id='concept-show-concepts-imgs'>
             {
               (!concept.concepts)? (null) : concept.concepts.map((ele) => {
-                if (ele.id !== concept.id){
+                if (ele.id !== concept.id && concept.publish===true){
                   return(
                     <Link to={`/concepts/${ele.id}`}
                       key={ele.id}>

@@ -35,7 +35,6 @@ class ConceptsStepsComments extends React.Component{
 
   render(){
     let concept = this.props.images;
-    debugger
     return(
       <div id='concept-show-concept-step'>
         <div id='concept-show-concept'>
