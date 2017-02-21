@@ -67,12 +67,12 @@ class Home extends React.Component{
   render(){
     return(
       <div>
-        <div className='head-image'>
+
           <video autoPlay loop className="fillWidth">
             <source src={ window.headvideo } type="video/mp4" />
           </video>
           <MakeItSearchBar />
-        </div>
+
         <ConceptIndexContainer />
       </div>
 

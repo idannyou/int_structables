@@ -26,12 +26,20 @@ class Welcome extends React.Component{
 
   loggedin(){
 
+
     return (
       <div className='right-nav'>
-        <button id='createConcept'
-          onClick={this.toConceptNew}>
-          New Concept
-        </button>
+        {
+          (this.props.pathname == '/concepts/new') ?
+            null :
+            <button id='createConcept'
+              onClick={this.toConceptNew}>
+              New Concept
+            </button>
+        }
+
+
+
         <button onClick={this.props.logout}
           id='nav-login'>
           Log Out
@@ -66,7 +74,7 @@ class Welcome extends React.Component{
   }
 
   onModalClose(){
-    this.setState({modalOpen: false})
+    this.setState({modalOpen: false});
   }
 
   setFormType(formType){
@@ -75,15 +83,14 @@ class Welcome extends React.Component{
 
   backToHomePage(event){
     event.preventDefault();
-    let url=''
-    hashHistory.push(url)
+    let url='';
+    hashHistory.push(url);
   }
 
-  toConceptNew(event){
-    debugger
-    event.preventDefault();
-    let url='concepts/new'
-    hashHistory.push(url)
+  toConceptNew(e){
+      e.preventDefault();
+      let url='concepts/new';
+      hashHistory.push(url);
   }
 
 

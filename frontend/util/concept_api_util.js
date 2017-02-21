@@ -32,6 +32,6 @@ export const updateConcept = (concept) => {
 export const deleteConcept = (id) => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/concepts/${id}`,
+    url: `/api/concepts/${id}`
   });
 };

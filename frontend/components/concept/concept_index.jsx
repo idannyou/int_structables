@@ -15,12 +15,12 @@ class ConceptIndex extends React.Component{
       <div id='concept-index-container'>
         <ul id='concept-index'>
           {
-            this.props.concepts.map(concept => {
+            this.props.concepts.map((concept,idx) => {
               return(
                 <ConceptIndexItem
-                  key={concept.id}
+                  key = {idx}
                   concept={concept} />
-              )
+              );
             })
           }
         </ul>

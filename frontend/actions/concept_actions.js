@@ -50,8 +50,8 @@ export const createConcept = (concept) => (dispatch) => {
   );
 };
 
-export const updateConcept = (concept) => (dispatch) => {
-  return ConceptApiUtil.updateConcept(concept).then(
+export const updateConcept = (concept, id) => (dispatch) => {
+  return ConceptApiUtil.updateConcept(concept, id).then(
     (concept) => dispatch(receiveConcept(concept))
   );
 };

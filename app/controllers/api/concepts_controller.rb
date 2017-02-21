@@ -35,12 +35,9 @@ class Api::ConceptsController < ApplicationController
     end
   end
 
-
-
   private
-
   def concept_params
-    params.require(:concept).permit(:title, :description, :equations, :image_url, :video_url)
+    params.require(:concept).permit(:title, :description, :equations)
   end
 
 end

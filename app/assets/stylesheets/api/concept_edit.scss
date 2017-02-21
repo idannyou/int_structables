@@ -3,6 +3,13 @@
   border: 1px solid #ddd;
 }
 
+#concept-edit-adding{
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
 #concept-edit{
   margin-top: 2.5%;
   margin-left: 14%;
@@ -20,20 +27,34 @@
   border: 1px solid #ddd;
 }
 
-#concept-edit-header-image{
+.concept-edit-header-image{
   background-color: #eee;
   box-shadow: inset 0 0 3px 3px #dfdfdf;
   height: 110px;
   width: 98%;
   margin: auto;
   border-radius: 10px;
-  text-align: center;
   line-height: 110px;
   font-size: 20px;
   color: #AAA;
   font-family: sans-serif;
   margin-bottom: 10px;
   margin-top: 5px;
+  display: flex;
+  align-self: center;
+  overflow: visible;
+}
+
+#concept-edit-adding-container{
+  display: flex;
+}
+
+#concept-edit-delete{
+  position: absolute;
+  z-index: 2;
+  color: #e86c00;
+  top: -35px;
+  left: 0;
 }
 
 #concept-edit-body{
@@ -56,7 +77,7 @@
   margin-top: 10px;
   border-radius: 10px;
   text-align: center;
-  height: 90px;
+  min-height: 100px;
   line-height: 90px;
 }
 
@@ -88,4 +109,81 @@
   display: flex;
   align-self: center;
   margin-bottom: 1%;
+}
+
+#concept-edit-save{
+  font-size: 16px;
+  margin-right: 12px;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  text-shadow: none;
+  background-color: #e86c00;
+  color: #fff;
+
+}
+
+#concept-edit-buttons{
+  display: flex;
+  align-items: center;
+}
+
+#concept-edit-title{
+  margin: 20px;
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+#concept-edit-modal-body{
+  display: flex;
+  flex-direction: column;
+}
+
+#concept-edit-modal-title{
+  color: #aaa;
+  padding: 10px;
+  border: 0;
+  border-bottom: solid 1px #c9c9c9;
+  transition: border .3s;
+  border-radius: 0;
+  font-size: 18px;
+  width: 350px;
+  text-align: center;
+  margin: auto;
+}
+
+#concept-edit-modal-description{
+
+  color: #aaa;
+  border: 1px solid #c9c9c9;
+  transition: border .3s;
+  border-radius: 0;
+  font-size: 14px;
+  width: 350px;
+  margin: auto;
+  height: 80px;
+  margin-top: 10px;
+}
+
+#concept-edit-modal-submit{
+  margin: auto;
+  margin-top: 30px;
+  padding: 11px 19px;
+  font-size: 17.5px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+
+  font-weight: 400;
+  margin-bottom: 20px;
+
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-shadow: none;
+
+  background-color: #e86c00;
+
+  color: #fff;
 }

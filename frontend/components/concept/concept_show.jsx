@@ -12,14 +12,13 @@ class ConceptShow extends React.Component{
 
   componentDidMount(){
     this.props.fetchConcept(this.props.params.conceptId);
-    $('#concept-nav').stick_in_parent()
+    // $('#concept-nav').stick_in_parent()
   }
 
   componentWillReceiveProps(nextProps) {
     if(this.props.params.conceptId !== nextProps.params.conceptId){
       this.props.fetchConcept(nextProps.params.conceptId);
     }
-    $('#concept-nav').stick_in_parent()
   }
 
   render(){
@@ -34,10 +33,12 @@ class ConceptShow extends React.Component{
               username={concept.username}/>
 
           <div id='concept-show-body'>
-            <ConceptsStepsComments
-              image_url={concept.image_url}
+            {(concept.images_url)?
+              <ConceptsStepsComments
+              images={concept.images_url}
               description = {concept.description}
               />
+            : null}
             <UserInfo
               username={concept.username}
               concepts={concept.concepts}

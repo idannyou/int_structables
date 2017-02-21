@@ -1,7 +1,8 @@
 
 @concepts.each do |concept|
   json.set! concept.id do
-    json.extract! concept, :id, :image_url, :title
+    json.extract! concept, :id, :title
     json.username concept.user.username
+    json.images_url concept.extractImgUrl[0]
   end
 end

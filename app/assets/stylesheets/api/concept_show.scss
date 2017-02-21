@@ -93,6 +93,7 @@
   padding: 15px;
 }
 
+
 #concept-show-userconcepts img{
   display: block;
   width: 84px;
@@ -102,6 +103,7 @@
 #concept-show-concepts-imgs{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #concept-show-heading{
@@ -136,4 +138,15 @@
   border-bottom-right: 1px solid rgb(221, 221, 221);
   padding: 15px;
   margin-right: 23px;
+}
+
+#concept-show-small-imgs{
+  display:flex;
+  flex-direction: row;
+}
+#concept-show-small-imgs img{
+  display:block;
+  width: 80px;
+  height: 80px;
+
 }

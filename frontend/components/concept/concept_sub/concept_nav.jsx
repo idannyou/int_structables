@@ -28,9 +28,7 @@ class ConceptNav extends React.Component{
           </h3>
         </div>
         <div id='concept-nav-buttons'>
-          <button id='concept-nav-hide'>
-            Hide
-          </button>
+
           <button id='concept-nav-all'>
             <img id='concept-nav-img' src={window.downimage} />
           </button>

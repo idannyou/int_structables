@@ -2,7 +2,7 @@ import {RECEIVE_CONCEPTS,
         RECEIVE_CONCEPT,
         REMOVE_CONCEPT,
         RECEIVE_ERRORS
-        } from '../actions/concept_actions'
+      } from '../actions/concept_actions';
 
 import {merge} from 'lodash';
 
@@ -26,6 +26,6 @@ const ConceptReducer = (state = {}, action) => {
     default:
       return state;
   }
-}
+};
 
 export default ConceptReducer;

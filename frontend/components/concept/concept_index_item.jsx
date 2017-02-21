@@ -5,7 +5,7 @@ const ConceptIndexItem = ({concept}) => {
   return (
     <li id='concept-index-item'>
       <Link to={`/concepts/${concept.id}`}>
-        <img src={concept.image_url}
+        <img src={concept.images_url}
           id='concept-index-img'/>
       </Link>
 

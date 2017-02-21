@@ -1,1 +1,15 @@
 Add sticky to concept_show. Doesn't work on WillMount.
+
+How do you delete pictures form the server when a user delete an image?
+
+How do you create a NEW concept with images if there are no concept IDs to refer to?
+(Force Client to create Concept first, then let them add images)
+
+Routing for Concepts, if logged in vs if not.
+
+How do i change an object in a state using setState
+this.state = {concept: {a:b, b:c}, c:d}
+this.setState({concept[a]: z }) <- this doesn't work
+can do this:
+const newConcept = Object.assign({}, this.state.concept, {[field]: e.target.value});
+this.setState({concept: newConcept});
