@@ -26,3 +26,5 @@ this.setState({concept[a]: z }) <- this doesn't work
 can do this:
 const newConcept = Object.assign({}, this.state.concept, {[field]: e.target.value});
 this.setState({concept: newConcept});
+
+NEVER EVER LET 1 COMPONENT CHANGE ANOTHER COMPONENT's STATE!!!!!!

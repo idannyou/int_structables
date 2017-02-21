@@ -17,6 +17,7 @@ class ConceptNewEdit extends React.Component{
     this.onModalClose = this.onModalClose.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handlePublish = this.handlePublish.bind(this);
+    this.submitConcept = this.submitConcept.bind(this);
   }
 
   componentDidMount(){
@@ -31,7 +32,7 @@ class ConceptNewEdit extends React.Component{
     if (this.props.params.conceptId){
       this.setState(newProps.concept);
     } else {
-      this.setState({modalOpen: true});
+      this.setState(Object.assign({}, newProps.concept, {modalOpen: true }));
     }
   }
 
@@ -84,6 +85,9 @@ class ConceptNewEdit extends React.Component{
 
   }
 
+  submitConcept(){
+    this.props.action(this.state);
+  }
 
 
   render(){
@@ -99,13 +103,14 @@ class ConceptNewEdit extends React.Component{
             >
             <ConceptNew action={this.props.action}
                         update={this.update}
-                        handleSubmit={this.handleSubmit} />
+                        handleSubmit={this.handleSubmit}
+                        errors = {this.props.errors}/>
           </Modal>}
         <div id='concept-edit-container'>
           <div id='concept-edit'>
             <ImagesContainer params={this.props.params}
-                            state = {this.state}
-                            submitConcept = {this.props.action}
+                            publish = {this.state.publish}
+                            submitConcept = {this.submitConcept}
                             handlePublish = {this.handlePublish}/>
             <div id='concept-edit-body'>
               <input type='text' id='concept-edit-body-title'

@@ -5,13 +5,45 @@ import {hashHistory} from 'react-router';
 
 class UserInfo extends React.Component{
 
+  constructor(props){
+    super(props);
+    this.toEdit = this.toEdit.bind(this);
+  }
+
+  renderConceptsByGuest(){
+    let concept=this.props;
+    return (!concept.concepts)? (null) : concept.concepts.map((ele) => {
+      if (ele.id !== concept.id && ele.publish===true){
+        return(
+          <Link to={`/concepts/${ele.id}`}
+            key={ele.id}>
+            <img src={ele.images_url[0]}/>
+          </Link>
+        );
+      }
+    });
+  }
+
+  toEdit(){
+    let url = `concepts/${this.props.id}/edit`;
+    hashHistory.push(url);
+  }
+
 
   render(){
     let concept=this.props;
     return(
       <div id='concept-show-user-info'>
         <div id='concept-show-heading'>
-          About This Concept
+          <div>
+            About This Concept
+          </div>
+          {(this.props.currentUser === this.props.username)?
+          <button id='createEdit'
+            onClick={this.toEdit}>
+            Edit
+          </button> :
+          null}
         </div>
         <div id='concept-show-username'>
           {concept.username}
@@ -22,16 +54,7 @@ class UserInfo extends React.Component{
           </div>
           <div id='concept-show-concepts-imgs'>
             {
-              (!concept.concepts)? (null) : concept.concepts.map((ele) => {
-                if (ele.id !== concept.id && concept.publish===true){
-                  return(
-                    <Link to={`/concepts/${ele.id}`}
-                      key={ele.id}>
-                      <img src={ele.images_url[0]}/>
-                    </Link>
-                  );
-                }
-              })
+              this.renderConceptsByGuest()
             }
           </div>
         </div>

@@ -137,7 +137,7 @@ class Images extends React.Component{
   handleSave(){
     let innerProps = this.props;
     let innerState = this.state;
-    innerProps.submitConcept(this.props.state);
+    innerProps.submitConcept();
     if (innerState.imageFileArray){
       innerState.imageFileArray.forEach((file) => {
         var formData = new FormData();
@@ -151,7 +151,7 @@ class Images extends React.Component{
   }
 
   publishOrNot(){
-    return (this.props.state.publish===false) ?
+    return (this.props.publish===false) ?
       <button id='concept-edit-save'
               onClick={this.handlePublish}>
         Publish

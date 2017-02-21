@@ -6,7 +6,8 @@ import { fetchConcept,
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    concept: state.concepts[ownProps.params.conceptId]
+    concept: state.concepts[ownProps.params.conceptId],
+    currentUser: (state.session.currentUser)? state.session.currentUser.username : null
   };
 };
 

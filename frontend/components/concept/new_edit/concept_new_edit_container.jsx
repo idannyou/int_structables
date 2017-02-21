@@ -7,14 +7,17 @@ import {fetchConcept,
 
 
 const mapStateToProps = (state, ownProps) => {
-  let concept;
-  let initial = {title:'', description:''};
+  let concept, errors;
+  let initial = {title:'', description:'', images:{}, images_url:[], publish: false, user_id:'', username:'', concepts:[], id:''};
+  if (state.concepts.errors){
+    errors = state.concepts.errors;
+  }
   if (ownProps.params.conceptId){
     concept = state.concepts[ownProps.params.conceptId];
   }else{
     concept = initial;
   }
-  return {concept};
+  return {concept, errors};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

@@ -22,13 +22,20 @@ class Welcome extends React.Component{
     this.setFormType = this.setFormType.bind(this);
     this.backToHomePage = this.backToHomePage.bind(this);
     this.toConceptNew = this.toConceptNew.bind(this);
+    this.toMyConcepts = this.toMyConcepts.bind(this);
   }
 
   loggedin(){
 
-
     return (
       <div className='right-nav'>
+        {
+            <button id='myConcepts'
+              onClick={this.toMyConcepts}>
+              My Concepts
+            </button>
+        }
+
         {
           (this.props.pathname == '/concepts/new') ?
             null :
@@ -37,8 +44,6 @@ class Welcome extends React.Component{
               New Concept
             </button>
         }
-
-
 
         <button onClick={this.props.logout}
           id='nav-login'>
@@ -90,6 +95,12 @@ class Welcome extends React.Component{
   toConceptNew(e){
       e.preventDefault();
       let url='concepts/new';
+      hashHistory.push(url);
+  }
+
+  toMyConcepts(e){
+      e.preventDefault();
+      let url=`/concepts/user/${this.props.currentUser.id}`;
       hashHistory.push(url);
   }
 

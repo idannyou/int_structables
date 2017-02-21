@@ -113,6 +113,8 @@
   border-radius: 5px 5px 0 0;
   font-size: 18px;
   border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
 }
 
 #concept-show-description{
@@ -149,4 +151,17 @@
   width: 80px;
   height: 80px;
 
+}
+
+#createEdit{
+  font-size: 12px;
+  margin-right: 12px;
+  border-radius: 2px;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-shadow: none;
+  background-color: #e86c00;
+  color: #fff;
+  letter-spacing: 2px;
 }

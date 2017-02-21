@@ -1,13 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router';
+import {hashHistory} from 'react-router';
 
-const ConceptIndexItem = ({concept}) => {
+
+const toEdit = (id) => {
+  let url= `/concepts/${id}/edit`
+  hashHistory.push(url)
+}
+
+const ConceptIndexItem = ({concept, pathname}) => {
   return (
     <li id='concept-index-item'>
-      <Link to={`/concepts/${concept.id}`}>
-        <img src={concept.images_url}
-          id='concept-index-img'/>
-      </Link>
+      <div>
+        <Link to={`/concepts/${concept.id}`}>
+          <img src={concept.images_url}
+            id='concept-index-img'/>
+        </Link>
+        {(!pathname)? null:
+          <button onClick={()=>toEdit(concept.id)}>
+            Edit
+          </button>}
+      </div>
 
       <div id='concept-index-text'>
         <div>

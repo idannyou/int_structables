@@ -43,6 +43,7 @@ class ConceptShow extends React.Component{
               username={concept.username}
               concepts={concept.concepts}
               id = {concept.id}
+              currentUser = {this.props.currentUser}
               />
           </div>
         </div>

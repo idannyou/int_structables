@@ -17,6 +17,7 @@ class ConceptIndex extends React.Component{
 
   publishOrNot(){
     return this.props.concepts.map((concept,idx) => {
+      if(!concept) return null;
       if(concept.publish === true){
         return (<ConceptIndexItem
           key = {idx}

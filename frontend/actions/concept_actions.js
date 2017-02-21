@@ -25,10 +25,10 @@ export const removeConcept = (concept) => {
   };
 };
 
-export const receiveErrors = (errorsArray) => {
+export const receiveErrors = (errorsObj) => {
   return {
     type: RECEIVE_ERRORS,
-    errorsArray
+    errorsObj
   };
 };
 
@@ -46,7 +46,8 @@ export const fetchConcept = (id) => (dispatch) => {
 
 export const createConcept = (concept) => (dispatch) => {
   return ConceptApiUtil.createConcept(concept).then(
-    (concept) => dispatch(receiveConcept(concept))
+    (concept) => dispatch(receiveConcept(concept)),
+    (errors) => dispatch(receiveErrors(errors.responseJSON))
   );
 };
 

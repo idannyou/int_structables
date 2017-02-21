@@ -11,6 +11,7 @@ class Api::ConceptsController < ApplicationController
     if @concept.save
       render 'api/concepts/show'
     else
+      
       render json: @concept.errors, status: 422
     end
   end

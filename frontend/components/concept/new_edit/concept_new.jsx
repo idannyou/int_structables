@@ -14,10 +14,10 @@ const ConceptNew = (props) => {
         <h2 id='concept-edit-title'>My Concept is on:</h2>
         <input type='text'
           id='concept-edit-modal-title'
-          placeholder='Title'
+          placeholder={(props.errors)? `Title ${props.errors['title']}`:'Title'}
           onChange={props.update('title')} />
         <textarea wrap='hard'
-          placeholder='Description'
+          placeholder= {(props.errors)? `Description ${props.errors['description']}`:'Description'}
           id='concept-edit-modal-description'
           onChange={props.update('description')}>
         </textarea>

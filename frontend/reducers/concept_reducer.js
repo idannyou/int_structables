@@ -23,6 +23,11 @@ const ConceptReducer = (state = {}, action) => {
       delete newState[action.concept.id];
       return newState;
 
+    case RECEIVE_ERRORS:
+      const newErrState = merge({}, state);
+      newErrState.errors = action.errorsObj;
+      return newErrState;
+
     default:
       return state;
   }

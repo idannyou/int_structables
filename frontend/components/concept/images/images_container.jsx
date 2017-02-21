@@ -6,8 +6,14 @@ import {createImage,
         updateImage} from '../../../actions/image_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  let images;
+  if(ownProps.params.conceptId){
+     images= state.images;
+  } else {
+    images = [];
+  }
   return{
-    images: state.images
+    images
   };
 
 };

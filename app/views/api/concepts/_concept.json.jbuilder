@@ -6,4 +6,5 @@ json.concepts concept.user.concepts do |concept|
   json.extract! concept, :id
   json.images concept.images
   json.images_url concept.extractImgUrl
+  json.publish concept.publish
 end
