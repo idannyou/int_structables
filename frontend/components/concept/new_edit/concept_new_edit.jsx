@@ -7,6 +7,7 @@ import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 import ConceptNew from './concept_new';
 import ImagesContainer from '../images/images_container';
+import StepNewEditContainer from '../../step/new_edit/step_new_edit_container';
 
 class ConceptNewEdit extends React.Component{
 
@@ -113,6 +114,7 @@ class ConceptNewEdit extends React.Component{
             </div>
           </div>
         </div>
+        <StepNewEditContainer />
       </div>
     );
   }
