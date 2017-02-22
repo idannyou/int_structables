@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :concepts, only: [:index, :create, :show, :update, :destroy] do
       resources :images, only: [:index, :create, :destroy, :update]
+      resources :steps, only: [:index, :show, :create, :destroy, :update] do
+        resources :images, only: [:index, :create, :destroy, :update]
+      end
     end
   end
 end

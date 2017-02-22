@@ -72,10 +72,10 @@ class Welcome extends React.Component{
 
   _handleClick(formType){
     return (e) => {
-      e.preventDefault()
+      e.preventDefault();
       this.setState({modalOpen: true,
                       formType});
-    }
+    };
   }
 
   onModalClose(){

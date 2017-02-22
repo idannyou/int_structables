@@ -11,6 +11,8 @@ const mapStateToProps = (state, ownProps) => {
   let initial = {title:'', description:'', images:{}, images_url:[], publish: false, user_id:'', username:'', concepts:[], id:''};
   if (state.concepts.errors){
     errors = state.concepts.errors;
+  } else {
+    errors = null ;
   }
   if (ownProps.params.conceptId){
     concept = state.concepts[ownProps.params.conceptId];

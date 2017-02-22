@@ -31,8 +31,6 @@ class ConceptsStepsComments extends React.Component{
     }
   }
 
-
-
   render(){
     let concept = this.props.images;
     return(

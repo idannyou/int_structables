@@ -26,6 +26,7 @@ class Api::ImagesController < ApplicationController
   private
 
   def load_imageable
+    #query the length of the request path to determine if it's a concept or step image.
     resource, id = request.path.split('/')[2,3]
     @imageable = resource.singularize.classify.constantize.find(id)
   end

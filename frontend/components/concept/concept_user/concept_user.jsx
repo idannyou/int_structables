@@ -16,10 +16,6 @@ class ConceptUser extends React.Component{
     this.props.fetchConcepts();
   }
 
-  componentWillReceiveProps(){
-    this.props.fetchConcepts();
-  }
-
   publish(){
     return this.props.concepts.map((concept,idx) => {
       if(!concept.publish) return null;

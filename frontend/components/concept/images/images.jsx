@@ -24,14 +24,9 @@ class Images extends React.Component{
   componentDidMount(){
     if (this.props.params.conceptId){
       this.props.fetchImages(`concepts/${this.props.params.conceptId}`).then(
-        action => this.setState({images: action.images})
+        action => this.setState({images: action.images},()=>{})
       );
     }
-  }
-
-  componentWillReceiveProps(newProps){
-    let newImages = Object.assign({}, newProps.images);
-    this.setState({images: newProps.images});
   }
 
   onDrop(files) {
@@ -53,9 +48,9 @@ class Images extends React.Component{
             alert(`${file.name} has already been inserted`);
           }}
       );
-        this.setState({imageFileArray: filesArray});
-        this.setState({imageFileName: filesName});
-        this.setState({imageFileUrl: filesUrl});
+        this.setState({imageFileArray: filesArray},()=>{});
+        this.setState({imageFileName: filesName},()=>{});
+        this.setState({imageFileUrl: filesUrl},()=>{});
 
 
   }
@@ -67,9 +62,9 @@ class Images extends React.Component{
     imageFileArray.splice(idx,1);
     imageFileName.splice(idx,1);
     imageFileUrl.splice(idx,1);
-    this.setState({imageFileArray: imageFileArray});
-    this.setState({imageFileName: imageFileName});
-    this.setState({imageFileUrl: imageFileUrl});
+    this.setState({imageFileArray: imageFileArray},()=>{});
+    this.setState({imageFileName: imageFileName},()=>{});
+    this.setState({imageFileUrl: imageFileUrl},()=>{});
     return (e) => {
       e.preventDefault();
     };
@@ -115,8 +110,9 @@ class Images extends React.Component{
   }
 
   renderPropsImageArray(){
-    if(!this.state.images) return null;
-    let keyArray = Object.keys(this.state.images);
+
+    if(!this.props.images) return null;
+    let keyArray = Object.keys(this.props.images);
     if (keyArray.length > 0){
       return keyArray.map((imgKey) => {
         return (
@@ -125,7 +121,7 @@ class Images extends React.Component{
             <button id='concept-edit-delete' onClick={this.handlePropImgDelete(imgKey)}>
               X
             </button>
-            <img id='concept-edit-img' src={this.state.images[imgKey].image_url}/>
+            <img id='concept-edit-img' src={this.props.images[imgKey].image_url}/>
           </li>
         );
       });
@@ -145,9 +141,9 @@ class Images extends React.Component{
         innerProps.createImage(formData, `concepts/${innerProps.params.conceptId}`);
       });
     }
-    this.setState({imageFileName: []});
-    this.setState({imageFileArray: []});
-    this.setState({imageFileUrl: []});
+    this.setState({imageFileName: []},()=>{});
+    this.setState({imageFileArray: []},()=>{});
+    this.setState({imageFileUrl: []},()=>{});
   }
 
   publishOrNot(){

@@ -17,7 +17,7 @@ const ConceptNew = (props) => {
           placeholder={(props.errors)? `Title ${props.errors['title']}`:'Title'}
           onChange={props.update('title')} />
         <textarea wrap='hard'
-          placeholder= {(props.errors)? `Description ${props.errors['description']}`:'Description'}
+          placeholder= {(props.errors) ? `Description ${props.errors['description']}`:'Description'}
           id='concept-edit-modal-description'
           onChange={props.update('description')}>
         </textarea>
