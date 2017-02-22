@@ -22,7 +22,6 @@ export const createConcept = (concept) => {
 };
 
 export const updateConcept = (concept) => {
-  debugger #NEED TO FIX PUBLISH FOR NEW CONCEPT
   return $.ajax({
     method: 'PATCH',
     url: `/api/concepts/${concept.id}`,

@@ -13,7 +13,6 @@ class ConceptNewEdit extends React.Component{
   constructor(props){
     super(props);
     this.state = this.props.concept;
-
     this.update = this.update.bind(this);
     this.onModalClose = this.onModalClose.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,7 +21,6 @@ class ConceptNewEdit extends React.Component{
   }
 
   componentDidMount(){
-
     if (this.props.params.conceptId){
       this.props.fetchConcept(this.props.params.conceptId);
     } else {
@@ -31,7 +29,7 @@ class ConceptNewEdit extends React.Component{
   }
 
   componentWillReceiveProps(newProps){
-    if (this.props.params.conceptId){
+    if (newProps.params.conceptId){
       this.setState(newProps.concept);
     } else {
       this.setState({modalOpen: true}, ()=>{});
@@ -47,10 +45,12 @@ class ConceptNewEdit extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
+    let that = this;
     this.props.action({title: this.state.title, description: this.state.description}).then(
       (promise) => {
         let url = `concepts/${promise.concept.id}/edit`;
         this.onModalClose();
+        that.props.fetchConcept(promise.concept.id);
         hashHistory.push(url);
       }
     );
