@@ -15,12 +15,15 @@ class StepNewEdit extends React.Component{
     this.stepBody = this.stepBody.bind(this);
     this.renderStep = this.renderStep.bind(this);
     this.removeStep = this.removeStep.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.setBody = this.setBody.bind(this);
   }
 
   stepBody(stepKey){
     return (
       <div>
-        <textarea key={stepKey}/>
+        <textarea key={stepKey}
+                  onChange={this.setBody(stepKey)}/>
         <button onClick={() => this.removeStep(stepKey)}>
           Remove
         </button>
@@ -28,10 +31,18 @@ class StepNewEdit extends React.Component{
     );
   }
 
+  setBody(stepKey){
+    return (e) => {
+      let stepObj = Object.assign({},this.state.stepsHash);
+      stepObj[stepKey][1]=(e.target.value);
+      this.setState({stepsHash: stepObj});
+    };
+  }
+
   addStep(){
     let array = Object.keys(this.state.stepsHash);
     let lastKey = (array[array.length - 1])? array[array.length - 1] : 0;
-    let hash = Object.assign({}, this.state.stepsHash, {[parseInt(lastKey)+1]: this.stepBody(parseInt(lastKey)+1)});
+    let hash = Object.assign({}, this.state.stepsHash, {[parseInt(lastKey)+1]: [this.stepBody(parseInt(lastKey)+1)]});
     this.setState({stepsHash: hash}, ()=> {});
   }
 
@@ -52,12 +63,16 @@ class StepNewEdit extends React.Component{
           <div
             key={stepKey}>
             <h1>Step {idx + 1}</h1>
-            {this.state.stepsHash[stepKey]}
+            {this.state.stepsHash[stepKey][0]}
           </div>
 
       ))
 
     );
+  }
+
+  handleSubmit(){
+    debugger
   }
 
 
@@ -67,6 +82,7 @@ class StepNewEdit extends React.Component{
       <div>
         {this.renderStep()}
         <button onClick={this.addStep}>Add Step</button>
+        <button onClick={this.handleSubmit}>Submit</button>
       </div>
     );
   }
