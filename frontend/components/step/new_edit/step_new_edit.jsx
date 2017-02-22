@@ -72,7 +72,10 @@ class StepNewEdit extends React.Component{
   }
 
   handleSubmit(){
-    debugger
+    Object.keys(this.state.stepsHash).map((step, idx) => {
+      console.log(this.state.stepsHash[step][1]);
+      
+    });
   }
 
 

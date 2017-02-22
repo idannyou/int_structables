@@ -4,8 +4,9 @@ class Api::StepsController < ApplicationController
   end
 
   def create
+    debugger
     @step = Step.new(step_params)
-    @step.concept_id = current_user.id
+
 
     if @step.save
       render 'api/steps/show'
@@ -36,7 +37,9 @@ class Api::StepsController < ApplicationController
 
   private
   def step_params
-    params.require(:step).permit(:title, :description, :equations, :publish)
+    params.require(:step).permit(:conceptId)
   end
+
+
 
 end

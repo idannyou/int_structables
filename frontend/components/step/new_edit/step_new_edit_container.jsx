@@ -1,36 +1,37 @@
 import { connect } from 'react-redux';
 import StepNewEdit from './step_new_edit';
+import {fetchSteps,
+        fetchStep,
+        createStep,
+        updateStep,
+        deleteStep
+      } from '../../../actions/step_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let step, errors;
   let initial = {body:'', order:''};
-  // if (state.concepts.errors){
-  //   errors = state.concepts.errors;
-  // } else {
-  //   errors = null ;
-  // }`````
+  if (state.concepts.errors){
+    errors = state.concepts.errors;
+  } else {
+    errors = null ;
+  }
   if (ownProps.params){
-    step = state.steps[ownProps.params.stepId];
-  }else{
+    steps = state.steps;
     step = initial;
   }
   return {step, errors};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  // let action;
-  // if(ownProps.params.conceptId){
-  //   action = updateConcept;
-  // } else {
-  //   action = createConcept;
-  // }
-  // return {
-  //   fetchConcept: (id) => dispatch(fetchConcept(id)),
-  //   action: (concept) => dispatch(action(concept)),
-  //   deleteConcept: (id) => dispatch(deleteConcept(id)),
-  //   updateConcept: (concept) => dispatch(updateConcept(concept))
-  // };
+
+  return {
+    fetchSteps: () => dispatch(fetchSteps()),
+    fetchStep: (id) => dispatch(fetchStep(id)),
+    createStep: (step, conceptId) => dispatch(createStep(id, conceptId)),
+    updateStep: (step) => dispatch(updateStep(step)),
+    deleteStep: (id) => dispatch(deleteStep(id))
+  };
 };
 
 
-export default connect(null, null)(StepNewEdit);
+export default connect(mapStateToProps, mapDispatchToProps)(StepNewEdit);
