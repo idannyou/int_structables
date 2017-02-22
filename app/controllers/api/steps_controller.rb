@@ -4,7 +4,7 @@ class Api::StepsController < ApplicationController
   end
 
   def create
-    debugger
+
     @step = Step.new(step_params)
 
 
