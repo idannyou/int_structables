@@ -3,7 +3,7 @@ class Concept < ApplicationRecord
 
   belongs_to :user
   has_many :images, as: :imageable, dependent: :delete_all, inverse_of: :imageable
-  has_many :steps
+  has_many :steps, dependent: :delete_all
 
 
   def extractImgUrl

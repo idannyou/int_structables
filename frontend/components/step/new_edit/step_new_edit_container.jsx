@@ -8,26 +8,22 @@ import {fetchSteps,
       } from '../../../actions/step_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  let step, errors;
-  let initial = {body:'', order:''};
-  if (state.concepts.errors){
-    errors = state.concepts.errors;
-  } else {
-    errors = null ;
-  }
-  if (ownProps.params){
-    steps = state.steps;
-    step = initial;
-  }
-  return {step, errors};
+  return{
+    steps: Object.keys(state.steps).map(
+      (id) => {
+        return state.steps[id];
+      }
+    ),
+    conceptId: ownProps.conceptId
+  };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
-    fetchSteps: () => dispatch(fetchSteps()),
+    fetchSteps: (conceptId) => dispatch(fetchSteps(conceptId)),
     fetchStep: (id) => dispatch(fetchStep(id)),
-    createStep: (step, conceptId) => dispatch(createStep(id, conceptId)),
+    createStep: (step) => dispatch(createStep(step)),
     updateStep: (step) => dispatch(updateStep(step)),
     deleteStep: (id) => dispatch(deleteStep(id))
   };

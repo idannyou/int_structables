@@ -1,19 +1,13 @@
 class Api::StepsController < ApplicationController
+
   def index
-    @steps = Step.all
+    @steps = Step.where(concept_id: step_params[:concept_id])
   end
 
   def create
-
     @step = Step.new(step_params)
-
-
-    if @step.save
-      render 'api/steps/show'
-    else
-
-      render json: @step.errors, status: 422
-    end
+    @step.save
+    render 'api/steps/show'
   end
 
   def show
@@ -37,7 +31,7 @@ class Api::StepsController < ApplicationController
 
   private
   def step_params
-    params.require(:step).permit(:conceptId)
+    params.require(:step).permit(:body, :order, :concept_id, :title)
   end
 
 

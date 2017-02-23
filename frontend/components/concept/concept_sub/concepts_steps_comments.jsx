@@ -8,7 +8,7 @@ class ConceptsStepsComments extends React.Component{
   constructor(props){
     super(props);
     this.renderSmallImgs = this.renderSmallImgs.bind(this);
-
+    this.renderSteps = this.renderSteps.bind(this);
   }
 
   renderSmallImgs(){
@@ -31,6 +31,17 @@ class ConceptsStepsComments extends React.Component{
     }
   }
 
+  renderSteps(){
+    if(!this.props.steps) return null;
+    return this.props.steps.map((obj, idx) => (
+      <div key={obj.id}>
+        <h1>{`Step ${idx + 1}`}</h1>
+        <img src={this.props.steps[idx].images_url[0]} />
+        <h5>{this.props.steps[idx].body}</h5>
+      </div>
+    ));
+  }
+
   render(){
     let concept = this.props.images;
     return(
@@ -47,8 +58,13 @@ class ConceptsStepsComments extends React.Component{
           {this.props.description}
         </div>
         <div id='concept-show-step-comments'>
+          <div id='concept-show-steps'>
+            {this.renderSteps()}
+          </div>
+          <div id='concept-show-comments'>
+            Comments GO HERE
+          </div>
 
-          STEPS AND COMMENTS GO HERE!
         </div>
       </div>
     );

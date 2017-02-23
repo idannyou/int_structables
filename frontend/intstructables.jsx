@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let store, preloadedState;
   if (window.currentUser){
-    store = configureStore(preloadedState = {session: {currentUser: window.currentUser}});
+    window.store = configureStore(preloadedState = {session: {currentUser: window.currentUser}});
   } else {
-    store = configureStore();
+    window.store = configureStore();
   }
   Modal.setAppElement(document.body);
-  ReactDOM.render(<Root store={store} />, root);
+  ReactDOM.render(<Root store={window.store} />, root);
 });

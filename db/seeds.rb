@@ -8,6 +8,7 @@
 
 Concept.destroy_all
 Image.destroy_all
+Step.destroy_all
 
 User.create(username: 'guest', password: 'guestguest')
 
@@ -30,3 +31,8 @@ c2.images.new()
 
 c1.save!
 c2.save!
+
+#Step Seed
+c1.steps.create(title:'Step 1', body:'Step 1 Body', order: 1.0, concept_id: c1.id)
+c1.steps.create(title:'Step 2', body:'Step 2 Body', order: 2.0, concept_id: c1.id)
+c1.steps.create(title:'Step 3', body:'Step 3 Body', order: 3.0, concept_id: c1.id)

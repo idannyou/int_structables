@@ -32,8 +32,8 @@ export const receiveErrors = (errorsObj) => {
   };
 };
 
-export const fetchSteps = () => (dispatch) => {
-  return StepApiUtil.fetchSteps().then(
+export const fetchSteps = (conceptId) => (dispatch) => {
+  return StepApiUtil.fetchSteps(conceptId).then(
     (steps) => dispatch(receiveSteps(steps))
   );
 };
@@ -46,8 +46,7 @@ export const fetchStep = (id) => (dispatch) => {
 
 export const createStep = (step) => (dispatch) => {
   return StepApiUtil.createStep(step).then(
-    (step) => dispatch(receiveStep(step)),
-    (errors) => dispatch(receiveErrors(errors.responseJSON))
+    (step) => dispatch(receiveStep(step))
   );
 };
 

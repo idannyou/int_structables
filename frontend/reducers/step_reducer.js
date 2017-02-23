@@ -8,14 +8,12 @@ import {merge} from 'lodash';
 
 const StepReducer = (state = {}, action) => {
   Object.freeze(state);
-
   switch (action.type) {
     case RECEIVE_STEPS:
       return action.steps;
     case RECEIVE_STEP:
       return merge({}, state, {
-        [action.step.id]: action.step,
-        errors:[]
+        [action.step.id]: action.step
       });
 
     case REMOVE_STEP:

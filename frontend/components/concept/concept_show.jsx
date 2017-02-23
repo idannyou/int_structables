@@ -8,6 +8,7 @@ import UserInfo from './concept_sub/user_info';
 import stickykit from 'sticky-kit/dist/sticky-kit';
 
 
+
 class ConceptShow extends React.Component{
 
   componentDidMount(){
@@ -37,6 +38,7 @@ class ConceptShow extends React.Component{
               <ConceptsStepsComments
               images={concept.images_url}
               description = {concept.description}
+              steps = {concept.steps}
               />
             : null}
             <UserInfo

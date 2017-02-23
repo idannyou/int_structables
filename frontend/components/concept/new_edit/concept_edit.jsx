@@ -44,7 +44,6 @@ class ConceptNewEdit extends React.Component{
   }
 
   render(){
-
     if(!this.state) return null;
     return (
       <div>
@@ -70,8 +69,9 @@ class ConceptNewEdit extends React.Component{
                 />
             </div>
           </div>
+          <StepNewEditContainer conceptId={this.props.concept.id}
+                                />
         </div>
-        <StepNewEditContainer />
       </div>
     );
   }

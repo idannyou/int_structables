@@ -17,8 +17,7 @@ class Images extends React.Component{
     this.onDrop = this.onDrop.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.handlePropImgDelete = this.handlePropImgDelete.bind(this);
-    this.publishOrNot = this.publishOrNot.bind(this);
-    this.handlePublish = this.handlePublish.bind(this);
+    this.handleImgDelete = this.handleImgDelete.bind(this);
   }
 
   componentDidMount(){
@@ -51,8 +50,6 @@ class Images extends React.Component{
         this.setState({imageFileArray: filesArray},()=>{});
         this.setState({imageFileName: filesName},()=>{});
         this.setState({imageFileUrl: filesUrl},()=>{});
-
-
   }
 
   handleImgDelete(idx){
@@ -81,7 +78,7 @@ class Images extends React.Component{
   renderUploadThumbnail(){
     return (
       <div>
-        <Dropzone className='step-edit-header-image'
+        <Dropzone className='concept-edit-header-image'
           onDrop={this.onDrop}
           multiple= {true} >
           + Click or Drop to Add Images
@@ -95,12 +92,12 @@ class Images extends React.Component{
     if (this.state.imageFileUrl.length > 0){
       return this.state.imageFileUrl.map((image_url, idx) => {
         return (
-          <li id='step-edit-adding'
+          <li id='concept-edit-adding'
             key={idx}>
-            <button id='step-edit-delete' onClick={()=>this.handleImgDelete(idx)}>
+            <button id='concept-edit-delete' onClick={()=>this.handleImgDelete(idx)}>
               X
             </button>
-            <img id='step-edit-img' src={image_url}/>
+            <img id='concept-edit-img' src={image_url}/>
           </li>
         );
       });
@@ -116,12 +113,12 @@ class Images extends React.Component{
     if (keyArray.length > 0){
       return keyArray.map((imgKey) => {
         return (
-          <li id='step-edit-adding'
+          <li id='concept-edit-adding'
             key={imgKey}>
-            <button id='step-edit-delete' onClick={this.handlePropImgDelete(imgKey)}>
+            <button id='concept-edit-delete' onClick={this.handlePropImgDelete(imgKey)}>
               X
             </button>
-            <img id='step-edit-img' src={this.props.images[imgKey].image_url}/>
+            <img id='concept-edit-img' src={this.props.images[imgKey].image_url}/>
           </li>
         );
       });
@@ -133,7 +130,7 @@ class Images extends React.Component{
   handleSave(){
     let innerProps = this.props;
     let innerState = this.state;
-    innerProps.submitConcept();
+    innerProps.submitStep();
     if (innerState.imageFileArray){
       innerState.imageFileArray.forEach((file) => {
         var formData = new FormData();
@@ -146,39 +143,21 @@ class Images extends React.Component{
     this.setState({imageFileUrl: []},()=>{});
   }
 
-  publishOrNot(){
-    return (this.props.publish===false) ?
-      <button id='step-edit-save'
-              onClick={this.handlePublish}>
-        Publish
-      </button> :
-      <button id='step-edit-save'
-              onClick={this.handlePublish}>
-        UnPublish
-      </button> ;
-  }
-
-  handlePublish(){
-    this.handleSave();
-    this.props.handlePublish();
-  }
-
 
   render(){
     return(
       <div>
-        <div id='step-edit-header'>
+        <div id='concept-edit-header'>
           {this.renderUploadThumbnail()}
-          <div id='step-edit-buttons'>
-            <button id='step-edit-save'
+          <div id='concept-edit-buttons'>
+            <button id='concept-edit-save'
                     onClick={this.handleSave}>
               Save
             </button>
-            {this.publishOrNot()}
           </div>
         </div>
-        <div id='step-edit-body-img'>
-          <ul id='step-edit-adding-container'>
+        <div id='concept-edit-body-img'>
+          <ul id='concept-edit-adding-container'>
             {this.renderPropsImageArray()}
             {this.renderImageArray()}
           </ul>

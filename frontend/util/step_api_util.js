@@ -1,8 +1,9 @@
 
-export const fetchSteps = () => {
+export const fetchSteps = (conceptId) => {
   return $.ajax({
     method: 'GET',
-    url:'/api/steps'
+    url:'/api/steps',
+    data: {step: conceptId}
   });
 };
 
@@ -13,11 +14,11 @@ export const fetchStep = (id) => {
   });
 };
 
-export const createStep = (step, conceptId) => {
+export const createStep = (step) => {
   return $.ajax({
     method: 'POST',
     url: '/api/steps',
-    data: {step: {step, conceptId}}
+    data: {step}
   });
 };
 

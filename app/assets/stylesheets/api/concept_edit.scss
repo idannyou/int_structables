@@ -51,7 +51,7 @@
 
 #concept-edit-delete{
   position: absolute;
-  z-index: 2;
+  z-index: 200;
   color: #e86c00;
   top: 10px;
   left: 0;
@@ -187,4 +187,10 @@
   background-color: #e86c00;
 
   color: #fff;
+}
+
+#concept-edit-img{
+  z-index: 100;
+  border: 1px solid transparent;
+  border-radius: 20%;
 }
