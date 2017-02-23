@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 import {hashHistory} from 'react-router';
+import CommentContainer from '../comment/comment_container';
 
 class ConceptsStepsComments extends React.Component{
 
@@ -62,7 +63,8 @@ class ConceptsStepsComments extends React.Component{
             {this.renderSteps()}
           </div>
           <div id='concept-show-comments'>
-            Comments GO HERE
+            <CommentContainer
+              conceptId = {this.props.conceptId}/>
           </div>
 
         </div>

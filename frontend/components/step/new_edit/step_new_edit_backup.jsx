@@ -95,7 +95,6 @@ class StepNewEdit extends React.Component{
 
   renderStep(){
     let stepsArray = Object.keys(this.state.stepsHash);
-    debugger
     if (stepsArray.length === 0) return null;
     return (
       stepsArray.map((stepKey, idx) => (

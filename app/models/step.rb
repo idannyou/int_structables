@@ -2,6 +2,7 @@ class Step < ApplicationRecord
   validates :order, :concept_id, presence: true
 
   has_many :images, as: :imageable, dependent: :delete_all, inverse_of: :imageable
+  has_many :comments, as: :commentable, dependent: :delete_all, inverse_of: :commentable
   belongs_to :concept
 
   def extractImgUrl
