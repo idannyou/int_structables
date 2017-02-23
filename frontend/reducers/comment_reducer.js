@@ -1,25 +1,33 @@
 import {RECEIVE_COMMENTS,
         RECEIVE_COMMENT,
-        REMOVE_COMMENT
+        REMOVE_COMMENT,
+        RECEIVE_ERRORS
       } from '../actions/comment_actions';
 
 import {merge} from 'lodash';
 
-const CommentReducer = (state={}, action) => {
+const initialState = {
+  comments: {},
+  errors: []
+};
+
+const CommentReducer = (state=initialState, action) => {
   Object.freeze(state);
 
+  const newState = merge({}, state);
   switch (action.type) {
     case RECEIVE_COMMENTS:
-      return action.comments;
+      return {comments: action.comments};
     case RECEIVE_COMMENT:
-      return merge({}, state, {
-        [action.comment.id]: action.comment,
-        errors:[]
-      });
-    case REMOVE_COMMENT:
-      const newState = merge({}, state);
-      delete newState[action.comment.id];
+      newState.comments[action.comment.id] = action.comment;
       return newState;
+    case REMOVE_COMMENT:
+      delete newState.comments[action.comment.id];
+      return newState;
+    case RECEIVE_ERRORS:
+      const newErrState = merge({}, state);
+      newErrState.errors = action.errorsObj;
+      return newErrState;
     default:
       return state;
   }

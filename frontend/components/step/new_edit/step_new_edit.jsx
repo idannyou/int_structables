@@ -67,6 +67,7 @@ class StepNewEdit extends React.Component{
 
   update(field, id){
     return (e) => {
+      e.preventDefault();
       let newStep = merge({}, this.state.steps);
       const stepIdx = this.state.steps.indexOf(this.state.steps.find(step => step.id === id));
       newStep[stepIdx][field] = e.target.value;

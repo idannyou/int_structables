@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 import {hashHistory} from 'react-router';
-import CommentContainer from '../comment/comment_container';
+import CommentNewContainer from '../comment/comment_new_container';
+import CommentShowContainer from '../comment/comment_show_container';
 
 class ConceptsStepsComments extends React.Component{
 
@@ -36,9 +37,10 @@ class ConceptsStepsComments extends React.Component{
     if(!this.props.steps) return null;
     return this.props.steps.map((obj, idx) => (
       <div key={obj.id}>
-        <h1>{`Step ${idx + 1}`}</h1>
+        <h1 id='concept-show-step-heading'
+          >{`Step ${idx + 1}: ${obj.title}`}</h1>
         <img src={this.props.steps[idx].images_url[0]} />
-        <h5>{this.props.steps[idx].body}</h5>
+        <h5 id='concept-show-step-p'>{this.props.steps[idx].body}</h5>
       </div>
     ));
   }
@@ -63,7 +65,9 @@ class ConceptsStepsComments extends React.Component{
             {this.renderSteps()}
           </div>
           <div id='concept-show-comments'>
-            <CommentContainer
+            <CommentNewContainer
+              conceptId = {this.props.conceptId}/>
+            <CommentShowContainer
               conceptId = {this.props.conceptId}/>
           </div>
 
