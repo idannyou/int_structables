@@ -16,7 +16,8 @@ class UserInfo extends React.Component{
       if (ele.id !== concept.id && ele.publish===true){
         return(
           <Link to={`/concepts/${ele.id}`}
-            key={ele.id}>
+            key={ele.id}
+            >
             <img src={ele.images_url[0]}/>
           </Link>
         );

@@ -39,7 +39,9 @@ class ConceptsStepsComments extends React.Component{
       <div key={obj.id}>
         <h1 id='concept-show-step-heading'
           >{`Step ${idx + 1}: ${obj.title}`}</h1>
-        <img src={this.props.steps[idx].images_url[0]} />
+          <div id='concept-show-concept'>
+            <img src={this.props.steps[idx].images_url[0]} />
+          </div>
         <h5 id='concept-show-step-p'>{this.props.steps[idx].body}</h5>
       </div>
     ));
