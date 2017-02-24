@@ -22,9 +22,12 @@ class Search extends React.Component{
   }
 
   search(e) {
-    this.props.fetchSpecificConcepts(this.state.inputVal).then(projects =>{
-      hashHistory.push("/search");
-    });
+    if (this.state.inputVal !== ''){
+      this.props.fetchSpecificConcepts(this.state.inputVal).then(projects =>{
+        this.setState({inputVal: ''});
+        hashHistory.push("/search");
+      });
+    }
   }
 
   render(){

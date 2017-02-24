@@ -23,7 +23,7 @@ const ConceptReducer = (state = initialState, action) => {
         newState.errors = [];
         return newState;
     case REMOVE_CONCEPT:
-      delete newState[action.concept.id];
+      delete newState.concepts[action.concept.id];
       return newState;
 
     case RECEIVE_ERRORS:

@@ -6,9 +6,9 @@ import SearchPage from './search_page';
 
 const mapStateToProps = (state) => {
   return {
-    concepts: Object.keys(state.concepts).map(
+    concepts: Object.keys(state.concepts.concepts).map(
       (id) => {
-        return state.concepts[id];
+        return state.concepts.concepts[id];
       }
     )
   };
