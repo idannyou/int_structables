@@ -5,3 +5,40 @@ $feature_height: 39px;
   height: $feature_height;
   background-color: white;
 }
+
+#searchbar-container{
+  display: flex;
+  align-self: center;
+  margin-right: 20px;
+}
+
+#searchbar{
+  border: 1px solid #ccc;
+  width: 150px;
+  height: 24px;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+  padding: 4px 6px;
+
+}
+
+#searchbar-img{
+  width: 34px;
+  height: 34px;
+}
+
+#searchbar-word{
+  margin-right: 10px;
+  font-family: fantasy;
+}
+
+#nav-bar-right-search{
+  display: flex;
+  flex-direction: row;
+}
+
+#footer-bar{
+  padding-top: 20px;
+  height: 20px;
+  background-color: #d4e1e7;
+}

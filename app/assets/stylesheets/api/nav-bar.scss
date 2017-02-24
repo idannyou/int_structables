@@ -11,7 +11,6 @@ $nav_bar_height: 61px;
   display: flex;
   flex-direction: row;
   align-self: center;
-  width: auto;
   height: 20px;
   margin-right: 2.5%;
 }
@@ -26,7 +25,7 @@ $nav_bar_height: 61px;
   height: $nav_bar_height;
   background-color: #eee;
   overflow: visible;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #nav-signup{

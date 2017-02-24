@@ -117,12 +117,16 @@ class Welcome extends React.Component{
               />
             <h2>intStructables</h2>
           </div>
-          <Search fetchSpecificConcepts={this.props.fetchSpecificConcepts}/>
-          {
-            !!this.props.currentUser ?
-            this.loggedin() :
-            this.notloggedin()
-          }
+
+
+            <Search fetchSpecificConcepts={this.props.fetchSpecificConcepts}/>
+            {
+              !!this.props.currentUser ?
+              this.loggedin() :
+              this.notloggedin()
+            }
+
+
           <Modal
             isOpen={this.state.modalOpen}
             contentLabel="Modal"

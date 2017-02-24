@@ -29,11 +29,15 @@ class Search extends React.Component{
 
   render(){
     return(
-      <div>
+      <div id='searchbar-container'>
+        <h1 id='searchbar-word'>let's learn</h1>
         <input type="text"
           value={this.state.inputVal}
           onChange={this.handleInput}
-          id="searchbar"/>
+          id="searchbar"
+          />
+        <img src={window.magnifier}
+          id='searchbar-img'/>
       </div>
     );
   }
