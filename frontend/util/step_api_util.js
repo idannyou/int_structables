@@ -22,7 +22,7 @@ export const createStep = (step) => {
   });
 };
 
-export const updateStep = (step, conceptId) => {
+export const updateStep = (step) => {
   return $.ajax({
     method: 'PATCH',
     url: `/api/steps/${step.id}`,

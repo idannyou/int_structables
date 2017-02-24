@@ -5,12 +5,40 @@ import {hashHistory} from 'react-router';
 import CommentNewContainer from '../comment/comment_new_container';
 import CommentShowContainer from '../comment/comment_show_container';
 
+
+
 class ConceptsStepsComments extends React.Component{
 
   constructor(props){
     super(props);
     this.renderSmallImgs = this.renderSmallImgs.bind(this);
     this.renderSteps = this.renderSteps.bind(this);
+    this.merge = this.merge.bind(this);
+    this.mergeSort = this.mergeSort.bind(this);
+  }
+
+  merge(left, right) {
+    const merged = [];
+
+    while (left.length > 0 && right.length > 0) {
+      let nextItem = (left[0].order < right[0].order) ? left.shift() : right.shift();
+      merged.push(nextItem);
+    }
+
+    return merged.concat(left, right);
+  }
+
+  mergeSort(StepArray) {
+    if (StepArray.length < 2) {
+      return StepArray;
+    } else {
+      const middle = Math.floor(StepArray.length / 2);
+
+      const left = this.mergeSort(StepArray.slice(0, middle));
+      const right = this.mergeSort(StepArray.slice(middle));
+
+      return this.merge(left, right);
+    }
   }
 
   renderSmallImgs(){
@@ -35,14 +63,15 @@ class ConceptsStepsComments extends React.Component{
 
   renderSteps(){
     if(!this.props.steps) return null;
-    return this.props.steps.map((obj, idx) => (
+    let orderedSteps = this.mergeSort(this.props.steps);
+    return orderedSteps.map((obj, idx) => (
       <div key={obj.id}>
         <h1 id='concept-show-step-heading'
           >{`Step ${idx + 1}: ${obj.title}`}</h1>
           <div id='concept-show-concept'>
-            <img src={this.props.steps[idx].images_url[0]} />
+            <img src={orderedSteps[idx].images_url[0]} />
           </div>
-        <h5 id='concept-show-step-p'>{this.props.steps[idx].body}</h5>
+        <h5 id='concept-show-step-p'>{orderedSteps[idx].body}</h5>
       </div>
     ));
   }

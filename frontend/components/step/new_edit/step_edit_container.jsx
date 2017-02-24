@@ -10,7 +10,7 @@ import StepEdit from './step_edit'
 
 const mapStateToProps = (state, ownProps) => {
   return{
-    step: state.steps[ownProps.params.stepId]
+    step: state.steps.steps[ownProps.params.stepId]
   };
 };
 

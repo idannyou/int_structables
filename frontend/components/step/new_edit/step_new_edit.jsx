@@ -56,7 +56,7 @@ class StepNewEdit extends React.Component{
         </div>
           <h1 id='steps-edit-text'
             >{`Step ${idx + 1}:`}
-            <input type='text'
+            <input type='textarea'
               value={this.state.steps[idx].title}
               onChange={this.update('title', obj.id)}
               key={obj.id}

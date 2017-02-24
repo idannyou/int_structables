@@ -9,12 +9,13 @@ import {fetchSteps,
 
 const mapStateToProps = (state, ownProps) => {
   return{
-    steps: Object.keys(state.steps).map(
+    steps: Object.keys(state.steps.steps).map(
       (id) => {
-        return state.steps[id];
+        return state.steps.steps[id];
       }
     ),
-    conceptId: ownProps.conceptId
+    conceptId: ownProps.conceptId,
+    errors: state.steps.errors
   };
 };
 
