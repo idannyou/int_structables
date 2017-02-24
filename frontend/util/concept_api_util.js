@@ -35,3 +35,11 @@ export const deleteConcept = (id) => {
     url: `/api/concepts/${id}`
   });
 };
+
+export const fetchSpecificConcepts = (title) => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/concepts/`,
+    data: { concept: { title } }
+  });
+};

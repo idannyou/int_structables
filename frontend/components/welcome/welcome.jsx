@@ -6,6 +6,7 @@ import {hashHistory} from 'react-router';
 import SessionFormContainer from '../session/session_form_container';
 import ModalStyle from './modal_style';
 import FeatureBar from './feature_bar';
+import Search from './search';
 
 class Welcome extends React.Component{
 
@@ -116,9 +117,7 @@ class Welcome extends React.Component{
               />
             <h2>intStructables</h2>
           </div>
-
-
-
+          <Search fetchSpecificConcepts={this.props.fetchSpecificConcepts}/>
           {
             !!this.props.currentUser ?
             this.loggedin() :

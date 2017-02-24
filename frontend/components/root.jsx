@@ -11,6 +11,7 @@ import ConceptUserContainer from './concept/concept_user/concept_user_container'
 import {fetchConcept} from '../actions/concept_actions';
 import StepNewEditContainer from './step/new_edit/step_new_edit_container';
 import StepEditContainer from './step/new_edit/step_edit_container';
+import SearchPageContainer from './welcome/search_page_container';
 
 const Root = ( {store} ) => {
 
@@ -65,7 +66,8 @@ const Root = ( {store} ) => {
           <Route path='concepts/:conceptId/step/:stepId' component={StepNewEditContainer}/>
           <Route path='concepts/:conceptId/step/:stepId/edit' component={StepEditContainer}/>
           <Route path='concepts/:conceptId/edit' component={ConceptEditContainer} onEnter={_ensureAuthor}/>
-      </Route>
+          <Route path='search' component={SearchPageContainer} />
+    </Route>
       </Router>
     </Provider>
   );

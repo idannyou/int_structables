@@ -62,3 +62,9 @@ export const deleteConcept = (id) => (dispatch) => {
     (concept) => dispatch(removeConcept(concept))
   );
 };
+
+export const fetchSpecificConcepts = (search) => dispatch => (
+  ConceptApiUtil.fetchSpecificConcepts(search).then(
+    concepts => dispatch(receiveConcepts(concepts))
+  )
+);
