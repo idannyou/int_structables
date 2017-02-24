@@ -49,9 +49,9 @@ class ConceptsStepsComments extends React.Component{
         if(idx !== 0){
           return (
             <li key={idx}>
+              {(!image)? null:
               <img
-                  src={image}/>
-
+                  src={image}/>}
             </li>
           );
         }
@@ -68,9 +68,11 @@ class ConceptsStepsComments extends React.Component{
       <div key={obj.id}>
         <h1 id='concept-show-step-heading'
           >{`Step ${idx + 1}: ${obj.title}`}</h1>
+        {(!orderedSteps[idx].images_url[0])? null :
           <div id='concept-show-concept'>
             <img src={orderedSteps[idx].images_url[0]} />
           </div>
+        }
         <h5 id='concept-show-step-p'>{orderedSteps[idx].body}</h5>
       </div>
     ));
@@ -80,9 +82,11 @@ class ConceptsStepsComments extends React.Component{
     let concept = this.props.images;
     return(
       <div id='concept-show-concept-step'>
-        <div id='concept-show-concept'>
-          <img src={concept[0]} />
-        </div>
+        {(!concept[0])? null:
+          <div id='concept-show-concept'>
+            <img src={concept[0]} />
+          </div>
+        }
         <div >
           <ul id='concept-show-small-imgs'>
             {this.renderSmallImgs()}
