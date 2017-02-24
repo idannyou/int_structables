@@ -6,20 +6,23 @@ import {RECEIVE_CONCEPTS,
 
 import {merge} from 'lodash';
 
-const ConceptReducer = (state = {}, action) => {
+const initialState = {
+  concepts: {},
+  errors: []
+};
+
+const ConceptReducer = (state = initialState, action) => {
   Object.freeze(state);
+  const newState = merge({}, state);
 
   switch (action.type) {
     case RECEIVE_CONCEPTS:
-      return action.concepts;
+      return {concepts: action.concepts};
     case RECEIVE_CONCEPT:
-      return merge({}, state, {
-        [action.concept.id]: action.concept,
-        errors:[]
-      });
-
+        newState.concepts[action.concept.id]= action.concept;
+        newState.errors = [];
+        return newState;
     case REMOVE_CONCEPT:
-      const newState = merge({}, state);
       delete newState[action.concept.id];
       return newState;
 

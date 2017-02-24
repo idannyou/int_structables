@@ -44,6 +44,7 @@ class ConceptUser extends React.Component{
   }
 
   render(){
+    if(!this.props.concepts) return null;
     return(
       <div id='concept-user-container'>
         <h1 id='concept-user-title'>Published</h1>

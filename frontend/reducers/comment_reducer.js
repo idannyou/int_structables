@@ -20,6 +20,7 @@ const CommentReducer = (state=initialState, action) => {
       return {comments: action.comments};
     case RECEIVE_COMMENT:
       newState.comments[action.comment.id] = action.comment;
+      newState.errors = [];
       return newState;
     case REMOVE_COMMENT:
       delete newState.comments[action.comment.id];

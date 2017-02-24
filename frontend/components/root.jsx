@@ -47,7 +47,7 @@ const Root = ( {store} ) => {
     }
     store.dispatch(fetchConcept(nextState.params.conceptId)).then( () => {
 
-      if (!currentUser || store.getState().concepts[nextState.params.conceptId].user_id !== currentUser.id) {
+      if (!currentUser || store.getState().concepts.concepts[nextState.params.conceptId].user_id !== currentUser.id) {
         replace("/");
       }
       aSync();

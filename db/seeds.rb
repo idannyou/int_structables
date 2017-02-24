@@ -9,36 +9,36 @@
 Concept.destroy_all
 Image.destroy_all
 Step.destroy_all
+User.destroy_all
 
-User.create(username: 'guest', password: 'guestguest')
+u1 = User.create(username: 'guest', password: 'guestguest')
+u2 = User.create(username: 'testing', password: 'testing')
 
 #Concept Seed
 
-c1 = Concept.new(title: 'Cute', description:'Cute', user_id: 1, publish: true)
+c1 = Concept.new(title: 'Cute', description:'Cute', user_id: u1.id, publish: true)
 
-c2 = Concept.new(title: 'Kinda Cute', description:'Mehhhhhh', user_id: 1, publish: true)
+c2 = Concept.new(title: 'Kinda Cute', description:'Mehhhhhh', user_id: u1.id, publish: true)
 
-c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: 1, publish: true)
+c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: u1.id, publish: true)
 
-c4 = Concept.new(title: 'Not Cute', description:'Ewwwwwww', user_id: 4, publish: true)
+c4 = Concept.new(title: 'Not Cute', description:'Ewwwwwww', user_id: u2.id, publish: true)
 
-c5 = Concept.new(title: 'Mad Cute', description:'Woahhhhh', user_id: 4, publish: true)
+c5 = Concept.new(title: 'Mad Cute', description:'Woahhhhh', user_id: u2.id, publish: true)
 
-c6 = Concept.new(title: 'Funny Cute', description:'hahahhahha', user_id: 4, publish: true)
+c6 = Concept.new(title: 'Funny Cute', description:'hahahhahha', user_id: u2.id, publish: true)
 
-c7 = Concept.new(title: 'LAWL Cute', description:'LMFAO', user_id: 4, publish: false)
+c7 = Concept.new(title: 'LAWL Cute', description:'LMFAO', user_id: u2.id, publish: false)
 
-c8 = Concept.new(title: 'Ok Cute', description:'KAWAAAIIIIIIIII', user_id: 4, publish: true)
+c8 = Concept.new(title: 'Ok Cute', description:'KAWAAAIIIIIIIII', user_id: u2.id, publish: true)
 
-c9 = Concept.new(title: 'Not So Cute', description:'NOT!', user_id: 1, publish: false)
+c9 = Concept.new(title: 'Not So Cute', description:'NOT!', user_id: u1.id, publish: false)
 
 c10 = Concept.new(
   title: "How to minimize the surface area of a cylinder?",
   description: "Using derivatives, I'll show you how to minimize the surface area of a cylinder.",
   equations: "",
-  user_id: 1,
-  image_url: nil,
-  video_url: nil,
+  user_id: u1.id,
   publish: false
 )
 
