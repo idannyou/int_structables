@@ -1,11 +1,91 @@
+#steps-edit{
+  display: flex;
+  flex-direction: column;
+}
+
 
 #steps-edit-steps{
   margin: auto;
   margin-top: 2.5%;
   margin-left: 14%;
   margin-right: 14%;
-  background-color: white;
+  background-color: #f6f6f6;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 150px;
+}
+
+#steps-edit-buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+#steps-button{
+    margin-right: 12px;
+    border-radius: 8px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-shadow: none;
+    background-color: #e86c00;
+    color: #fff;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+}
+
+#steps-button-add{
+    margin-right: 12px;
+    border-radius: 8px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-shadow: none;
+    background-color: #e86c00;
+    color: #fff;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+
+
+#steps-edit-text{
+  text-align: left;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#steps-edit-text input{
+  margin-left: 5px;
+  text-align: left;
+}
+
+#step-edit-img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid transparent;
+  border-radius: 20%;
+}
+
+#stepImgContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  width: 60%;
+  min-height: 105px;
+  margin: 2%;
 }

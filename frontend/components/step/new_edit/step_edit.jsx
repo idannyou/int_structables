@@ -39,8 +39,7 @@ class StepEdit extends React.Component{
         <div id='concept-edit-container'>
           <div id='concept-edit'>
             <ImagesContainer params={this.props.params}
-                            submitStep = {this.submitStep}
-                            handlePublish = {this.handlePublish}/>
+                            submitStep = {this.submitStep}/>
             <div id='concept-edit-body'>
               <input type='text' id='concept-edit-body-title'
                 value= {this.state.title}

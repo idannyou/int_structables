@@ -68,10 +68,10 @@ class Images extends React.Component{
   }
 
   handlePropImgDelete(idx){
-    let innerProps = this.props;
+    let innerProps = this.props.params;
     return (e) => {
       e.preventDefault();
-      this.props.deleteImage(idx,`steps/${innerProps.params.stepId}`);
+      this.props.deleteImage(idx,`steps/${innerProps.stepId}`);
     };
   }
 

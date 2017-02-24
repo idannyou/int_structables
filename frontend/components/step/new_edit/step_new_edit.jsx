@@ -17,6 +17,7 @@ class StepNewEdit extends React.Component{
     this.handleAdd = this.handleAdd.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.update = this.update.bind(this);
+    this.renderStepsImgs=this.renderStepsImgs.bind(this);
   }
 
   componentDidMount(){
@@ -35,18 +36,38 @@ class StepNewEdit extends React.Component{
     }
   }
 
+  renderStepsImgs(stepObj){
+    if (!stepObj.image_url) return null;
+    return(
+      stepObj.image_url.map((img, idx) => {
+        return <img src={img} key={idx}
+          id='step-edit-img'/>;
+      })
+
+    );
+  }
+
   renderSteps(){
     if (this.state.steps.length === 0) return null;
     return this.state.steps.map((obj, idx) => (
       <div key={obj.id} id='steps-edit-steps'>
-        <h1>{`Step ${idx + 1}`}</h1>
-        <input type='text'
-          value={this.state.steps[idx].title}
-          onChange={this.update('title', obj.id)}
-          key={obj.id}
-          />
-        <button onClick={() => this.handleDelete(obj.id)}>Remove</button>
-        <Link to={`concepts/${this.props.conceptId}/step/${obj.id}/edit`}>Edit</Link>
+        <div id='stepImgContainer'>
+          {this.renderStepsImgs(obj)}
+        </div>
+          <h1 id='steps-edit-text'
+            >{`Step ${idx + 1}:`}
+            <input type='text'
+              value={this.state.steps[idx].title}
+              onChange={this.update('title', obj.id)}
+              key={obj.id}
+              />
+          </h1>
+        <div id='steps-edit-buttons'>
+          <Link to={`concepts/${this.props.conceptId}/step/${obj.id}/edit`}
+            id='steps-button'>Edit</Link>
+          <button onClick={() => this.handleDelete(obj.id)}
+            id='steps-button'>Remove</button>
+        </div>
       </div>
     ));
   }
@@ -85,7 +106,13 @@ class StepNewEdit extends React.Component{
     return (
       <div id='steps-edit'>
         {this.renderSteps()}
-        <button onClick={this.handleAdd}>Add</button>
+        <button
+          id='steps-button-add'
+          onClick={this.handleAdd}>
+          <div id='steps-button-add-text'>
+            Add Step
+          </div>
+        </button>
       </div>
     );
   }
