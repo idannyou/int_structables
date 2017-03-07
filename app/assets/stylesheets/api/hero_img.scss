@@ -6,10 +6,8 @@
   display: flex;
 }
 
-
-
 #make-it-search-bar{
-    font-size: 93px;
+    font-size: 20px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     color: white;
     letter-spacing: 4px;
@@ -19,4 +17,22 @@
     z-index: 2;
     position: absolute;
     font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+
+@media screen and (min-width: 480px) {
+
+    #make-it-search-bar{
+        font-size: 70px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+        color: white;
+        letter-spacing: 4px;
+        top: 40%;
+        left: 20%;
+        padding: 0;
+        z-index: 2;
+        position: absolute;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    }
 }

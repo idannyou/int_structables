@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 class CommentNew extends React.Component{
 
   constructor(props){
