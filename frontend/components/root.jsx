@@ -8,6 +8,7 @@ import Home from './home/home'
 import ConceptNewContainer from './concept/new_edit/concept_new_container';
 import ConceptEditContainer from './concept/new_edit/concept_edit_container';
 import ConceptUserContainer from './concept/concept_user/concept_user_container';
+import ConceptPublish from './concept/new_edit/concept_publish';
 import {fetchConcept} from '../actions/concept_actions';
 import StepNewEditContainer from './step/new_edit/step_new_edit_container';
 import StepEditContainer from './step/new_edit/step_edit_container';
@@ -66,6 +67,7 @@ const Root = ( {store} ) => {
           <Route path='concepts/:conceptId/step/:stepId' component={StepNewEditContainer}/>
           <Route path='concepts/:conceptId/step/:stepId/edit' component={StepEditContainer}/>
           <Route path='concepts/:conceptId/edit' component={ConceptEditContainer} onEnter={_ensureAuthor}/>
+          <Route path='concepts/:conceptId/edit/publish' component={ConceptPublish} onEnter={_ensureAuthor}/>
           <Route path='search' component={SearchPageContainer} />
     </Route>
       </Router>

@@ -147,15 +147,12 @@ class Images extends React.Component{
   }
 
   publishOrNot(){
-    return (this.props.publish===false) ?
-      <button id='concept-edit-save'
-              onClick={this.handlePublish}>
-        Publish
-      </button> :
-      <button id='concept-edit-save'
-              onClick={this.handlePublish}>
-        UnPublish
-      </button> ;
+      return (
+        <button id='concept-edit-save'
+                onClick={this.handlePublish}>
+          Publish
+        </button>
+      );
   }
 
   handlePublish(){

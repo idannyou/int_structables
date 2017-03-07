@@ -31,12 +31,8 @@ class ConceptNewEdit extends React.Component{
   }
 
   handlePublish(){
-    if(this.state.publish === false){
-      this.setState({publish: true}, () => this.props.updateConcept(this.state));
-    } else {
-      this.setState({publish: false}, () => this.props.updateConcept(this.state));
-    }
-
+    let url = `concepts/${this.state.id}/edit/publish`;
+    hashHistory.push(url);
   }
 
   submitConcept(){
@@ -59,8 +55,6 @@ class ConceptNewEdit extends React.Component{
                 onChange={this.update('title')}
                 placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
                 />
-              <div id='concept-edit-body-buttons'>
-              </div>
 
               <textarea id='concept-edit-body-description'
                 value={this.state.description}

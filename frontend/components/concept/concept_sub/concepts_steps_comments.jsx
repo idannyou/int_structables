@@ -15,6 +15,7 @@ class ConceptsStepsComments extends React.Component{
     this.renderSteps = this.renderSteps.bind(this);
     this.merge = this.merge.bind(this);
     this.mergeSort = this.mergeSort.bind(this);
+    this.renderBody = this.renderBody.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState){
@@ -69,6 +70,7 @@ class ConceptsStepsComments extends React.Component{
     if(!this.props.steps) return null;
     let orderedSteps = this.mergeSort(this.props.steps);
     return orderedSteps.map((obj, idx) => (
+
       <div key={obj.id}>
         <h1 id='concept-show-step-heading'
           >{`Step ${idx + 1}: ${obj.title}`}</h1>
@@ -77,9 +79,14 @@ class ConceptsStepsComments extends React.Component{
             <img src={orderedSteps[idx].images_url[0]} />
           </div>
         }
-        <h5 id='concept-show-step-p'>{orderedSteps[idx].body}</h5>
+        <h5 id='concept-show-step-p'
+          dangerouslySetInnerHTML={this.renderBody(orderedSteps[idx].body)}/>
       </div>
     ));
+  }
+
+  renderBody(text){
+    return {__html: text.replace(/\n/g, "<br />")};
   }
 
   render(){
