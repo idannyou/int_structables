@@ -51,15 +51,13 @@ class StepNewEdit extends React.Component{
     if (this.state.steps.length === 0) return null;
     return this.state.steps.map((obj, idx) => (
       <div key={obj.id} id='steps-edit-steps'>
-        <div id='stepImgContainer'>
-          {this.renderStepsImgs(obj)}
-        </div>
           <h1 id='steps-edit-text'
             >{`Step ${idx + 1}:`}
             <input type='textarea'
               value={this.state.steps[idx].title}
               onChange={this.update('title', obj.id)}
               key={obj.id}
+              placeholder='Title'
               />
           </h1>
         <div id='steps-edit-buttons'>

@@ -17,6 +17,10 @@ class ConceptsStepsComments extends React.Component{
     this.mergeSort = this.mergeSort.bind(this);
   }
 
+  componentDidUpdate(prevProps, prevState){
+      MathJax.Hub.Typeset();
+  }
+
   merge(left, right) {
     const merged = [];
 

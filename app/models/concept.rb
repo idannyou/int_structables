@@ -6,6 +6,10 @@ class Concept < ApplicationRecord
   has_many :comments, as: :commentable, dependent: :delete_all, inverse_of: :commentable
   has_many :steps, dependent: :delete_all
 
+  has_many :category,
+    through: :categories_concept,
+    source: :category
+
 
   def extractImgUrl
     img_url_array = [];

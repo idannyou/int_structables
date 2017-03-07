@@ -16,21 +16,21 @@ u2 = User.create(username: 'testing', password: 'testing')
 
 #Concept Seed
 
-c1 = Concept.new(title: 'Cute', description:'Cute', user_id: u1.id, publish: true)
+c1 = Concept.new(title: 'Cute', description:'Cute', user_id: u1.id, publish: false)
 
-c2 = Concept.new(title: 'Kinda Cute', description:'Mehhhhhh', user_id: u1.id, publish: true)
+c2 = Concept.new(title: 'Kinda Cute', description:'Mehhhhhh', user_id: u1.id, publish: false)
 
-c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: u1.id, publish: true)
+c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: u1.id, publish: false)
 
-c4 = Concept.new(title: 'Not Cute', description:'Ewwwwwww', user_id: u2.id, publish: true)
+c4 = Concept.new(title: 'Not Cute', description:'Ewwwwwww', user_id: u2.id, publish: false)
 
-c5 = Concept.new(title: 'Mad Cute', description:'Woahhhhh', user_id: u2.id, publish: true)
+c5 = Concept.new(title: 'Mad Cute', description:'Woahhhhh', user_id: u2.id, publish: false)
 
-c6 = Concept.new(title: 'Funny Cute', description:'hahahhahha', user_id: u2.id, publish: true)
+c6 = Concept.new(title: 'Funny Cute', description:'hahahhahha', user_id: u2.id, publish: false)
 
 c7 = Concept.new(title: 'LAWL Cute', description:'LMFAO', user_id: u2.id, publish: false)
 
-c8 = Concept.new(title: 'Ok Cute', description:'KAWAAAIIIIIIIII', user_id: u2.id, publish: true)
+c8 = Concept.new(title: 'Ok Cute', description:'KAWAAAIIIIIIIII', user_id: u2.id, publish: false)
 
 c9 = Concept.new(title: 'Not So Cute', description:'NOT!', user_id: u1.id, publish: false)
 
@@ -92,3 +92,11 @@ s2.save!
 s3.save!
 s4.save!
 s5.save!
+
+#categories
+cat1 = Category.create(name: 'Derivative');
+cat1 = Category.create(name: 'Integral');
+cat1 = Category.create(name: 'Limit');
+
+#category join table
+CategoriesConcept.create(concept_id: c10.id, category_id: cat1.id) 
