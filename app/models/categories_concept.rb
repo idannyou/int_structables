@@ -1,0 +1,2 @@
+class CategoriesConcept < ApplicationRecord
+end
