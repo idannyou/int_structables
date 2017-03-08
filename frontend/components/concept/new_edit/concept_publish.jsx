@@ -12,6 +12,7 @@ class ConceptPublish extends React.Component{
   constructor(props){
     super(props);
     this.state = this.props.concept;
+    debugger
     this.update = this.update.bind(this);
     this.handlePublish = this.handlePublish.bind(this);
     this.handleCategories = this.handleCategories.bind(this);
@@ -56,29 +57,24 @@ class ConceptPublish extends React.Component{
 
   handleCatClick(category){
     let cat_id = this.props.categories[category];
-    let index = this.state.category_ids.indexOf(cat_id);
-    let array = this.state.category_ids;
+    let array = Object.assign([], this.state.category_ids);
+    let index = array.indexOf(cat_id);
     if (index > -1){
       array.splice(index, 1);
     } else {
       array.push(cat_id);
     }
-    debugger
-    if (array.length === 0){
-      this.setState({[category_ids]: []});
-    } else {
-      this.setState({[category_ids]: array});
-    }
+      this.setState({category_ids: array});
   }
 
   checkCheck(category){
-    let keyArray = Object.keys(this.state.categories);
-    for (var i = 0; i < keyArray.length; i++) {
-      if(this.state.categories[i].name === category){
-        return true;
-      }
+    let cat_id = this.props.categories[category];
+    let index = this.state.category_ids.indexOf(cat_id);
+    if (index === -1){
+      return false;
+    } else {
+      return true;
     }
-    return false;
   }
 
   handleCategories(){
