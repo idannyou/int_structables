@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-router';
+import { Link, hashHistory} from 'react-router';
 
 class MakeItSearchBar extends React.Component{
   constructor(props) {
@@ -10,6 +10,7 @@ class MakeItSearchBar extends React.Component{
     };
     this.finalDemoInputText = " Calculus ";
     this.simulateTyping = this.simulateTyping.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -24,27 +25,33 @@ class MakeItSearchBar extends React.Component{
     );
   }
 
+  handleClick(field){
+    // document.getElementById('searchbar').value = field;
+    let url= `/${field}`;
+    hashHistory.push(url);
+  }
+
   render(){
     return (
       <div id='make-it-search-bar'>
         Let's learn
         {this.state.demoInputText}
         <div id='category-links'>
-          <Link to={`/concepts/integral`}>
+          <div onClick={() => this.handleClick('integral')}>
             Integrals
-          </Link>
-          <Link to={`/concepts/derivative`}>
+          </div>
+          <div onClick={() => this.handleClick('derivative')}>
             Derivatives
-          </Link>
-          <Link to={`/concepts/limit`}>
+          </div>
+          <div onClick={() => this.handleClick('limit')}>
             Limits
-          </Link>
+          </div>
 
         </div>
       </div>
     );
   }
 
-};
+}
 
 export default MakeItSearchBar;

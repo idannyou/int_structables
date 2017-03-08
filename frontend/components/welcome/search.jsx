@@ -17,7 +17,6 @@ class Search extends React.Component{
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
       this.search();
-      console.log('sent to server');
     }, 1000);
   }
 

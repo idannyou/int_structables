@@ -25,5 +25,28 @@ class Concept < ApplicationRecord
     return img_url_array
   end
 
+  def self.find_by_title(name)
+    # Concept.includes(:images).where("title ILIKE '%#{name}%'")
+    Concept.includes(:images).joins(self.join_sql).where('categories.name ILIKE ?', name)
+      .or(Concept.includes(:images).joins(self.join_sql).where('concepts.title ILIKE ?', "%#{name}%"))
+      .distinct
+  end
+
+  # def self.find_by_category_name(cat_name)
+  #   Concept.includes(:images).joins(self.join_sql).where('categories.name ILIKE ?', cat_name)
+  #     .or(Concept.includes(:images).joins(self.join_sql).where('concepts.title ILIKE ?', "%#{cat_name}%"))
+  #     .distinct
+  # end
+
+
+  private
+
+    def self.join_sql
+      sql = "INNER JOIN taggings
+      ON concepts.id = taggings.concept_id
+      INNER JOIN categories
+      ON categories.id = taggings.category_id"
+      sql
+    end
 
 end

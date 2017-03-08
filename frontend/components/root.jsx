@@ -69,6 +69,9 @@ const Root = ( {store} ) => {
           <Route path='concepts/:conceptId/edit' component={ConceptEditContainer} onEnter={_ensureAuthor}/>
           <Route path='concepts/:conceptId/edit/publish' component={ConceptPublish} onEnter={_ensureAuthor}/>
           <Route path='search' component={SearchPageContainer} />
+          <Route path='integral' component={SearchPageContainer} />
+          <Route path='derivative' component={SearchPageContainer} />
+          <Route path='limit' component={SearchPageContainer} />
     </Route>
       </Router>
     </Provider>

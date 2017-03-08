@@ -2,8 +2,9 @@ class Api::ConceptsController < ApplicationController
 
   def index
     #when it gets the concept from the database, it also grabs the images and the image_url too, so there will be less queries
+
     if params[:concept]
-      @concepts = Concept.includes(:images).where("title LIKE '%#{concept_params[:title]}%'")
+      @concepts = Concept.find_by_title(concept_params[:title])
     else
       @concepts = Concept.includes(:images).all
     end

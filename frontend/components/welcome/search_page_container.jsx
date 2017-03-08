@@ -1,10 +1,10 @@
 import {connect} from 'react-redux';
 import {
-        fetchConcepts
+        fetchSpecificConcepts
       } from '../../actions/concept_actions';
 import SearchPage from './search_page';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, newProps) => {
   return {
     concepts: Object.keys(state.concepts.concepts).map(
       (id) => {
@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchConcepts: () => dispatch(fetchConcepts())
+    fetchSpecificConcepts: (title) => dispatch(fetchSpecificConcepts(title))
   };
 };
 

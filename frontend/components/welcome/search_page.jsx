@@ -11,6 +11,13 @@ class SearchPage extends React.Component{
     this.publishOrNot = this.publishOrNot.bind(this);
   }
 
+  componentDidMount(){
+    if (this.props.route.path !== 'search'){
+      this.props.fetchSpecificConcepts(this.props.route.path);
+    }
+  }
+
+
   publishOrNot(){
     return this.props.concepts.map((concept,idx) => {
       if(!concept) return null;
