@@ -1,16 +1,15 @@
 class Api::CategoriesConceptsController < ApplicationController
   def create
-    @category.create(categories_params)
-    render 'api/comments/show'
+    cat_id = Category.find_by_name(params[:categories][:category]).id
+    @categories_concept = CategoriesConcept.create(concept_id: params[:categories][:concept_id].to_i, category_id: cat_id)
+    render 'api/categories_concepts/show'
   end
 
   def destroy
-    @category = Category.find(params[:id])
-    @category.destroy
-    render 'api/comments/show'
+    @categories_concept = CategoriesConcept.find(params[:id])
+    @categories_concept.destroy
+    render 'api/categories_concepts/show'
   end
 
-  def categories_params
-    params.require(:categories).permit(:concept_id, :category_id)
-  end
+
 end

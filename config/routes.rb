@@ -11,5 +11,6 @@ Rails.application.routes.draw do
       resources :images, only: [:index, :create, :destroy, :update]
       resources :comments, only: [:index, :create, :destroy, :update]
     end
+    resources :categories_concepts, only: [:create, :destroy]
   end
 end

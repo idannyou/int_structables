@@ -10,6 +10,8 @@ Concept.destroy_all
 Image.destroy_all
 Step.destroy_all
 User.destroy_all
+Category.destroy_all
+CategoriesConcept.destroy_all
 
 u1 = User.create(username: 'guest', password: 'guestguest')
 u2 = User.create(username: 'testing', password: 'testing')
@@ -95,8 +97,9 @@ s5.save!
 
 #categories
 cat1 = Category.create(name: 'Derivative');
-cat1 = Category.create(name: 'Integral');
-cat1 = Category.create(name: 'Limit');
+cat2 = Category.create(name: 'Integral');
+cat3 = Category.create(name: 'Limit');
 
 #category join table
-CategoriesConcept.create(concept_id: c10.id, category_id: cat1.id) 
+CategoriesConcept.create(concept_id: c10.id, category_id: cat1.id)
+CategoriesConcept.create(concept_id: c10.id, category_id: cat3.id)

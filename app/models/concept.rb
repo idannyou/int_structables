@@ -6,9 +6,11 @@ class Concept < ApplicationRecord
   has_many :comments, as: :commentable, dependent: :delete_all, inverse_of: :commentable
   has_many :steps, dependent: :delete_all
 
-  has_many :category,
-    through: :categories_concept,
+  has_many :categories,
+    through: :categories_concepts,
     source: :category
+
+  has_many :categories_concepts, dependent: :delete_all
 
 
   def extractImgUrl

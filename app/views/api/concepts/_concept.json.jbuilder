@@ -1,4 +1,6 @@
 json.extract! concept, :id, :title, :description, :equations, :user_id, :publish
+json.categories concept.categories
+json.categories_concepts concept.categories_concepts
 json.images concept.images
 json.images_url concept.extractImgUrl
 json.username concept.user.username
