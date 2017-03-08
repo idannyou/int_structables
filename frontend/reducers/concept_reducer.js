@@ -4,10 +4,6 @@ import {RECEIVE_CONCEPTS,
         RECEIVE_ERRORS
       } from '../actions/concept_actions';
 
-import {RECEIVE_CATEGORY,
-        REMOVE_CATEGORY
-      } from '../actions/category_actions';
-
 import {merge} from 'lodash';
 
 const initialState = {
@@ -20,6 +16,7 @@ const ConceptReducer = (state = initialState, action) => {
   const newState = merge({}, state);
 
   switch (action.type) {
+
     case RECEIVE_CONCEPTS:
       return {concepts: action.concepts};
     case RECEIVE_CONCEPT:
@@ -34,15 +31,6 @@ const ConceptReducer = (state = initialState, action) => {
       const newErrState = merge({}, state);
       newErrState.errors = action.errorsObj;
       return newErrState;
-
-    case RECEIVE_CATEGORY:
-      newState.concepts[action.categories_concept.concept_id].categories_concepts[action.categories_concept.id]= action.categories_concept;
-      return newState;
-
-    case REMOVE_CATEGORY:
-      delete newState.categories_concept[action.categories_concept.id];
-      return newState;
-
 
     default:
       return state;

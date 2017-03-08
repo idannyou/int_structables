@@ -6,8 +6,6 @@ import { connect } from 'react-redux';
 import ConceptEdit from './concept_edit';
 import {fetchConcept,
         updateConcept} from '../../../actions/concept_actions';
-import {createCategory,
-        deleteCategory} from '../../../actions/category_actions';
 
 class ConceptPublish extends React.Component{
 
@@ -17,8 +15,8 @@ class ConceptPublish extends React.Component{
     this.update = this.update.bind(this);
     this.handlePublish = this.handlePublish.bind(this);
     this.handleCategories = this.handleCategories.bind(this);
-    this.handleCatClick = this.handleCatClick.bind(this);
     this.checkCheck = this.checkCheck.bind(this);
+    this.handleCatClick = this.handleCatClick.bind(this);
   }
 
   componentDidMount(){
@@ -57,11 +55,19 @@ class ConceptPublish extends React.Component{
   }
 
   handleCatClick(category){
-    let boolean = $(`#${category}`)[0].checked;
-    if(boolean){
-      this.props.createCategory({concept_id: this.state.id, category});
+    let cat_id = this.props.categories[category];
+    let index = this.state.category_ids.indexOf(cat_id);
+    let array = this.state.category_ids;
+    if (index > -1){
+      array.splice(index, 1);
     } else {
-      this.props.deleteCategory(this.props.categories_concepts[category]);
+      array.push(cat_id);
+    }
+    debugger
+    if (array.length === 0){
+      this.setState({[category_ids]: []});
+    } else {
+      this.setState({[category_ids]: array});
     }
   }
 
@@ -134,23 +140,18 @@ const mapStateToProps = (state, ownProps) => {
   }
     concept = state.concepts.concepts[ownProps.params.conceptId];
     let categories = {};
-    let categories_concepts = {};
-    let keyArray = Object.keys(concept.categories);
-    for (var i = 0; i < keyArray.length; i++) {
-      categories[concept.categories[i].name] = concept.categories[i].id;
-      categories_concepts[concept.categories[i].name] = concept.categories_concepts[i].id;
-    }
+    concept.allCat.forEach((category) => {
+      categories[category.name] = category.id;
+    });
 
-  return {concept, categories, categories_concepts, errors};
+  return {concept, categories, errors};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
     fetchConcept: (id) => dispatch(fetchConcept(id)),
-    updateConcept: (concept) => dispatch(updateConcept(concept)),
-    createCategory: (category) => dispatch(createCategory(category)),
-    deleteCategory: (id) => dispatch(deleteCategory(id))
+    updateConcept: (concept) => dispatch(updateConcept(concept))
   };
 };
 

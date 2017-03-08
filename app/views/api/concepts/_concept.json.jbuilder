@@ -1,5 +1,6 @@
-json.extract! concept, :id, :title, :description, :equations, :user_id, :publish
+json.extract! concept, :id, :title, :description, :equations, :user_id, :publish, :category_ids
 json.categories concept.categories
+json.allCat concept.getAllCategories
 json.images concept.images
 json.images_url concept.extractImgUrl
 json.username concept.user.username

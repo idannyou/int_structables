@@ -43,7 +43,7 @@ class Api::ConceptsController < ApplicationController
 
   private
   def concept_params
-    params.require(:concept).permit(:title, :description, :equations, :publish)
+    params.require(:concept).permit(:title, :description, :equations, :publish, category_ids: [])
   end
 
 end
