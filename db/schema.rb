@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307152739) do
+ActiveRecord::Schema.define(version: 20170308051611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +19,6 @@ ActiveRecord::Schema.define(version: 20170307152739) do
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "categories_concepts", force: :cascade do |t|
-    t.integer  "concept_id",  null: false
-    t.integer  "category_id", null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -69,6 +62,16 @@ ActiveRecord::Schema.define(version: 20170307152739) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "title"
+  end
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "concept_id",  null: false
+    t.integer  "category_id", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_taggings_on_category_id", using: :btree
+    t.index ["concept_id", "category_id"], name: "index_taggings_on_concept_id_and_category_id", unique: true, using: :btree
+    t.index ["concept_id"], name: "index_taggings_on_concept_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

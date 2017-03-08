@@ -36,12 +36,10 @@ const ConceptReducer = (state = initialState, action) => {
       return newErrState;
 
     case RECEIVE_CATEGORY:
-    debugger
       newState.concepts[action.categories_concept.concept_id].categories_concepts[action.categories_concept.id]= action.categories_concept;
       return newState;
 
     case REMOVE_CATEGORY:
-    debugger
       delete newState.categories_concept[action.categories_concept.id];
       return newState;
 

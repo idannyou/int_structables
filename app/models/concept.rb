@@ -7,10 +7,10 @@ class Concept < ApplicationRecord
   has_many :steps, dependent: :delete_all
 
   has_many :categories,
-    through: :categories_concepts,
+    through: :taggings,
     source: :category
 
-  has_many :categories_concepts, dependent: :delete_all
+  has_many :taggings, dependent: :delete_all, inverse_of: :concept
 
 
   def extractImgUrl
