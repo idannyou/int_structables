@@ -17,6 +17,20 @@ class StepEdit extends React.Component{
     this.insertAtCaret = this.insertAtCaret.bind(this);
   }
 
+  componentDidMount(){
+    this.props.fetchStep(this.props.params.stepId);
+  }
+
+  componentWillReceiveProps(newProps){
+    this.setState(newProps.step);
+    this.setupMathQuill();
+  }
+
+  // runs the functions inside after every update of the page. NEVER setState in here
+  componentDidUpdate(prevProps, prevState){
+    this.setupMathQuill();
+  }
+
   setupMathQuill(){
       var mathFieldSpan = document.getElementById('math-field');
       var latexSpan = document.getElementById('latex');
@@ -40,19 +54,6 @@ class StepEdit extends React.Component{
     var mathFieldSpan = document.getElementById('math-field');
   }
 
-  componentDidMount(){
-      this.props.fetchStep(this.props.params.stepId);
-  }
-
-  componentWillReceiveProps(newProps){
-      this.setState(newProps.step);
-      this.setupMathQuill();
-  }
-
-  // runs the functions inside after every update of the page. NEVER setState in here
-  componentDidUpdate(prevProps, prevState){
-      this.setupMathQuill();
-  }
 
   update(field){
     return (e) => {

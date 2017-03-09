@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 import {hashHistory} from 'react-router';
 import CommentNewContainer from '../comment/comment_new_container';
 import CommentShowContainer from '../comment/comment_show_container';
+import Modal from 'react-modal';
 
 
 
@@ -11,11 +12,17 @@ class ConceptsStepsComments extends React.Component{
 
   constructor(props){
     super(props);
+    this.state = {
+      modalImage: null
+    };
     this.renderSmallImgs = this.renderSmallImgs.bind(this);
     this.renderSteps = this.renderSteps.bind(this);
     this.merge = this.merge.bind(this);
     this.mergeSort = this.mergeSort.bind(this);
     this.renderBody = this.renderBody.bind(this);
+    this.onModalOpen = this.onModalOpen.bind(this);
+    this.onModalClose = this.onModalClose.bind(this);
+    this.renderModalImage = this.renderModalImage.bind(this);
   }
 
   componentDidUpdate(){
@@ -24,6 +31,23 @@ class ConceptsStepsComments extends React.Component{
 
   componentDidMount(){
       MathJax.Hub.Typeset();
+  }
+
+  onModalClose(){
+    this.setState({modalOpen: false});
+  }
+
+  onModalOpen(image_url){
+    this.setState({modalImage: image_url});
+    this.setState({modalOpen: true});
+  }
+
+  renderModalImage(){
+    return (
+      <div>
+        <img src={`${this.state.modalImage}`}/>
+      </div>
+    );
   }
 
   merge(left, right) {
@@ -60,7 +84,9 @@ class ConceptsStepsComments extends React.Component{
             <li key={idx}>
               {(!image)? null:
               <img
+                  onClick={() => this.onModalOpen(image)}
                   src={image}/>}
+
             </li>
           );
         }
@@ -80,7 +106,8 @@ class ConceptsStepsComments extends React.Component{
           >{`Step ${idx + 1}: ${obj.title}`}</h1>
         {(!orderedSteps[idx].images_url[0])? null :
           <div id='concept-show-concept'>
-            <img src={orderedSteps[idx].images_url[0]} />
+            <img src={orderedSteps[idx].images_url[0]}
+              onClick={() => this.onModalOpen(orderedSteps[idx].images_url[0])}/>
           </div>
         }
         <h5 id='concept-show-step-p'
@@ -99,9 +126,17 @@ class ConceptsStepsComments extends React.Component{
       <div id='concept-show-concept-step'>
         {(!concept[0])? null:
           <div id='concept-show-concept'>
-            <img src={concept[0]} />
+            <img src={concept[0]}
+              onClick={() => this.onModalOpen(concept[0])}/>
           </div>
         }
+        <Modal
+          isOpen={this.state.modalOpen}
+          contentLabel="Modal"
+          onRequestClose={this.onModalClose}
+          >
+          {this.renderModalImage()}
+        </Modal>
         <div >
           <ul id='concept-show-small-imgs'>
             {this.renderSmallImgs()}
