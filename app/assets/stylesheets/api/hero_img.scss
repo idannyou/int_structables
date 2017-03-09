@@ -1,46 +1,49 @@
-.fillWidth{
-  width: 80%;
-  height: auto;
-  position: relative;
-  margin: auto;
-  display: flex;
-}
-
-
-
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px) {
+and (max-width : 1079px) {
+
+  .fillWidth{
+    display: none;
+  }
 
   #make-it-search-bar{
-    font-size: 20px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-    color: white;
-    letter-spacing: 4px;
-    top: 10%;
-    left: 20%;
-    padding: 0;
-    z-index: 2;
-    position: absolute;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: none;
+    // font-size: 20px;
+    // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    // color: white;
+    // letter-spacing: 4px;
+    // top: 10%;
+    // left: 20%;
+    // padding: 0;
+    // z-index: 2;
+    // position: absolute;
+    // font-family: "Comic Sans MS", cursive, sans-serif;
   }
 
 
   #category-links{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    font-size: 15px;
-    text-align: right;
-    cursor: pointer;
-    width: 20%;
-    margin-right: 10%;
+    display: none;
+    // display: flex;
+    // flex-direction: column;
+    // align-self: flex-end;
+    // font-size: 15px;
+    // text-align: right;
+    // cursor: pointer;
+    // width: 20%;
+    // margin-right: 10%;
   }
 }
 
 
 @media only screen
-and (min-device-width : 700px){
+and (min-width : 1080px){
+  .fillWidth{
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: auto;
+    display: flex;
+  }
+
 
   #make-it-search-bar{
     font-size: 90px;
