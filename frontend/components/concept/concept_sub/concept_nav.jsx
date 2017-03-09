@@ -12,7 +12,7 @@ class ConceptNav extends React.Component{
         <h1 id='concept-nav-title'>
           {concept.title}
         </h1>
-        <div>
+        <div id='concept-nav-text'>
           <h3 id='concept-nav-author'>
             by
             <a>

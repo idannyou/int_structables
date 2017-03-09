@@ -1,0 +1,66 @@
+#concept-publish{
+  display: flex;
+  justify-content: center;
+}
+
+
+#concept-publish-item{
+  width: 324px;
+  height: 363px;
+  padding-bottom: 10px;
+  padding: 12px;
+  position: relative;
+}
+
+#concept-publish-img{
+  width: 322px;
+  height: 268px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#concept-publish-text{
+  padding: 10px 13px;
+  margin-bottom: 10px;
+  height: 50px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#concept-publish-title{
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+#concept-publish-username a{
+  margin-left: 5px;
+}
+
+#concept-publish-save{
+  font-size: 16px;
+  margin-right: 12px;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  text-shadow: none;
+  background-color: #e86c00;
+  color: #fff;
+  cursor: pointer;
+}
+
+.concept-publish-edit{
+  margin-left: 20px;
+  margin-top: 2%;
+}
+
+.concept-publish-category{
+  margin-bottom: 10px;
+}
+
+.concept-publish-category h2{
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+}

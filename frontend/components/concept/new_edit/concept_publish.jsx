@@ -44,11 +44,11 @@ class ConceptPublish extends React.Component{
 
   publishOrNot(){
     return (this.state.publish===false) ?
-      <button id='concept-edit-save'
+      <button id='concept-publish-save'
               onClick={this.handlePublish}>
         Publish Now
       </button> :
-      <button id='concept-edit-save'
+      <button id='concept-publish-save'
               onClick={this.handlePublish}>
         UnPublish
       </button> ;
@@ -103,22 +103,37 @@ class ConceptPublish extends React.Component{
 
   render(){
     return (
-      <div>
-        <div id='concept-show-concept'>
-          <img src={this.state.images_url[0]} />
-        </div>
-        <div >
-          Title
-          <input type='text' id='concept-edit-body-title'
-            value= {this.state.title}
-            onChange={this.update('title')}
-            placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
-            />
+      <div id='concept-publish'>
+          <div id='concept-publish-item'>
+            <div id='concept-publish-img'>
+              <img src={this.state.images_url[0]} />
+            </div>
+            <div id='concept-publish-text'>
+              <div>
+                <input type='text' id='concept-index-title'
+                  value= {this.state.title}
+                  onChange={this.update('title')}
+                  placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
+                  />
+              </div>
+                <label id='concept-publish-username'>
+                  by
+                  <a>
+                    {this.state.username}
+                  </a>
+                </label>
+            </div>
+          </div>
+        <div className='concept-publish-edit'>
+          <div className='concept-publish-category'>
+            <h2>
+              Category
+            </h2>
+            {this.handleCategories()}
+          </div>
+
           {this.publishOrNot()}
-        </div>
-        <div>
-          Category
-          {this.handleCategories()}
+
         </div>
       </div>
     );
