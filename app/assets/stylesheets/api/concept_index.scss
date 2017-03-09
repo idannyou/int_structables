@@ -38,9 +38,13 @@
 }
 
 #concept-index-img{
-  width: 324px;
-  height: 270px;
+  width: 322px;
+  height: 268px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
+#concept-index-img:hover{
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 #concept-index-text{
