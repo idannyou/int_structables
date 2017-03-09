@@ -42,12 +42,13 @@ c9 = Concept.new(title: 'Not So Cute', description:'NOT!', user_id: u1.id, publi
 
 c10 = Concept.new(
   title: "How to minimize the surface area of a cylinder?",
-  description: "Using derivatives, I'll show you how to minimize the surface area of a cylinder.",
+  description: "Using derivatives, I'll show you how to minimize the surface area of a cylinder given a constant volume.",
   equations: "",
   user_id: u1.id,
   publish: false,
   category_ids: [cat1.id, cat3.id]
 )
+
 
 #Image Seed
 
@@ -77,25 +78,63 @@ s1= c1.steps.new(title:'Step 1', body:'Step 1 Body', order: 1.0, concept_id: c1.
 s2= c1.steps.new(title:'Step 2', body:'Step 2 Body', order: 2.0, concept_id: c1.id)
 s3= c1.steps.new(title:'Step 3', body:'Step 3 Body', order: 3.0, concept_id: c1.id)
 s4= c10.steps.new(
-  body: "The volume \\(V\\) of a cylinder is:\n\n\\(V=πr^2h\\)",
-  order: 1.0,
-  concept_id: c10.id,
-  title: "The volume of a cylinder"
+  body:
+   "\\(-2V*r^{-2}+4\\pi\\cdot r=0\\)\n\nIsolate r:\n\n\\(r^3=\\frac{2V}{4\\cdot\\pi}\\)\n\nIf we assume V = 1, then we get:\n\n\\(r=\\left(\\frac{1}{2\\pi}\\right)^{\\frac{1}{3}}\\approx.54\\)\n",
+  order: 6.0,
+  title: "Set the derivative to 0"
 )
 s5= c10.steps.new(
-  body: "The surface area of a cylinder (\\(SA\\)) is defined by:\n \\(SA = 2πrh+2πr^2 \\), where \\(r\\) is the radius.",
+  body: "\\(SA=\\frac{2\\pi rV}{\\pi r^2}+2\\pi\\cdot r^2\\)\n\n\\(=2\\cdot\\frac{V}{r}+2\\pi\\cdot r^2\\)\n",
+  order: 4.0,
+  title: "Plug the isolated height equation into the surface area equation"
+)
+
+s6= c10.steps.new(
+  body:
+   "We will also need the surface area equation. \n\nThe surface area of a cylinder is defined by:\n \\(SA = 2πrh+2πr^2 \\), where \\(r\\) is the radius.",
   order: 2.0,
-  concept_id: c10.id,
   title: "The surface area of a cylinder"
 )
+
+s7= c10.steps.new(
+  body: "First we need the equation for the volume of a cylinder.\n\nThe volume of a cylinder is:\n\n\\(V=πr^2h\\)\n",
+  order: 1.0,
+  title: "The volume of a cylinder"
+)
+
+s8= c10.steps.new(
+  body: "By substituting 1 for V, we can graph the function and see that the lowest Surface Area is near .54.",
+  order: 7.0,
+  title: "Graph of surface area function"
+)
+
+s9= c10.steps.new(
+  body: "\\(\\frac{dSA}{dr}=-2V*r^{-2}+4\\pi r\\)",
+  order: 5.0,
+  title: "Take the derivative of the surface area in respect to the radius"
+)
+
+s10= c10.steps.new(
+  body: "Isolate the height from the volume equation:\n\n\\(h=\\frac{V}{\\pi\\cdot r^2}\\)",
+  order: 3.0,
+  title: "Isolate the height"
+)
+
+
 
 
 s1.images.new(image: File.open('app/assets/images/cutest-panda-gifs-babies.gif'))
 s2.images.new(image: File.open('app/assets/images/super-cute-heart-kitty-illustration-valentine-animated-gif.gif'))
 s3.images.new(image: File.open('app/assets/images/heroImage.jpg'))
+s8.images.new(image: File.open('app/assets/images/Surface Area 1.png'))
 
 s1.save!
 s2.save!
 s3.save!
 s4.save!
 s5.save!
+s6.save!
+s7.save!
+s8.save!
+s9.save!
+s10.save!

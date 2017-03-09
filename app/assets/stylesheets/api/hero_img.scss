@@ -6,33 +6,66 @@
   display: flex;
 }
 
-#make-it-search-bar{
+
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+
+  #make-it-search-bar{
     font-size: 20px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     color: white;
     letter-spacing: 4px;
-    top: 40%;
+    top: 10%;
     left: 20%;
     padding: 0;
     z-index: 2;
     position: absolute;
     font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+
+  #category-links{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    font-size: 15px;
+    text-align: right;
+    cursor: pointer;
+    width: 20%;
+    margin-right: 10%;
+  }
 }
 
 
+@media only screen
+and (min-device-width : 700px){
 
-@media screen and (min-width: 750px) {
+  #make-it-search-bar{
+    font-size: 90px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    color: white;
+    letter-spacing: 4px;
+    top: 20%;
+    left: 20%;
+    padding: 0;
+    z-index: 2;
+    position: absolute;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
 
-    #make-it-search-bar{
-        font-size: 90px;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-        color: white;
-        letter-spacing: 4px;
-        top: 40%;
-        left: 20%;
-        padding: 0;
-        z-index: 2;
-        position: absolute;
-        font-family: "Comic Sans MS", cursive, sans-serif;
-    }
+  #category-links{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    font-size: 30px;
+    text-align: right;
+    cursor: pointer;
+    width: 40%;
+    margin-right: 10%;
+  }
 }

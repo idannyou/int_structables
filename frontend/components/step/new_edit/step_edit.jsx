@@ -37,6 +37,7 @@ class StepEdit extends React.Component{
     var htmlElement = document.getElementById('latex').innerHTML;
     this.insertAtCaret('concept-edit-body-description', '\\(' + htmlElement + '\\)');
     this.setState({['body']: document.getElementById('concept-edit-body-description').value});
+    var mathFieldSpan = document.getElementById('math-field');
   }
 
   componentDidMount(){
@@ -61,6 +62,7 @@ class StepEdit extends React.Component{
 
   submitStep(){
     this.props.updateStep(this.state);
+
   }
 
   renderMathField(){

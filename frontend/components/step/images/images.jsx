@@ -141,6 +141,8 @@ class Images extends React.Component{
     this.setState({imageFileName: []},()=>{});
     this.setState({imageFileArray: []},()=>{});
     this.setState({imageFileUrl: []},()=>{});
+    document.getElementById('save-status').classList.remove('hidden');
+    setTimeout(()=> document.getElementById('save-status').classList.add('hidden'), 2000);
   }
 
 
@@ -154,6 +156,7 @@ class Images extends React.Component{
                     onClick={this.handleSave}>
               Save
             </button>
+            <div id='save-status' className='hidden'>Saved</div>
           </div>
         </div>
         <div id='concept-edit-body-img'>
