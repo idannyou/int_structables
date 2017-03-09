@@ -48,7 +48,8 @@ class ConceptNewEdit extends React.Component{
             <ImagesContainer params={this.props.params}
                             publish = {this.state.publish}
                             submitConcept = {this.submitConcept}
-                            handlePublish = {this.handlePublish}/>
+                            handlePublish = {this.handlePublish}
+                            handleDelete = {() => this.props.deleteConcept(this.props.concept.id)}/>
             <div id='concept-edit-body'>
               <input type='text' id='concept-edit-body-title'
                 value= {this.state.title}

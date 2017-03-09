@@ -144,6 +144,8 @@ class Images extends React.Component{
     this.setState({imageFileName: []},()=>{});
     this.setState({imageFileArray: []},()=>{});
     this.setState({imageFileUrl: []},()=>{});
+    document.getElementById('save-status').classList.remove('hidden');
+    setTimeout(()=> document.getElementById('save-status').classList.add('hidden'), 2000);
   }
 
   publishOrNot(){
@@ -160,6 +162,15 @@ class Images extends React.Component{
     this.props.handlePublish();
   }
 
+  removeMe(){
+    return (
+      <button id='concept-edit-save'
+              onClick={this.props.handleDelete}>
+        Delete
+      </button>
+    );
+  }
+
 
   render(){
     return(
@@ -172,6 +183,8 @@ class Images extends React.Component{
               Save
             </button>
             {this.publishOrNot()}
+            {this.removeMe()}
+            <div id='save-status' className='hidden'>Saved</div>
           </div>
         </div>
         <div id='concept-edit-body-img'>

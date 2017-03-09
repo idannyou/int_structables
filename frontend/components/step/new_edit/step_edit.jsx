@@ -68,12 +68,13 @@ class StepEdit extends React.Component{
 
   renderMathField(){
     return(
-      <div>
-        <p>Type math here: <span id="math-field"></span></p>
-        <span id="latex" hidden></span>
+      <div className='edit-math'>
         <button
           onClick= {this.handleInsertMath}
-          >Insert Math</button>
+          >Insert Math
+        </button>
+        <p >Type math here: <span id="math-field"></span></p>
+        <span id="latex" hidden></span>
       </div>
     );
   }
