@@ -71,7 +71,6 @@ class Home extends React.Component{
             <source src={ window.headvideo } type="video/mp4" />
           </video>
           <MakeItSearchBar />
-
         <ConceptIndexContainer />
       </div>
 
