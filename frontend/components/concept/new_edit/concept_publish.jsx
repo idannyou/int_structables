@@ -12,7 +12,6 @@ class ConceptPublish extends React.Component{
   constructor(props){
     super(props);
     this.state = this.props.concept;
-    debugger
     this.update = this.update.bind(this);
     this.handlePublish = this.handlePublish.bind(this);
     this.handleCategories = this.handleCategories.bind(this);
