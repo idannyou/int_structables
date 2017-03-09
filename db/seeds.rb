@@ -28,25 +28,23 @@ c2 = Concept.new(title: 'Kinda Cute', description:'Mehhhhhh', user_id: u1.id, pu
 
 c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: u1.id, publish: false)
 
-c4 = Concept.new(title: 'Not Cute', description:'Ewwwwwww', user_id: u2.id, publish: false)
-
-c5 = Concept.new(title: 'Mad Cute', description:'Woahhhhh', user_id: u2.id, publish: false)
-
-c6 = Concept.new(title: 'Funny Cute', description:'hahahhahha', user_id: u2.id, publish: false)
-
-c7 = Concept.new(title: 'LAWL Cute', description:'LMFAO', user_id: u2.id, publish: false)
-
-c8 = Concept.new(title: 'Ok Cute', description:'KAWAAAIIIIIIIII', user_id: u2.id, publish: false)
-
-c9 = Concept.new(title: 'Not So Cute', description:'NOT!', user_id: u1.id, publish: false)
-
 c10 = Concept.new(
   title: "How to minimize the surface area of a cylinder?",
   description: "Using derivatives, I'll show you how to minimize the surface area of a cylinder given a constant volume.",
   equations: "",
   user_id: u1.id,
-  publish: false,
-  category_ids: [cat1.id, cat3.id]
+  publish: true,
+  category_ids: [cat1.id]
+)
+
+c11 = Concept.new(
+  title: "Related Rates",
+  description:
+  "I'll demonstrate how to use related rates to solve a fishing problem.",
+  equations: "",
+  user_id: u1.id,
+  publish: true,
+  category_ids: [cat1.id]
 )
 
 
@@ -56,27 +54,22 @@ c1.images.new(image: 'http://www.vomzi.com/wp-content/uploads/2016/02/best-cute-
 c1.images.new(image: File.open('app/assets/images/91558-babies-cute-baby.gif'))
 c2.images.new(image: File.open('app/assets/images/11-cute-gif-222.gif'))
 c3.images.new(image: File.open('app/assets/images/718448.gif'))
-c4.images.new(image: File.open('app/assets/images/4447706-cute-wallpapers.jpg'))
-c5.images.new(image: File.open('app/assets/images/babyasian.gif'))
-c6.images.new(image: File.open('app/assets/images/bears-cute-gif-Favim.com-4009131.gif'))
-c8.images.new(image: File.open('app/assets/images/cute-kitty-animated-gif-25.gif'))
 c10.images.new(image: File.open('app/assets/images/surface-area-of-cylinder-animation.gif'))
-
-
+c11.images.new(image: File.open('app/assets/images/related_rates.jpg'))
 
 c1.save!
 c2.save!
 c3.save!
-c4.save!
-c5.save!
-c6.save!
-c8.save!
 c10.save!
+c11.save!
 
 #Step Seed
 s1= c1.steps.new(title:'Step 1', body:'Step 1 Body', order: 1.0, concept_id: c1.id)
 s2= c1.steps.new(title:'Step 2', body:'Step 2 Body', order: 2.0, concept_id: c1.id)
 s3= c1.steps.new(title:'Step 3', body:'Step 3 Body', order: 3.0, concept_id: c1.id)
+
+# Optimization
+
 s4= c10.steps.new(
   body:
    "\\(-2V*r^{-2}+4\\pi\\cdot r=0\\)\n\nIsolate r:\n\n\\(r^3=\\frac{2V}{4\\cdot\\pi}\\)\n\nIf we assume V = 1, then we get:\n\n\\(r=\\left(\\frac{1}{2\\pi}\\right)^{\\frac{1}{3}}\\approx.54\\)\n",
@@ -120,9 +113,6 @@ s10= c10.steps.new(
   title: "Isolate the height"
 )
 
-
-
-
 s1.images.new(image: File.open('app/assets/images/cutest-panda-gifs-babies.gif'))
 s2.images.new(image: File.open('app/assets/images/super-cute-heart-kitty-illustration-valentine-animated-gif.gif'))
 s3.images.new(image: File.open('app/assets/images/heroImage.jpg'))
@@ -131,6 +121,8 @@ s8.images.new(image: File.open('app/assets/images/Surface Area 1.png'))
 s1.save!
 s2.save!
 s3.save!
+
+#Optimization
 s4.save!
 s5.save!
 s6.save!
@@ -138,3 +130,55 @@ s7.save!
 s8.save!
 s9.save!
 s10.save!
+
+#Related Rates
+s11= c11.steps.new(
+  body:
+   "The height of the bridge is not moving.\n\nThe angle is moving! One can see that the angle gets bigger as the fish gets closer.\n\nThe line is also moving! As a matter of fact the rate is given in the problem. \\(\\frac{1ft}{s}\\)\n\nBecause there are moving parts, we have to create a coordinate system; ie., which way is positive? Which point should be the origin? \n\nLets assume going up and going away from the person is positive. Lets also assume the base of the bridge is the origin, because that's a stationary point. \n\nBecause going away from the person is positive, \\(\\frac{dx}{dt}=-\\frac{1ft}{s}\\).\n\n",
+  order: 2.0,
+  title: "Identify what is moving and what is stationary"
+)
+
+s12= c11.steps.new(
+  body:
+   "\\(\\frac{d\\theta}{dt}\\cos\\left(\\theta\\right)=h\\cdot\\left(-1\\right)\\cdot x^{-2}\\frac{dx}{dt}\\)\n\nWe can now plug in the variables from the problem to our equation to get what we are interested in.\n\n\\(\\frac{dx}{dt}=\\frac{-1ft}{s}\\)\n\n\\(h=15ft\\)\n\n\\(\\frac{d\\left(\\theta\\right)}{dt}=?\\)\n\n\\(x=25ft\\)\n\nBut, wait! What is \\(\\cos\\left(\\theta\\right)\\) from our equation?\n\nYou can solve for \\(\\theta\\) using:\n\n\\(\\sin\\left(\\theta\\right)=\\frac{h}{x}=\\frac{15ft}{25ft}\\)\n\n\\(\\theta=\\sin^{-1}\\left(\\frac{15ft}{25ft}\\right)\\)\n\n\\(\\theta\\approx.6435rad\\), so \n\n\\(\\cos\\left(.6435rad\\right)\\approx.8\\)",
+  order: 5.0,
+  title: "Plug it in!"
+)
+
+s13= c11.steps.new(
+  body:
+   "\\(\\frac{d\\theta}{dt}=\\frac{h\\cdot\\left(-1\\right)\\cdot x^{-2}\\frac{dx}{dt}}{\\cos\\left(\\theta\\right)}\\)\n\n\\(=\\frac{\\left(15ft\\cdot\\left(-1\\right)\\cdot\\left(25ft\\right)^{-2}\\cdot-\\frac{1ft}{s}\\right)}{.8}\\)\n\n\\(\\approx.03\\cdot\\frac{rad}{s}\\)\n\nThe answer makes sense, because the angle is getting wider, hence the positive answer!",
+  order: 6.0,
+  title: "Get answer"
+)
+
+s14= c11.steps.new(
+body:
+ "Now that we have the equation that 'Relates' the variables, we can simply take the derivative of the equation in respect to time.\n\nMake sure to only take the derivative of the moving variables in respect to time. Taking a derivative of a stationary variable in respect to time is 0; ie., \\(\\frac{dh}{dt}=0\\), because it is NOT MOVING!\n\n\\(\\sin\\left(\\theta\\right)=\\frac{h}{x}\\)\n\n\\(\\frac{d\\theta}{dt}\\cos\\left(\\theta\\right)=h\\cdot\\left(-1\\right)\\cdot x^{-2}\\frac{dx}{dt}\\)",
+  order: 4.0,
+  title: "Take the derivative in respect to time"
+)
+
+s15= c11.steps.new(
+body:
+  "The first step is to understand the problem! You can do that by drawing a picture.\n\nUsing that picture, come up with an equation that relates all the variables relevant to the problem.\n\nIn this case, we have \n\\(\\theta\\) : angle between the line and the water\n\\(x\\) : the distance of the line from the fish to the pole\n\\(h=15ft\\): the height of the bridge",
+ order: 1.0,
+ title: "Understand the Problem By Drawing the Picture"
+)
+
+s16= c11.steps.new(
+  body:
+   "Now we need to come up with an equation relating all those variables. Hmmmm... what relates the angle \\(\\theta\\), the hypotenuse \\(x\\), and the height of the bridge \\(h:15ft\\).\n\n\\(\\sin\\left(\\theta\\right)=\\frac{h}{x}\\)",
+  order: 3.0,
+  title: "Identify Equations"
+)
+
+s11.images.new(image: File.open('app/assets/images/related_rates copy.jpg'))
+
+s11.save!
+s12.save!
+s13.save!
+s14.save!
+s15.save!
+s16.save!
