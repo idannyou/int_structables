@@ -59,7 +59,10 @@ export const updateConcept = (concept, id) => (dispatch) => {
 
 export const deleteConcept = (id) => (dispatch) => {
   return ConceptApiUtil.deleteConcept(id).then(
-    (concept) => dispatch(removeConcept(concept))
+    (concept) => {
+      dispatch(removeConcept(concept));
+      return concept;
+    }
   );
 };
 
