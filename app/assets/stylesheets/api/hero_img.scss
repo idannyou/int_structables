@@ -68,4 +68,9 @@ and (min-device-width : 700px){
     width: 40%;
     margin-right: 10%;
   }
+
+  .category-links-items:hover{
+    position: relative;
+    top: -5px;
+  }
 }

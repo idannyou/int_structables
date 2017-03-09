@@ -38,14 +38,16 @@ class MakeItSearchBar extends React.Component{
         {this.state.demoInputText}
         <div id='category-links'>
           <div onClick={() => this.handleClick('integral')}
-            className=''
+            className='category-links-items'
             >
             Integrals
           </div>
-          <div onClick={() => this.handleClick('derivative')}>
+          <div onClick={() => this.handleClick('derivative')}
+            className='category-links-items'>
             Derivatives
           </div>
-          <div onClick={() => this.handleClick('limit')}>
+          <div onClick={() => this.handleClick('limit')}
+            className='category-links-items'>
             Limits
           </div>
 
