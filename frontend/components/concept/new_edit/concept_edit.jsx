@@ -60,12 +60,14 @@ class ConceptNewEdit extends React.Component{
   deleteBox(){
     if (this.state.deleteState === true){
       return(
-        <div>
-          Delete?
-          <button onClick={this.onDelete}>
+        <div className='concept-edit-delete'>
+          <h2>
+            Confirm Delete?
+          </h2>
+          <button id='concept-edit-save' onClick={this.onDelete}>
             Yes
           </button>
-          <button onClick={this.onNotDelete}>
+          <button id='concept-edit-save' onClick={this.onNotDelete}>
             No
           </button>
         </div>
@@ -89,19 +91,21 @@ class ConceptNewEdit extends React.Component{
                             handlePublish = {this.handlePublish}
                             handleDelete = {this.handleDelete}
                             />
-                          {this.deleteBox()}
-            <div id='concept-edit-body'>
-              <input type='text' id='concept-edit-body-title'
-                value= {this.state.concept.title}
-                onChange={this.update('title')}
-                placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
-                />
+          <div className='concept-edit-body-delete'>
+              {this.deleteBox()}
+              <div id='concept-edit-body'>
+                <input type='text' id='concept-edit-body-title'
+                  value= {this.state.concept.title}
+                  onChange={this.update('title')}
+                  placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
+                  />
 
-              <textarea id='concept-edit-body-description'
-                value={this.state.concept.description}
-                onChange={this.update('description')}
-                placeholder= {(this.props.errors && this.props.errors['description']) ? `Description ${this.props.errors['description']}`:'Description'}
-                />
+                <textarea id='concept-edit-body-description'
+                  value={this.state.concept.description}
+                  onChange={this.update('description')}
+                  placeholder= {(this.props.errors && this.props.errors['description']) ? `Description ${this.props.errors['description']}`:'Description'}
+                  />
+              </div>
             </div>
           </div>
           <StepNewEditContainer conceptId={this.props.concept.id}

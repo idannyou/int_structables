@@ -12,14 +12,19 @@ import stickykit from 'sticky-kit/dist/sticky-kit';
 class ConceptShow extends React.Component{
 
   componentDidMount(){
-    this.props.fetchConcept(this.props.params.conceptId);
+    this.props.fetchConcept(this.props.params.conceptId).then(
+      () => MathJax.Hub.Typeset()
+    );
     // $('#concept-nav').stick_in_parent()
   }
 
   componentWillReceiveProps(nextProps) {
     if(this.props.params.conceptId !== nextProps.params.conceptId){
-      this.props.fetchConcept(nextProps.params.conceptId);
+      this.props.fetchConcept(nextProps.params.conceptId).then(
+        () => MathJax.Hub.Typeset()
+      );
     }
+
   }
 
   render(){

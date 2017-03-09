@@ -24,8 +24,22 @@ class CommentShow extends React.Component{
   }
 
   componentWillReceiveProps(newProps) {
+
+    if (newProps.conceptId !== this.props.conceptId){
+      newProps.fetchComments(`/concepts/${newProps.conceptId}`).then(
+        action => {
+          this.setState({comments: Object.keys(action.comments).map(
+            (id) => {
+              return action.comments[id];
+            }
+          )
+        },() => {});}
+      );
+    }
+
+
     if (newProps.comments.length !== this.props.comments.length) {
-      this.setState({comments: newProps.comments});
+      this.setState({comments: newProps.comments}, () => {});
     }
   }
 

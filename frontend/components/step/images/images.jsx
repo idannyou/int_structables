@@ -18,6 +18,7 @@ class Images extends React.Component{
     this.handleSave = this.handleSave.bind(this);
     this.handlePropImgDelete = this.handlePropImgDelete.bind(this);
     this.handleImgDelete = this.handleImgDelete.bind(this);
+    this.handleBack = this.handleBack.bind(this);
   }
 
   componentDidMount(){
@@ -145,6 +146,11 @@ class Images extends React.Component{
     setTimeout(()=> document.getElementById('save-status').classList.add('hidden'), 2000);
   }
 
+  handleBack(){
+    let url = `concepts/${this.props.params.conceptId}/edit`;
+    hashHistory.push(url);
+  }
+
 
   render(){
     return(
@@ -155,6 +161,10 @@ class Images extends React.Component{
             <button id='concept-edit-save'
                     onClick={this.handleSave}>
               Save
+            </button>
+            <button id='concept-edit-save'
+                    onClick={this.handleBack}>
+              Back
             </button>
             <div id='save-status' className='hidden'>Saved</div>
           </div>

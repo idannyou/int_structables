@@ -25,13 +25,7 @@ class ConceptsStepsComments extends React.Component{
     this.renderModalImage = this.renderModalImage.bind(this);
   }
 
-  componentDidUpdate(){
-      MathJax.Hub.Typeset();
-  }
 
-  componentDidMount(){
-      MathJax.Hub.Typeset();
-  }
 
   onModalClose(){
     this.setState({modalOpen: false});
