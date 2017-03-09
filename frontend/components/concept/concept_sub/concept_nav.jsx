@@ -6,7 +6,6 @@ import {hashHistory} from 'react-router';
 class ConceptNav extends React.Component{
 
   render(){
-
     let concept=this.props;
     return(
       <div id='concept-nav'>
@@ -20,21 +19,16 @@ class ConceptNav extends React.Component{
               {concept.username}
             </a>
           </h3>
-          <h3 id='concept-nav-category'>
-            in
-            <a>
-              organizing
-            </a>
-          </h3>
-        </div>
-        <div id='concept-nav-buttons'>
-
-          <button id='concept-nav-all'>
-            <img id='concept-nav-img' src={window.downimage} />
-          </button>
-          <button id='concept-nav-right'>
-            <img id='concept-nav-img' src={window.rightimage} />
-          </button>
+          {
+          ( concept.category && concept.category.length > 0)?
+            <h3 id='concept-nav-category'>
+              in
+              <a>
+                {concept.category[0].name}
+              </a>
+            </h3>
+            : null
+          }
         </div>
 
       </div>

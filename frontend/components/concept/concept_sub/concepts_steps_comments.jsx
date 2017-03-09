@@ -74,8 +74,7 @@ class ConceptsStepsComments extends React.Component{
     }
   }
 
-  renderSmallImgs(){
-    let concept = this.props.images;
+  renderSmallImgs(concept){
     if (concept.length < 2 && !Array.isArray(concept)) return null;
     if (concept.length > 1 && Array.isArray(concept)){
       return concept.map((image, idx) =>{
@@ -108,8 +107,14 @@ class ConceptsStepsComments extends React.Component{
           <div id='concept-show-concept'>
             <img src={orderedSteps[idx].images_url[0]}
               onClick={() => this.onModalOpen(orderedSteps[idx].images_url[0])}/>
+              <ul id='concept-show-small-imgs'>
+                {this.renderSmallImgs(orderedSteps[idx].images_url)}
+              </ul>
+
+
           </div>
         }
+
         <h5 id='concept-show-step-p'
           dangerouslySetInnerHTML={this.renderBody(orderedSteps[idx].body)}/>
       </div>
@@ -139,7 +144,7 @@ class ConceptsStepsComments extends React.Component{
         </Modal>
         <div >
           <ul id='concept-show-small-imgs'>
-            {this.renderSmallImgs()}
+            {this.renderSmallImgs(this.props.images)}
           </ul>
         </div>
         <div id='concept-show-description'>

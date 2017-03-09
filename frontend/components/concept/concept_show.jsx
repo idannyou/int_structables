@@ -30,8 +30,9 @@ class ConceptShow extends React.Component{
         <div id='concept-show' >
 
             <ConceptNav
-              title={this.props.concept.title}
-              username={concept.username}/>
+              title={concept.title}
+              username={concept.username}
+              category={concept.categories}/>
 
           <div id='concept-show-body'>
             {(concept.images_url)?

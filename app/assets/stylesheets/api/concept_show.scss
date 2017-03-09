@@ -1,6 +1,7 @@
 #concept-show-container{
   background-color: rgb(212, 225, 231);
   border: 1px solid #ddd;
+  padding-bottom: 20px;
 }
 
 #concept-show{
@@ -148,6 +149,7 @@
 }
 
 #concept-show-small-imgs{
+  margin-top: 10px;
   display:flex;
   flex-direction: row;
 }
