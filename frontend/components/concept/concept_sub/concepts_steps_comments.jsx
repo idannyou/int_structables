@@ -18,7 +18,11 @@ class ConceptsStepsComments extends React.Component{
     this.renderBody = this.renderBody.bind(this);
   }
 
-  componentDidUpdate(prevProps, prevState){
+  componentDidUpdate(){
+      MathJax.Hub.Typeset();
+  }
+
+  componentDidMount(){
       MathJax.Hub.Typeset();
   }
 
