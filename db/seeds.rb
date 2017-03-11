@@ -47,6 +47,16 @@ c11 = Concept.new(
   category_ids: [cat1.id]
 )
 
+c12 = Concept.new(
+  title: "How to Approximate the Area Under the Curve Using Geometry?",
+   description:
+    "I will show you how to approximate the area under a curve using basic geometry. For this example, we will look at the area of f(x) = x from x=0 to x=1.",
+   equations: "",
+   user_id: u1.id,
+   publish: true,
+   category_ids: [cat2.id]
+)
+
 
 #Image Seed
 
@@ -56,6 +66,7 @@ c2.images.new(image: File.open('app/assets/images/11-cute-gif-222.gif'))
 c3.images.new(image: File.open('app/assets/images/718448.gif'))
 c10.images.new(image: File.open('app/assets/images/surface-area-of-cylinder-animation.gif'))
 c11.images.new(image: File.open('app/assets/images/related_rates.jpg'))
+c12.images.new(image: File.open('app/assets/images/Y = X.png'))
 
 c1.save!
 c2.save!
@@ -182,3 +193,28 @@ s13.save!
 s14.save!
 s15.save!
 s16.save!
+
+# Basic Integral
+
+s17 = c12.steps.new(
+  body:
+   "Lets look at the function: \n\n\\(f\\left(x\\right)=x\\)\n\nWe can see that finding the area under this curve is simply finding the area of a triangle. We also know that the area of a triangle is: \n\n\\(Area=\\frac{1}{2}\\cdot B\\cdot H\\)\n\nwhere,\n\\(B: Base\\)\n\\(H: Height\\)",
+  order: 1.0,
+  title: "The Basics"
+)
+s18 = c12.steps.new(
+  body:
+   "Now we can plug the base and height into the triangle area formula.\n\n\\(Area=\\frac{1}{2}\\left(1\\cdot1\\right)\\)\n\nSo the area of \\(f\\left(x\\right)=x\\) from x=0 to x=1 is:\n\n\\(\\frac{1}{2}\\)",
+  order: 3.0,
+  title: "Using the Triangle Area Formula"
+)
+s19 = c12.steps.new(
+  body:
+   "\\(Base=1\\)\n\nThe height can be determined by finding the f(x) at the points of interest:\n\n\\(f\\left(1\\right)-f\\left(0\\right)\\)\n\n\\(=1-0\\)\n\n=\\(1\\)\n\nThe height is 1.",
+  order: 2.0,
+  title: "Base and Height of f(x) = x"
+)
+
+s17.save!
+s18.save!
+s19.save!

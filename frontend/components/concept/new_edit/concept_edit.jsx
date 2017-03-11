@@ -31,10 +31,10 @@ class ConceptNewEdit extends React.Component{
       this.setState({concept: newProps.concept, deleteState: false});
   }
 
-  update(field){
-    return (e) => {
-      this.setState({[field]: e.target.value});
-    };
+  update(field, event){
+    let newConcept = Object.assign({}, this.state.concept);
+    newConcept[field] = event.target.value;
+    this.setState({concept: newConcept}, ()=>{});
   }
 
   handlePublish(){
@@ -96,13 +96,13 @@ class ConceptNewEdit extends React.Component{
               <div id='concept-edit-body'>
                 <input type='text' id='concept-edit-body-title'
                   value= {this.state.concept.title}
-                  onChange={this.update('title')}
+                  onChange={(event) => this.update('title', event)}
                   placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
                   />
 
                 <textarea id='concept-edit-body-description'
                   value={this.state.concept.description}
-                  onChange={this.update('description')}
+                  onChange={(event) => this.update('description', event) }
                   placeholder= {(this.props.errors && this.props.errors['description']) ? `Description ${this.props.errors['description']}`:'Description'}
                   />
               </div>

@@ -53,7 +53,8 @@ export const createConcept = (concept) => (dispatch) => {
 
 export const updateConcept = (concept, id) => (dispatch) => {
   return ConceptApiUtil.updateConcept(concept, id).then(
-    (concept) => dispatch(receiveConcept(concept))
+    (concept) => dispatch(receiveConcept(concept)),
+    (errors) => dispatch(receiveErrors(errors.responseJSON))
   );
 };
 
