@@ -16,18 +16,18 @@ INT-Structables is a full-stack web application inspired by Instructables, where
 ### Concepts
   Concepts can have many steps. Steps can be text and/or images. MathJax is incorporated to render Latex to readable math symbols.
 
-  ![alt text](https://raw.githubusercontent.com/christiancho/interlude-app/master/docs/screenshots/interlude_screenshot.jpg "Concept Screenshot")
+  ![alt text](https://github.com/idannyou/int_structables/blob/master/app/assets/images/readme/concept.gif "Concept Screenshot")
 
 
 ### Steps
   Steps can be added or removed from the Concept Edit page. Steps have their own edit page, where users can insert Latex in the step edit form.
 
-  ![alt text](https://raw.githubusercontent.com/christiancho/interlude-app/master/docs/screenshots/interlude_screenshot.jpg "Step Screenshot")
+  ![alt text](https://github.com/idannyou/int_structables/blob/master/app/assets/images/readme/steps.gif "Step Screenshot")
 
 ### Categories
   This app has 3 categories, Derivatives, Limits, and Integrals. Concepts can belong to none, one or more categories. When a user first visits the app, the user can view all the concepts, or filter them by category. Categories are set when the User is about to publish the concept.
 
-  ![alt text](https://raw.githubusercontent.com/christiancho/interlude-app/master/docs/screenshots/interlude_screenshot.jpg "Step Screenshot")
+  ![alt text](https://github.com/idannyou/int_structables/blob/master/app/assets/images/readme/category.gif "Categories Screenshot")
 
 ### Comment
   Users can leave comments on a concept when they are signed in.
