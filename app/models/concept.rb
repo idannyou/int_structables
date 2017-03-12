@@ -32,13 +32,6 @@ class Concept < ApplicationRecord
       .distinct
   end
 
-  # def self.find_by_category_name(cat_name)
-  #   Concept.includes(:images).joins(self.join_sql).where('categories.name ILIKE ?', cat_name)
-  #     .or(Concept.includes(:images).joins(self.join_sql).where('concepts.title ILIKE ?', "%#{cat_name}%"))
-  #     .distinct
-  # end
-
-
   private
 
     def self.join_sql
