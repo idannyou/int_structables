@@ -4,7 +4,14 @@
 
 INT-Structables is a full-stack web application inspired by Instructables, where users can share and learn Calculus Concepts. It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the front end.
 
-## Features & Implementation
+## Technology
+
+### INT-Structables was built using:
+- [MathQuill](http://mathquill.com/) for inputting math expressions
+- [MathJax](https://www.mathjax.org/) for immediate pretty-printing of math expressions
+- [jQuery](https://jquery.com/) for DOM manipulation
+
+## Features
 
 ### Single-Page App
 
