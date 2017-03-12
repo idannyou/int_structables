@@ -57,6 +57,26 @@ c12 = Concept.new(
    category_ids: [cat2.id]
 )
 
+c13 = Concept.new(
+  title: "What is a Slope?",
+  description: "The slope of a line is the measure of the steepness of a line.",
+  equations: "",
+  user_id: u1.id,
+  publish: true
+)
+
+c14 = Concept.new(
+   title: "What is a Derivative? ",
+   description:
+    "A derivative measures the sensitivity of the change of a function relative to a variable. Derivative expands on the slope definition to achieve this measurement. So before we dive into derivatives, we need to understand what is a slope. Review 'What is a Slope?' before checking this concept out.",
+   equations: "",
+   user_id: u1.id,
+   publish: true,
+   category_ids: [cat2.id, cat3.id]
+)
+
+
+
 
 #Image Seed
 
@@ -68,11 +88,20 @@ c10.images.new(image: File.open('app/assets/images/surface-area-of-cylinder-anim
 c11.images.new(image: File.open('app/assets/images/related_rates.jpg'))
 c12.images.new(image: File.open('app/assets/images/Y = X.png'))
 
+c13.images.new(image: File.open('app/assets/images/slope/Negative-slope.gif'))
+c13.images.new(image: File.open('app/assets/images/slope/Positive-slope.gif'))
+c13.images.new(image: File.open('app/assets/images/slope/Zero-slope.gif'))
+
+c14.images.new(image: File.open('app/assets/images/Derivative_Cover.jpg'))
+
 c1.save!
 c2.save!
 c3.save!
 c10.save!
 c11.save!
+c12.save!
+c13.save!
+c14.save!
 
 #Step Seed
 s1= c1.steps.new(title:'Step 1', body:'Step 1 Body', order: 1.0, concept_id: c1.id)
@@ -218,3 +247,26 @@ s19 = c12.steps.new(
 s17.save!
 s18.save!
 s19.save!
+
+# Basic Slope
+
+s20 = c13.steps.new(
+  body:
+   "Lets look at the graph above. \n\nThe y-axis represent velocity, and the x-axis represent time.\n\nWe can clearly see that the slope is positive or we can determine that the slope is positive using the slope formula.\n\nLets select two points as needed by the slope formula. Lets pick x=2s and x=4s.\n\n\\(\\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}\\)\n\n\\(=\\frac{f\\left(4s\\right)-f\\left(2s\\right)}{4s-2s}\\)\n\n\\(\\frac{\\left(8\\cdot\\frac{m}{s}-4\\cdot\\frac{m}{s}\\right)}{4s-2s}\\)\n\nSo, the slope of the line is \\(=2\\cdot\\frac{m}{s^2}\\). \n\nThis means as the time increases by \\(1s\\) the velocity increases by \\(2\\cdot\\frac{m}{s}\\).",
+  order: 2.0,
+  title: "Slope Example"
+)
+
+s21 = c13.steps.new(
+  body:
+   "The slope of a line is determined by:\n\n\\(\\frac{\\left(y_2-y_1\\right)}{\\left(x_2-x_1\\right)}\\)\n\nor another way to write it:\n\n\\(\\frac{\\left(f\\left(x_2\\right)-f\\left(x_1\\right)\\right)}{\\left(x_2-x_1\\right)}\\)\n\nOr in plain english, the slope is the rise over run of a straight line. The slope tells us a lot about a line.\n\nA positive slope means that the f(x) increases as you increase x.\n\nA negative slope mean that the f(x) decreases as you increase x.\n\nLastly, a zero slope means that the f(x) does not increase or decrease as you increase x.",
+  order: 1.0,
+  title: "The Slope Equation"
+)
+
+s20.images.new(image: File.open('app/assets/images/slope/velocity line.gif'))
+
+s20.save!
+s21.save!
+
+# Basic Derivative
