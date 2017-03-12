@@ -72,7 +72,7 @@ c14 = Concept.new(
    equations: "",
    user_id: u1.id,
    publish: true,
-   category_ids: [cat2.id, cat3.id]
+   category_ids: [cat1.id, cat3.id]
 )
 
 
@@ -270,3 +270,40 @@ s20.save!
 s21.save!
 
 # Basic Derivative
+
+s22 = c14.steps.new(
+body:
+"The red lines shown in the graph above are known as Secant Lines. A secant line connects two points in a function. We can determine the slope of these secant lines by plugging the two end points to: \n\n\\(\\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}\\)\n\nThe slope of a secant line gives us some insight about the function. For example, the three red secant lines have positive slopes, indicating that the function in that range on average is increasing.\n\n",
+order: 1.0,
+title: "Secant Lines"
+)
+
+s22.images.new(image: File.open('app/assets/images/derivative/secant lines.png'))
+
+s23 = c14.steps.new(
+  body:
+    "We can determine the slope of a Secant Line, because the two points are located in our \\(f\\left(x\\right)\\). The slope of the secant line gives us an average insight of our function within a range.\n\nWhat if we don't want an 'average' slope, but instead want the slope at a point in our \\(f\\left(x\\right)\\), like the blue line above. A line that is tangent to a point in \\(f\\left(x\\right)\\) is called a tangent line. By knowing the slope of a tangent line, one can accurately describe how \\(f\\left(x\\right)\\) is behaving exactly at that one point. ",
+   order: 2.0,
+   title: "Tangent Line"
+)
+
+s24 = c14.steps.new(
+  body:
+   "Recall that the line slope equation is defined as: \n\n\\(\\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}\\)\n\nThis equation requires TWO known points to determine the slope, but the Tangent line only has ONE point.\n\nWe know that the Tangent line is tangent to the function at one point, so we can arbitrarily create a second point and force the second point to be REALLY close to the point of interest, that is:\n\n\\(x_2-x_1\\approx0\\)  or\n\n\\(x_2-x_1\\to0\\)\n\nLets assign \\(x_2-x_1\\)  a variable, h.\n\n\\(h=x_2-x_1\\) or \\(x_1+h=x_2\\)\n\nSo, now the slope formula can be re-written as:\n\n\\(\\lim_{h\\to0}\\frac{f\\left(x_1+h\\right)-f\\left(x_1\\right)}{h}\\)\n Also known as the derivative!",
+  order: 3.0,
+  title: "The Slope of a Tangent Line or The Derivative"
+)
+
+s25 = c14.steps.new(
+  body:
+  "Lets find the slope of a line tangent to (1,1) of the function \\(f\\left(x\\right)=x^2\\)\n\n\\(\\lim_{h\\to0}\\frac{f\\left(x_1+h\\right)-f\\left(x_1\\right)}{h}\\)\n\n\\(=\\lim_{h\\to0}\\frac{f\\left(1+h\\right)-f\\left(x\\right)}{h}\\)\n\n\\(=\\lim_{h\\to0}\\frac{\\left(1+h\\right)^2-\\left(1\\right)}{h}\\)\n\n\\(=\\lim_{h\\to0}\\frac{1+2h+h^2-\\left(1\\right)}{h}\\)\n\n\\(=\\lim_{h\\to0}\\frac{2h+h^2}{h}\\)\n\n\\(=\\lim_{h\\to0}\\frac{h\\left(2+h\\right)}{h}\\)\n\n\\(=\\lim_{h\\to0}\\left(2+h\\right)\\)\n\n\\(=2\\)",
+  order: 4.0,
+  title: "The Slope of a Tangent Line Example"
+)
+
+s25.images.new(image: File.open('app/assets/images/derivative/tangent line.png'))
+
+s22.save!
+s23.save!
+s24.save!
+s25.save!
