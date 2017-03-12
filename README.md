@@ -27,7 +27,7 @@ INT-Structables is a full-stack web application inspired by Instructables, where
 ### Categories
   This app has 3 categories, Derivatives, Limits, and Integrals. Concepts can belong to none, one or more categories. When a user first visits the app, the user can view all the concepts, or filter them by category. Categories are set when the User is about to publish the concept.
 
-  ![alt text](https://github.com/idannyou/int_structables/blob/master/app/assets/images/readme/category.gif "Categories Screenshot")
+  ![alt text](https://github.com/idannyou/int_structables/blob/master/app/assets/images/readme/category_1.gif "Categories Screenshot")
 
 ### Comment
   Users can leave comments on a concept when they are signed in.
