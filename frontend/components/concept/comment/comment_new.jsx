@@ -14,7 +14,7 @@ class CommentNew extends React.Component{
   }
 
   createComment(e){
-    this.props.createComment(this.state, `/concepts/${this.props.conceptId}`)
+    this.props.createComment(this.state, `concepts/${this.props.conceptId}`)
       .then(() => this.setState({content: ""}));
   }
 

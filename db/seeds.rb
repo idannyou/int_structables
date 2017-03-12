@@ -11,6 +11,7 @@ Image.destroy_all
 Step.destroy_all
 User.destroy_all
 Category.destroy_all
+Comment.destroy_all
 
 u1 = User.create(username: 'guest', password: 'guestguest')
 u2 = User.create(username: 'testing', password: 'testing')
