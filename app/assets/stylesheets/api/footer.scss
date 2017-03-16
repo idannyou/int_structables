@@ -1,0 +1,24 @@
+
+#footer-bar{
+  margin: 0 auto;
+  display: flex;
+  padding-top: 20px;
+  height: 20px;
+  background-color: #eee;
+}
+
+#footer-bar button{
+  width: 150px;
+  height: 150px;
+}
+
+#footer-bar ul{
+  display: flex;
+  list-style: none;
+  font-size: 25px;
+}
+
+#footer-bar ul a{
+  margin-right: 10px;
+  text-decoration: none;
+}
