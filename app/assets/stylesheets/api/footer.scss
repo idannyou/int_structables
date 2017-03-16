@@ -2,6 +2,7 @@
 #footer-bar{
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   padding-top: 20px;
   height: 20px;
   background-color: #eee;
@@ -15,7 +16,7 @@
 #footer-bar ul{
   display: flex;
   list-style: none;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #footer-bar ul a{
