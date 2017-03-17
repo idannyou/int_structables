@@ -81,7 +81,7 @@ c14 = Concept.new(
 
 #Image Seed
 
-c1.images.new(image: 'https://www.vomzi.com/wp-content/uploads/2016/02/best-cute-gif-788.gif')
+c1.images.new(image: 'http://www.vomzi.com/wp-content/uploads/2016/02/best-cute-gif-788.gif')
 c1.images.new(image: File.open('app/assets/images/91558-babies-cute-baby.gif'))
 c2.images.new(image: File.open('app/assets/images/11-cute-gif-222.gif'))
 c3.images.new(image: File.open('app/assets/images/718448.gif'))
