@@ -10,6 +10,7 @@ $feature_height: 39px;
 #searchbar-container{
   display: flex;
   align-self: center;
+  align-items: center;
   margin-right: 20px;
 }
 
@@ -17,7 +18,7 @@ $feature_height: 39px;
   border: 1px solid #ccc;
   width: 150px;
   height: 24px;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   font-size: 14px;
   padding: 4px 6px;
 

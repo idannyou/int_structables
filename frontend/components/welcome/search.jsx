@@ -38,8 +38,6 @@ class Search extends React.Component{
           onChange={this.handleInput}
           id="searchbar"
           />
-        <img src={window.magnifier}
-          id='searchbar-img'/>
       </div>
     );
   }
