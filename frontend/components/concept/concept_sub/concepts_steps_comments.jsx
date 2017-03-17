@@ -5,6 +5,7 @@ import {hashHistory} from 'react-router';
 import CommentNewContainer from '../comment/comment_new_container';
 import CommentShowContainer from '../comment/comment_show_container';
 import Modal from 'react-modal';
+import ModalStyle from './modal_style';
 
 
 
@@ -132,6 +133,7 @@ class ConceptsStepsComments extends React.Component{
         <Modal
           isOpen={this.state.modalOpen}
           contentLabel="Modal"
+          style={ModalStyle}
           onRequestClose={this.onModalClose}
           >
           {this.renderModalImage()}
