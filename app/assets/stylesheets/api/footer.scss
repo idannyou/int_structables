@@ -3,9 +3,13 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 20px;
   height: 20px;
+  width: 100%;
   background-color: #eee;
+  position: fixed;
+  bottom: 0;
 }
 
 #footer-bar button{
