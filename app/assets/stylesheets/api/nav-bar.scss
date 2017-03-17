@@ -5,11 +5,13 @@ $nav_bar_height: 61px;
   flex-direction: row;
   line-height: $nav_bar_height;
   margin-left: 5%;
+  width: 10%;
 }
 
 .right-nav{
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   align-self: center;
   height: 20px;
   margin-right: 2.5%;
@@ -23,7 +25,7 @@ $nav_bar_height: 61px;
   font-family: sans-serif;
   display: flex;
   flex-direction: row;
-  width: auto;
+  width: 100%;
   height: $nav_bar_height;
   background-color: #eee;
   overflow: visible;
@@ -32,7 +34,6 @@ $nav_bar_height: 61px;
 
 #nav-signup{
   font-size: 12px;
-  padding-right: 10px;
 }
 
 #nav-login{
