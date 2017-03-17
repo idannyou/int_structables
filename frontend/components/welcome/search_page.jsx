@@ -19,8 +19,15 @@ class SearchPage extends React.Component{
 
 
   publishOrNot(){
+    if (this.props.concepts.length === 0){
+      return (
+        <h1 className='search-no-results'>
+          No Results
+        </h1>
+      );
+    }
     return this.props.concepts.map((concept,idx) => {
-      if(!concept) return 'No Results';
+      if(!concept) return null;
       if(concept.publish === true){
         return (<ConceptIndexItem
           key = {idx}
