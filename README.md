@@ -1,6 +1,6 @@
 #INT-Structables
 
-[INT-Structables] (https://int-structables.herokuapp.com/#/ "Live link")
+[INT-Structables] (https://int-structables.herokuapp.com/#/)
 
 INT-Structables is a full-stack web application inspired by Instructables, where users can share and learn Calculus Concepts. It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the front end.
 
