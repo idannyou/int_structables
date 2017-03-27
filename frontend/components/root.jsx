@@ -33,7 +33,6 @@ const Root = ( {store} ) => {
     const currentUser = store.getState().session.currentUser;
     if(!currentUser){
       replace('/');
-      aSync() ;
     }
     if (currentUser.id !== parseInt(nextState.params.userId)) {
       replace('/');
