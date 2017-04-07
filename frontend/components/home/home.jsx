@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ConceptIndexContainer from '../concept/concept_index_container';
 import MakeItSearchBar from '../welcome/make_it_search_bar';
 
@@ -67,9 +67,8 @@ class Home extends React.Component{
     return(
       <div>
 
-          <video autoPlay loop className="fillWidth">
-            <source src={ window.headvideo } type="video/mp4" />
-          </video>
+          <img className='fillWidth' src={window.headimage}/>
+
           <MakeItSearchBar />
         <ConceptIndexContainer />
       </div>
