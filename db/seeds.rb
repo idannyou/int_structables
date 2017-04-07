@@ -15,6 +15,7 @@ Comment.destroy_all
 
 u1 = User.create(username: 'guest', password: 'guestguest')
 u2 = User.create(username: 'testing', password: 'testing')
+u3 = User.create(username: 'TurnUpCalc', password: 'turntturnt')
 
 #categories
 cat1 = Category.create(name: 'Derivative');
@@ -27,13 +28,13 @@ c1 = Concept.new(title: 'Cute', description:'Cute', user_id: u1.id, publish: fal
 
 c2 = Concept.new(title: 'Kinda Cute', description:'Mehhhhhh', user_id: u1.id, publish: false)
 
-c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: u1.id, publish: false)
+c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: u3.id, publish: false)
 
 c10 = Concept.new(
   title: "How to minimize the surface area of a cylinder?",
   description: "Using derivatives, I'll show you how to minimize the surface area of a cylinder given a constant volume.",
   equations: "",
-  user_id: u1.id,
+  user_id: u3.id,
   publish: true,
   category_ids: [cat1.id]
 )
@@ -43,7 +44,7 @@ c11 = Concept.new(
   description:
   "I'll demonstrate how to use related rates to solve a fishing problem.",
   equations: "",
-  user_id: u1.id,
+  user_id: u3.id,
   publish: true,
   category_ids: [cat1.id]
 )
@@ -53,7 +54,7 @@ c12 = Concept.new(
    description:
     "I will show you how to approximate the area under a curve using basic geometry. For this example, we will look at the area of f(x) = x from x=0 to x=1.",
    equations: "",
-   user_id: u1.id,
+   user_id: u3.id,
    publish: true,
    category_ids: [cat2.id]
 )
@@ -62,7 +63,7 @@ c13 = Concept.new(
   title: "What is a Slope?",
   description: "The slope of a line is the measure of the steepness of a line.",
   equations: "",
-  user_id: u1.id,
+  user_id: u3.id,
   publish: true
 )
 
@@ -71,9 +72,19 @@ c14 = Concept.new(
    description:
     "A derivative measures the sensitivity of the change of a function relative to a variable. Derivative expands on the slope definition to achieve this measurement. So before we dive into derivatives, we need to understand what is a slope. Review 'What is a Slope?' before checking this concept out.",
    equations: "",
-   user_id: u1.id,
+   user_id: u3.id,
    publish: true,
    category_ids: [cat1.id, cat3.id]
+)
+
+c15 = Concept.new(
+  title: "Riemann Sum",
+  description:
+  "Using Riemann Sum, we will approximate the area under any curves.",
+  equations: "",
+  user_id: u3.id,
+  publish: true,
+  category_ids: [cat2.id, cat3.id]
 )
 
 
@@ -93,6 +104,7 @@ c12.images.new(image: File.open('app/assets/images/approximate_integral.jpg'))
 c13.images.new(image: File.open('app/assets/images/slope/slope.jpg'))
 
 c14.images.new(image: File.open('app/assets/images/derivative/derivative.jpg'))
+c15.images.new(image: File.open('app/assets/images/Riemann.jpg'))
 
 c1.save!
 c2.save!
@@ -102,6 +114,7 @@ c11.save!
 c12.save!
 c13.save!
 c14.save!
+c15.save!
 
 #Step Seed
 s1= c1.steps.new(title:'Step 1', body:'Step 1 Body', order: 1.0, concept_id: c1.id)

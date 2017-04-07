@@ -79,19 +79,19 @@ class ConceptPublish extends React.Component{
   handleCategories(){
     return(
       <div>
-        <label htmlFor='Derivative'>
+        <label htmlFor='Derivative' className='checkbox'>
           Derivatives
         </label>
         <input type='checkbox' id= 'Derivative' checked={this.checkCheck('Derivative')}
           onChange = {() => this.handleCatClick('Derivative')}
           />
-          <label htmlFor='Integral'>
+          <label htmlFor='Integral' className='checkbox'>
             Integrals
           </label>
         <input type='checkbox' id= 'Integral' checked={this.checkCheck('Integral')}
           onChange = {() => this.handleCatClick('Integral')}
           />
-          <label htmlFor='Limits'>
+          <label htmlFor='Limits' className='checkbox'>
             Limits
           </label>
         <input type='checkbox' id= 'Limit' checked={this.checkCheck('Limit')}
