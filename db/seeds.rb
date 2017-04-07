@@ -85,15 +85,14 @@ c1.images.new(image: 'http://www.vomzi.com/wp-content/uploads/2016/02/best-cute-
 c1.images.new(image: File.open('app/assets/images/91558-babies-cute-baby.gif'))
 c2.images.new(image: File.open('app/assets/images/11-cute-gif-222.gif'))
 c3.images.new(image: File.open('app/assets/images/718448.gif'))
-c10.images.new(image: File.open('app/assets/images/surface-area-of-cylinder-animation.gif'))
-c11.images.new(image: File.open('app/assets/images/related_rates.jpg'))
-c12.images.new(image: File.open('app/assets/images/Y = X.png'))
 
-c13.images.new(image: File.open('app/assets/images/slope/Negative-slope.gif'))
-c13.images.new(image: File.open('app/assets/images/slope/Positive-slope.gif'))
-c13.images.new(image: File.open('app/assets/images/slope/Zero-slope.gif'))
+c10.images.new(image: File.open('app/assets/images/optimize.jpg'))
+c11.images.new(image: File.open('app/assets/images/Related.jpg'))
+c12.images.new(image: File.open('app/assets/images/approximate_integral.jpg'))
 
-c14.images.new(image: File.open('app/assets/images/Derivative_Cover.jpg'))
+c13.images.new(image: File.open('app/assets/images/slope/slope.jpg'))
+
+c14.images.new(image: File.open('app/assets/images/derivative/derivative.jpg'))
 
 c1.save!
 c2.save!
@@ -157,6 +156,8 @@ s10= c10.steps.new(
 s1.images.new(image: File.open('app/assets/images/cutest-panda-gifs-babies.gif'))
 s2.images.new(image: File.open('app/assets/images/super-cute-heart-kitty-illustration-valentine-animated-gif.gif'))
 s3.images.new(image: File.open('app/assets/images/heroImage.jpg'))
+
+s6.images.new(image: File.open('app/assets/images/surface-area-of-cylinder-animation.gif'))
 s8.images.new(image: File.open('app/assets/images/Surface Area 1.png'))
 
 s1.save!
@@ -216,6 +217,7 @@ s16= c11.steps.new(
 )
 
 s11.images.new(image: File.open('app/assets/images/related_rates copy.jpg'))
+s15.images.new(image: File.open('app/assets/images/related_rates.jpg'))
 
 s11.save!
 s12.save!
@@ -245,6 +247,8 @@ s19 = c12.steps.new(
   title: "Base and Height of f(x) = x"
 )
 
+s17.images.new(image: File.open('app/assets/images/Y = X.png'))
+
 s17.save!
 s18.save!
 s19.save!
@@ -266,6 +270,10 @@ s21 = c13.steps.new(
 )
 
 s20.images.new(image: File.open('app/assets/images/slope/velocity line.gif'))
+
+s21.images.new(image: File.open('app/assets/images/slope/Negative-slope.gif'))
+s21.images.new(image: File.open('app/assets/images/slope/Positive-slope.gif'))
+s21.images.new(image: File.open('app/assets/images/slope/Zero-slope.gif'))
 
 s20.save!
 s21.save!
