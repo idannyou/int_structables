@@ -152,7 +152,7 @@ class Images extends React.Component{
       return (
         <button id='concept-edit-save'
                 onClick={this.handlePublish}>
-          Publish
+          Edit Publish
         </button>
       );
   }
