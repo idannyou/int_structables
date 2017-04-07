@@ -105,23 +105,24 @@ class ConceptPublish extends React.Component{
     return (
       <div id='concept-publish'>
           <div id='concept-publish-item'>
-            <div id='concept-publish-img'>
-              <img src={this.state.images_url[0]} />
-            </div>
+
+              <img src={this.state.images_url[0]} id='concept-publish-img'/>
+
             <div id='concept-publish-text'>
+
               <div>
-                <input type='text' id='concept-index-title'
-                  value= {this.state.title}
-                  onChange={this.update('title')}
-                  placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
-                  />
+                <div id='concept-publish-title'>
+                  {this.state.title}
+                </div>
               </div>
-                <label id='concept-publish-username'>
-                  by
-                  <a>
-                    {this.state.username}
-                  </a>
-                </label>
+
+              <label id='concept-publish-username'>
+                by
+                <a>
+                  {this.state.username}
+                </a>
+              </label>
+
             </div>
           </div>
         <div className='concept-publish-edit'>
