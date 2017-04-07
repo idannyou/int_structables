@@ -122,6 +122,8 @@ class ConceptsStepsComments extends React.Component{
 
   render(){
     let concept = this.props.images;
+    let newComment = (this.props.currentUser)? (<CommentNewContainer
+      conceptId = {this.props.conceptId}/>) : null;
     return(
       <div id='concept-show-concept-step'>
         {(!concept[0])? null:
@@ -151,8 +153,7 @@ class ConceptsStepsComments extends React.Component{
             {this.renderSteps()}
           </div>
           <div id='concept-show-comments'>
-            <CommentNewContainer
-              conceptId = {this.props.conceptId}/>
+            {newComment}
             <CommentShowContainer
               conceptId = {this.props.conceptId}/>
           </div>

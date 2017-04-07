@@ -46,6 +46,7 @@ class ConceptShow extends React.Component{
               description = {concept.description}
               steps = {concept.steps}
               conceptId = {concept.id}
+              currentUser = {this.props.currentUser}
               />
             : null}
             <UserInfo
