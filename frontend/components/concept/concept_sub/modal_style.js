@@ -8,7 +8,6 @@ const ModalStyle = {
     backgroundColor : 'transparent',
     zIndex          : 10,
     padding         : 0
-
   },
   content : {
     position        : 'absolute',
@@ -17,9 +16,7 @@ const ModalStyle = {
     transform       : 'translateX(-50%)',
     bottom          : 'auto',
     backgroundColor : 'transparent',
-    border          : 'none',
-    width           : '1000px',
-    height          : '1000px'
+    border          : 'none'
   }
 };
 export default ModalStyle;
