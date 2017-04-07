@@ -13,6 +13,10 @@ class CommentNew extends React.Component{
     this.update = this.update.bind(this);
   }
 
+  componentWillReceiveProps(newProps) {
+    this.setState({content: ''});
+  }
+
   createComment(e){
     this.props.createComment(this.state, `concepts/${this.props.conceptId}`)
       .then(() => this.setState({content: ""}));
