@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
-import {hashHistory} from 'react-router';
+import {hashHistory, browserHistory} from 'react-router';
 import stickykit from 'sticky-kit/dist/sticky-kit';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
@@ -65,9 +65,15 @@ class ConceptNew extends React.Component{
               id='concept-edit-modal-description'
               onChange={this.update('description')}>
             </textarea>
-            <input type='submit'
-              id='concept-edit-modal-submit'
-              value= 'Start Concept'/>
+            <div id='concept-edit-modal-buttons'>
+              <input type='submit'
+                id='concept-edit-modal-submit'
+                value= 'Start Concept'/>
+              <input type='button'
+                id='concept-edit-modal-submit'
+                value= 'Go Back'
+                onClick={browserHistory.goBack}/>
+            </div>
           </div>
         </form>
       </Modal>
