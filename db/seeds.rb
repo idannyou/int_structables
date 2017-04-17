@@ -94,7 +94,7 @@ c15 = Concept.new(
 
 # c1.images.new(image: File.open('app/assets/images/best-cute-gif-788.gif'))
 c1.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/195/original/best-cute-gif-788.gif?1492444261')
-c1.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/196/original/91558-babies-cute-baby.gif?1492444261'
+c1.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/196/original/91558-babies-cute-baby.gif?1492444261')
 c2.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/195/original/best-cute-gif-788.gif?1492444261')
 c3.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/198/original/718448.gif?1492444261')
 
