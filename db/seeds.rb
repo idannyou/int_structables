@@ -92,19 +92,20 @@ c15 = Concept.new(
 
 #Image Seed
 
-c1.images.new(image: File.open('app/assets/images/best-cute-gif-788.gif'))
-c1.images.new(image: File.open('app/assets/images/91558-babies-cute-baby.gif'))
-c2.images.new(image: File.open('app/assets/images/11-cute-gif-222.gif'))
-c3.images.new(image: File.open('app/assets/images/718448.gif'))
+# c1.images.new(image: File.open('app/assets/images/best-cute-gif-788.gif'))
+c1.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/195/original/best-cute-gif-788.gif?1492444261')
+c1.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/196/original/91558-babies-cute-baby.gif?1492444261'
+c2.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/195/original/best-cute-gif-788.gif?1492444261')
+c3.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/198/original/718448.gif?1492444261')
 
-c10.images.new(image: File.open('app/assets/images/optimize_1.jpg'))
-c11.images.new(image: File.open('app/assets/images/Related.jpg'))
-c12.images.new(image: File.open('app/assets/images/approximate_integral.jpg'))
+c10.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/199/original/optimize_1.jpg')
+c11.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/200/original/Related.jpg?1492444262')
+c12.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/201/original/approximate_integral.jpg?1492444262')
 
-c13.images.new(image: File.open('app/assets/images/slope/slope.jpg'))
+c13.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/202/original/slope.jpg?1492444262')
 
-c14.images.new(image: File.open('app/assets/images/derivative/derivative.jpg'))
-c15.images.new(image: File.open('app/assets/images/Riemann.jpg'))
+c14.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/203/original/derivative.jpg?1492444262')
+c15.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/204/original/Riemann.jpg?1492444262')
 
 c1.save!
 c2.save!
@@ -166,12 +167,12 @@ s10= c10.steps.new(
   title: "Isolate the height"
 )
 
-s1.images.new(image: File.open('app/assets/images/cutest-panda-gifs-babies.gif'))
-s2.images.new(image: File.open('app/assets/images/super-cute-heart-kitty-illustration-valentine-animated-gif.gif'))
-s3.images.new(image: File.open('app/assets/images/heroImage.jpg'))
+s1.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/205/original/cutest-panda-gifs-babies.gif?1492444264')
+s2.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/206/original/super-cute-heart-kitty-illustration-valentine-animated-gif.gif?1492444264')
+s3.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/207/original/heroImage.jpg?1492444264')
 
-s6.images.new(image: File.open('app/assets/images/surface-area-of-cylinder-animation.gif'))
-s8.images.new(image: File.open('app/assets/images/Surface Area 1.png'))
+s6.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/208/original/surface-area-of-cylinder-animation.gif?1492444264')
+s8.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/209/original/Surface_Area_1.png?1492444264')
 
 s1.save!
 s2.save!
@@ -229,8 +230,8 @@ s16= c11.steps.new(
   title: "Identify Equations"
 )
 
-s11.images.new(image: File.open('app/assets/images/related_rates copy.jpg'))
-s15.images.new(image: File.open('app/assets/images/related_rates.jpg'))
+s11.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/210/original/related_rates_copy.jpg?1492444265')
+s15.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/211/original/related_rates.jpg?1492444265')
 
 s11.save!
 s12.save!
@@ -260,7 +261,7 @@ s19 = c12.steps.new(
   title: "Base and Height of f(x) = x"
 )
 
-s17.images.new(image: File.open('app/assets/images/Y = X.png'))
+s17.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/212/original/Y___X.png?1492444265')
 
 s17.save!
 s18.save!
@@ -282,11 +283,11 @@ s21 = c13.steps.new(
   title: "The Slope Equation"
 )
 
-s20.images.new(image: File.open('app/assets/images/slope/velocity line.gif'))
+s20.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/213/original/velocity_line.gif?1492444265')
 
-s21.images.new(image: File.open('app/assets/images/slope/Negative-slope.gif'))
-s21.images.new(image: File.open('app/assets/images/slope/Positive-slope.gif'))
-s21.images.new(image: File.open('app/assets/images/slope/Zero-slope.gif'))
+s21.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/214/original/Negative-slope.gif?1492444265')
+s21.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/215/original/Positive-slope.gif?1492444265')
+s21.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/216/original/Zero-slope.gif?1492444265')
 
 s20.save!
 s21.save!
@@ -300,7 +301,7 @@ order: 1.0,
 title: "Secant Lines"
 )
 
-s22.images.new(image: File.open('app/assets/images/derivative/secant lines.png'))
+s22.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/217/original/secant_lines.png?1492444265')
 
 s23 = c14.steps.new(
   body:
@@ -323,7 +324,7 @@ s25 = c14.steps.new(
   title: "The Slope of a Tangent Line Example"
 )
 
-s25.images.new(image: File.open('app/assets/images/derivative/tangent line.png'))
+s25.images.new(image: 'https://s3.amazonaws.com/intstructable-pro/images/images/000/000/218/original/tangent_line.png?1492444265')
 
 s22.save!
 s23.save!
