@@ -28,7 +28,7 @@ c1 = Concept.new(title: 'Cute', description:'Cute', user_id: u1.id, publish: fal
 
 c2 = Concept.new(title: 'Kinda Cute', description:'Mehhhhhh', user_id: u1.id, publish: false)
 
-c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: u3.id, publish: false)
+c3 = Concept.new(title: 'Sorta Cute', description:'Cool', user_id: u1.id, publish: false)
 
 c10 = Concept.new(
   title: "How to minimize the surface area of a cylinder?",
