@@ -97,7 +97,7 @@ c1.images.new(image: File.open('app/assets/images/91558-babies-cute-baby.gif'))
 c2.images.new(image: File.open('app/assets/images/11-cute-gif-222.gif'))
 c3.images.new(image: File.open('app/assets/images/718448.gif'))
 
-c10.images.new(image: File.open('app/assets/images/optimize.jpg'))
+c10.images.new(image: File.open('app/assets/images/optimize_1.jpg'))
 c11.images.new(image: File.open('app/assets/images/Related.jpg'))
 c12.images.new(image: File.open('app/assets/images/approximate_integral.jpg'))
 
