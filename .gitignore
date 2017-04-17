@@ -8,3 +8,5 @@ test.js
 
 # Ignore application configuration
 /config/application.yml
+
+/images
