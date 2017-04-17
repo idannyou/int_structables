@@ -5,7 +5,7 @@ const ModalStyle = {
     left            : 0,
     right           : 0,
     bottom          : 0,
-    backgroundColor : 'transparent',
+    backgroundColor : 'rgba(0,0,0,.8)',
     zIndex          : 10,
     padding         : 0
   },
@@ -15,8 +15,9 @@ const ModalStyle = {
     left            : '50%',
     transform       : 'translateX(-50%)',
     bottom          : 'auto',
+    zIndex          : 20,
     backgroundColor : 'transparent',
-    border          : 'none'
+    border          : '1 px solid black'
   }
 };
 export default ModalStyle;
