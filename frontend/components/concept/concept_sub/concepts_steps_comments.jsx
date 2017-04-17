@@ -102,6 +102,7 @@ class ConceptsStepsComments extends React.Component{
           <div id='concept-show-concept'>
             <img src={orderedSteps[idx].images_url[0]}
               onClick={() => this.onModalOpen(orderedSteps[idx].images_url[0])}/>
+
               <ul id='concept-show-small-imgs'>
                 {this.renderSmallImgs(orderedSteps[idx].images_url)}
               </ul>
@@ -122,6 +123,7 @@ class ConceptsStepsComments extends React.Component{
 
   render(){
     let concept = this.props.images;
+
     let newComment = (this.props.currentUser)? (<CommentNewContainer
       conceptId = {this.props.conceptId}/>) : null;
     return(
