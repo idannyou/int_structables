@@ -15,7 +15,7 @@ Comment.destroy_all
 
 u1 = User.create(username: 'guest', password: 'guestguest')
 u2 = User.create(username: 'testing', password: 'testing')
-u3 = User.create(username: 'TurnUpCalc', password: 'turntturnt')
+u3 = User.create(username: 'TurnUpCalc', password: ENV["password"])
 
 #categories
 cat1 = Category.create(name: 'Derivative');
