@@ -26,7 +26,6 @@ class MakeItSearchBar extends React.Component{
   }
 
   handleClick(field){
-    // document.getElementById('searchbar').value = field;
     let url= `/${field}`;
     hashHistory.push(url);
   }
