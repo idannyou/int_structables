@@ -71,7 +71,7 @@ const Root = ( {store} ) => {
           <Route path='integral' component={SearchPageContainer} />
           <Route path='derivative' component={SearchPageContainer} />
           <Route path='limit' component={SearchPageContainer} />
-    </Route>
+        </Route>
       </Router>
     </Provider>
   );
