@@ -5,6 +5,7 @@ bundle.js.map
 .DS_Store
 npm-debug.log
 test.js
+notes
 
 # Ignore application configuration
 /config/application.yml
