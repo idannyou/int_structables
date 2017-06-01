@@ -32,11 +32,12 @@ class Search extends React.Component{
   render(){
     return(
       <div className='searchbar-container'>
-        <h1 className='searchbar-word'>let's learn</h1>
+        <h1 className='searchbar-word'>let's learn:</h1>
         <input type="text"
           value={this.state.inputVal}
           onChange={this.handleInput}
           className="searchbar"
+          placeholder="Type In Subject"
           />
       </div>
     );
