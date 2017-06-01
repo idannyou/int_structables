@@ -65,7 +65,7 @@
   margin: auto;
   border: 1px solid #ddd;
   background-color: #f6f6f6;
-  margin-top: 5%;
+  margin-top: 50px;
   border-radius: 10px;
 }
 
@@ -209,7 +209,7 @@
   border-radius: 20%;
 }
 
-.save-status{
+#save-status{
   font-size: 16px;
   margin-right: 12px;
   border-radius: 10px;
@@ -220,14 +220,14 @@
   color: #fff;
 }
 
-.concept-edit-delete{
+.concept-edit-delete-bar{
   display: flex;
   justify-content: center;
   margin-top: 10px;
   margin-bottom: -38px;
 }
 
-.concept-edit-delete h2{
+.concept-edit-delete-bar h2{
   font-size: 16px;
   margin-right: 5px;
   font-weight: bold;

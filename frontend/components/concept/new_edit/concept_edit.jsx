@@ -60,7 +60,7 @@ class ConceptNewEdit extends React.Component{
   deleteBox(){
     if (this.state.deleteState === true){
       return(
-        <div className='concept-edit-delete'>
+        <div className='concept-edit-delete-bar'>
           <h2>
             Confirm Delete?
           </h2>
@@ -100,7 +100,7 @@ class ConceptNewEdit extends React.Component{
                   placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
                   />
 
-                <textarea className='concept-edit-body-description'
+                <textarea id='concept-edit-body-description'
                   value={this.state.concept.description}
                   onChange={(event) => this.update('description', event) }
                   placeholder= {(this.props.errors && this.props.errors['description']) ? `Description ${this.props.errors['description']}`:'Description'}

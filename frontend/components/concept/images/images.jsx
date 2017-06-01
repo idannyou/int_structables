@@ -184,7 +184,7 @@ class Images extends React.Component{
             </button>
             {this.publishOrNot()}
             {this.removeMe()}
-            <div className='save-status' className='hidden'>Saved</div>
+            <div id='save-status' className='hidden'>Saved</div>
           </div>
         </div>
         <div className='concept-edit-body-img'>

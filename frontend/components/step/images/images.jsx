@@ -95,7 +95,7 @@ class Images extends React.Component{
         return (
           <li className='concept-edit-adding'
             key={idx}>
-            <button className='concept-edit-delete' onClick={()=>this.handleImgDelete(idx)}>
+            <button className='concept-edit-img-delete' onClick={()=>this.handleImgDelete(idx)}>
               X
             </button>
             <img className='concept-edit-img' src={image_url}/>
@@ -116,7 +116,7 @@ class Images extends React.Component{
         return (
           <li className='concept-edit-adding'
             key={imgKey}>
-            <button className='concept-edit-delete' onClick={this.handlePropImgDelete(imgKey)}>
+            <button className='concept-edit-img-delete' onClick={this.handlePropImgDelete(imgKey)}>
               X
             </button>
             <img className='concept-edit-img' src={this.props.images[imgKey].image_url}/>
@@ -166,7 +166,7 @@ class Images extends React.Component{
                     onClick={this.handleBack}>
               Back
             </button>
-            <div className='save-status' className='hidden'>Saved</div>
+            <div id='save-status' className='hidden'>Saved</div>
           </div>
         </div>
         <div className='concept-edit-body-img'>
