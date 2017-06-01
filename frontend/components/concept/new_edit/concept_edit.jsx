@@ -64,10 +64,10 @@ class ConceptNewEdit extends React.Component{
           <h2>
             Confirm Delete?
           </h2>
-          <button id='concept-edit-save' onClick={this.onDelete}>
+          <button className='concept-edit-save' onClick={this.onDelete}>
             Yes
           </button>
-          <button id='concept-edit-save' onClick={this.onNotDelete}>
+          <button className='concept-edit-save' onClick={this.onNotDelete}>
             No
           </button>
         </div>
@@ -83,8 +83,8 @@ class ConceptNewEdit extends React.Component{
     if(!this.state.concept) return null;
     return (
       <div>
-        <div id='concept-edit-container'>
-          <div id='concept-edit'>
+        <div className='concept-edit-container'>
+          <div className='concept-edit'>
             <ImagesContainer params={this.props.params}
                             publish = {this.state.concept.publish}
                             submitConcept = {this.submitConcept}
@@ -93,14 +93,14 @@ class ConceptNewEdit extends React.Component{
                             />
           <div className='concept-edit-body-delete'>
               {this.deleteBox()}
-              <div id='concept-edit-body'>
-                <input type='text' id='concept-edit-body-title'
+              <div className='concept-edit-body'>
+                <input type='text' className='concept-edit-body-title'
                   value= {this.state.concept.title}
                   onChange={(event) => this.update('title', event)}
                   placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
                   />
 
-                <textarea id='concept-edit-body-description'
+                <textarea className='concept-edit-body-description'
                   value={this.state.concept.description}
                   onChange={(event) => this.update('description', event) }
                   placeholder= {(this.props.errors && this.props.errors['description']) ? `Description ${this.props.errors['description']}`:'Description'}

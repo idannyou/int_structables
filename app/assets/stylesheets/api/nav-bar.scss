@@ -20,7 +20,7 @@ $nav_bar_height: 61px;
   width: 27%;
 }
 
-#nav-bar{
+.nav-bar{
   font-family: sans-serif;
   display: flex;
   flex-direction: row;
@@ -31,15 +31,15 @@ $nav_bar_height: 61px;
   justify-content: space-around;
 }
 
-#nav-signup{
+.nav-signup{
   font-size: 12px;
 }
 
-#nav-login{
+.nav-login{
   font-size: 12px;
 }
 
-#createConcept{
+.createConcept{
   font-size: 12px;
   margin-right: 12px;
   border-radius: 5%;
@@ -54,7 +54,7 @@ $nav_bar_height: 61px;
   white-space: nowrap;
 }
 
-#myConcepts{
+.myConcepts{
   font-size: 12px;
   margin-right: 12px;
   border-radius: 5%;
@@ -71,14 +71,14 @@ $nav_bar_height: 61px;
 
 
 
-#nav-login:after{
+.nav-login:after{
   content: '|';
   color: gray;
   padding-right: 10px;
   padding-left: 10px;
 }
 
-#navbarlogo-img{
+.navbarlogo-img{
   width: auto;
   height: 100px;
   z-index: 2;

@@ -1,11 +1,11 @@
-#concept-index{
+.concept-index{
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   margin-left: 10%;
 }
 
-#concept-index-item{
+.concept-index-item{
   width: 324px;
   height: 363px;
   padding-bottom: 10px;
@@ -15,7 +15,7 @@
 }
 
 
-#concept-index-item button{
+.concept-index-item button{
   position: absolute;
   top: 18px;
   right: 30px;
@@ -32,21 +32,21 @@
   letter-spacing: 2px;
 }
 
-#concept-index-username a{
+.concept-index-username a{
   margin-left: 5px;
 }
 
-#concept-index-img{
+.concept-index-img{
   width: 322px;
   height: 268px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#concept-index-img:hover{
+.concept-index-img:hover{
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-#concept-index-text{
+.concept-index-text{
   padding: 10px 13px;
   margin-bottom: 10px;
   height: 50px;
@@ -56,13 +56,13 @@
   border: 1px solid rgba(0, 0, 0, 0.10);
 }
 
-#concept-index-title{
+.concept-index-title{
   font-weight: bold;
   line-height: 20px;
   font-size: 14px;
 }
 
-#concept-index-title:hover{
+.concept-index-title:hover{
   text-decoration: underline;
 }
 

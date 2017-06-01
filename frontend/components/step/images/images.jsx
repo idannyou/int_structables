@@ -93,12 +93,12 @@ class Images extends React.Component{
     if (this.state.imageFileUrl.length > 0){
       return this.state.imageFileUrl.map((image_url, idx) => {
         return (
-          <li id='concept-edit-adding'
+          <li className='concept-edit-adding'
             key={idx}>
-            <button id='concept-edit-delete' onClick={()=>this.handleImgDelete(idx)}>
+            <button className='concept-edit-delete' onClick={()=>this.handleImgDelete(idx)}>
               X
             </button>
-            <img id='concept-edit-img' src={image_url}/>
+            <img className='concept-edit-img' src={image_url}/>
           </li>
         );
       });
@@ -114,12 +114,12 @@ class Images extends React.Component{
     if (keyArray.length > 0){
       return keyArray.map((imgKey) => {
         return (
-          <li id='concept-edit-adding'
+          <li className='concept-edit-adding'
             key={imgKey}>
-            <button id='concept-edit-delete' onClick={this.handlePropImgDelete(imgKey)}>
+            <button className='concept-edit-delete' onClick={this.handlePropImgDelete(imgKey)}>
               X
             </button>
-            <img id='concept-edit-img' src={this.props.images[imgKey].image_url}/>
+            <img className='concept-edit-img' src={this.props.images[imgKey].image_url}/>
           </li>
         );
       });
@@ -155,22 +155,22 @@ class Images extends React.Component{
   render(){
     return(
       <div>
-        <div id='concept-edit-header'>
+        <div className='concept-edit-header'>
           {this.renderUploadThumbnail()}
-          <div id='concept-edit-buttons'>
-            <button id='concept-edit-save'
+          <div className='concept-edit-buttons'>
+            <button className='concept-edit-save'
                     onClick={this.handleSave}>
               Save
             </button>
-            <button id='concept-edit-save'
+            <button className='concept-edit-save'
                     onClick={this.handleBack}>
               Back
             </button>
-            <div id='save-status' className='hidden'>Saved</div>
+            <div className='save-status' className='hidden'>Saved</div>
           </div>
         </div>
-        <div id='concept-edit-body-img'>
-          <ul id='concept-edit-adding-container'>
+        <div className='concept-edit-body-img'>
+          <ul className='concept-edit-adding-container'>
             {this.renderPropsImageArray()}
             {this.renderImageArray()}
           </ul>

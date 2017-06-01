@@ -31,15 +31,15 @@ class ConceptShow extends React.Component{
     if (!this.props.concept) return null;
     let concept = this.props.concept;
     return(
-      <div id='concept-show-container'>
-        <div id='concept-show' >
+      <div className='concept-show-container'>
+        <div className='concept-show' >
 
             <ConceptNav
               title={concept.title}
               username={concept.username}
               category={concept.categories}/>
 
-          <div id='concept-show-body'>
+          <div className='concept-show-body'>
             {(concept.images_url)?
               <ConceptsStepsComments
               images={concept.images_url}

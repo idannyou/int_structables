@@ -1,10 +1,10 @@
-#concept-publish{
+.concept-publish{
   display: flex;
   justify-content: center;
 }
 
 
-#concept-publish-item{
+.concept-publish-item{
   width: 324px;
   height: 363px;
   padding-bottom: 10px;
@@ -12,13 +12,13 @@
   position: relative;
 }
 
-#concept-publish-img{
+.concept-publish-img{
   width: 322px;
   height: 268px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#concept-publish-text{
+.concept-publish-text{
   padding: 10px 13px;
   margin-bottom: 10px;
   height: 50px;
@@ -28,17 +28,17 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#concept-publish-title{
+.concept-publish-title{
   font-weight: bold;
   line-height: 20px;
   font-size: 14px;
 }
 
-#concept-publish-username a{
+.concept-publish-username a{
   margin-left: 5px;
 }
 
-#concept-publish-save{
+.concept-publish-save{
   font-size: 16px;
   margin-right: 12px;
   border-radius: 10px;
@@ -70,7 +70,7 @@
 
 }
 
-#Derivative, #Integral, #Limit{
+.Derivative, .Integral, .Limit{
   margin-right: 10px;
 
 }

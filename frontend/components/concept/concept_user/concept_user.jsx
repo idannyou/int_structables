@@ -46,16 +46,16 @@ class ConceptUser extends React.Component{
   render(){
     if(!this.props.concepts) return null;
     return(
-      <div id='concept-user-container'>
-        <h1 id='concept-user-title'>Published</h1>
-        <ul id='concept-index'>
+      <div className='concept-user-container'>
+        <h1 className='concept-user-title'>Published</h1>
+        <ul className='concept-index'>
           {
             this.publish()
           }
         </ul>
-        <div id='concept-user-notpublish'>
-          <h1 id='concept-user-title-notpub'>Not Published</h1>
-          <ul id='concept-index'>
+        <div className='concept-user-notpublish'>
+          <h1 className='concept-user-title-notpub'>Not Published</h1>
+          <ul className='concept-index'>
             {
               this.notPublish()
             }

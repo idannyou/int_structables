@@ -3,7 +3,7 @@ import React from 'react';
 const FeatureBar = () => {
 
   return(
-    <div id='feature-bar'>
+    <div className='feature-bar'>
     </div>
   )
 

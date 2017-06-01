@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
 
   return(
-    <div id='footer-bar'>
+    <div className='footer-bar'>
       <ul>
         <li><a href="https://github.com/idannyou" className="fa fa-github"></a></li>
         <li><a href="https://www.linkedin.com/in/danny-ou-07b16221/" className="fa fa-linkedin"></a></li>

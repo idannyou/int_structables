@@ -1,10 +1,10 @@
-#concept-edit-container{
+.concept-edit-container{
   background-color: rgb(212, 225, 231);
   border: 1px solid #ddd;
   padding-bottom: 20px;
 }
 
-#concept-edit-adding{
+.concept-edit-adding{
   display: flex;
   align-self: center;
   width: 100px;
@@ -12,7 +12,7 @@
   position: relative;
 }
 
-#concept-edit{
+.concept-edit{
   margin-top: 2.5%;
   margin-left: 14%;
   margin-right: 14%;
@@ -22,7 +22,7 @@
   padding-bottom: 20px;
 }
 
-#concept-edit-header{
+.concept-edit-header{
   background-color: #f6f6f6;
   border-radius: 10px 10px 0 0;
   padding: 5px;
@@ -47,11 +47,11 @@
   overflow: visible;
 }
 
-#concept-edit-adding-container{
+.concept-edit-adding-container{
   display: flex;
 }
 
-#concept-edit-delete{
+.concept-edit-delete{
   position: absolute;
   z-index: 200;
   color: #e86c00;
@@ -60,7 +60,7 @@
   line-height: 0px;
 }
 
-#concept-edit-body{
+.concept-edit-body{
   width: 80%;
   margin: auto;
   border: 1px solid #ddd;
@@ -69,7 +69,7 @@
   border-radius: 10px;
 }
 
-#concept-edit-body-img{
+.concept-edit-body-img{
   width: 98%;
   margin: auto;
   background: white;
@@ -84,7 +84,7 @@
   line-height: 90px;
 }
 
-#concept-edit-body-title{
+.concept-edit-body-title{
   width: 98%;
   font-weight: bold;
   font-size: 18px;
@@ -103,7 +103,7 @@
   align-self: center;
 }
 
-#concept-edit-body-description{
+.concept-edit-body-description{
   width: 98%;
   background-color: white;
   height: 300px;
@@ -114,12 +114,12 @@
   margin-bottom: 1%;
 }
 
-#concept-edit-body textarea{
+.concept-edit-body textarea{
   box-sizing: border-box;
   padding: 5px;
 }
 
-#concept-edit-save{
+.concept-edit-save{
   font-size: 16px;
   margin-right: 12px;
   border-radius: 10px;
@@ -131,26 +131,26 @@
 
 }
 
-#concept-edit-buttons{
+.concept-edit-buttons{
   display: flex;
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-#concept-edit-title{
+.concept-edit-title{
   margin: 20px;
   font-family: sans-serif;
   font-size: 18px;
   text-align: center;
 }
 
-#concept-edit-modal-body{
+.concept-edit-modal-body{
   display: flex;
   flex-direction: column;
 }
 
-#concept-edit-modal-title{
+.concept-edit-modal-title{
   color: #aaa;
   padding: 10px;
   border: 0;
@@ -163,7 +163,7 @@
   margin: auto;
 }
 
-#concept-edit-modal-description{
+.concept-edit-modal-description{
 
   color: #aaa;
   border: 1px solid #c9c9c9;
@@ -176,7 +176,7 @@
   margin-top: 10px;
 }
 
-#concept-edit-modal-submit{
+.concept-edit-modal-submit{
   margin: auto;
   margin-top: 30px;
   padding: 11px 19px;
@@ -198,18 +198,18 @@
   color: #fff;
 }
 
-#concept-edit-modal-buttons{
+.concept-edit-modal-buttons{
   display: flex;
   justify-content: center;
 }
 
-#concept-edit-img{
+.concept-edit-img{
 
   border: 1px solid transparent;
   border-radius: 20%;
 }
 
-#save-status{
+.save-status{
   font-size: 16px;
   margin-right: 12px;
   border-radius: 10px;

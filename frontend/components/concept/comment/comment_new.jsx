@@ -31,18 +31,18 @@ class CommentNew extends React.Component{
 
   render(){
     return (
-      <div id='comments-new'>
+      <div className='comments-new'>
         <form onSubmit={this.createComment}>
           {(this.props.errors)?`Content ${this.props.errors['content'][0]}`: ''}
           <textarea
             onChange={this.update('content')}
             value={this.state.content}
-            id='comments-new-text'
+            className='comments-new-text'
             />
-          <div id='comments-new-button-contain'>
+          <div className='comments-new-button-contain'>
             <input type='submit'
               value='Post Comment'
-              id='comments-new-button'
+              className='comments-new-button'
               />
 
           </div>

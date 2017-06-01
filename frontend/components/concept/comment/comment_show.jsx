@@ -55,12 +55,12 @@ class CommentShow extends React.Component{
       this.state.comments.map(comment => {
         return(
           <li key={comment.id}
-            id='comments-render'>
-            <p id='comments-render-author'>
+            className='comments-render'>
+            <p className='comments-render-author'>
               {`${comment.username}`}
             </p>
             <textarea value= {comment.content}
-              id='comments-render-text'/>
+              className='comments-render-text'/>
 
           </li>
         );
@@ -70,7 +70,7 @@ class CommentShow extends React.Component{
 
   render(){
     return (
-      <div id='comments'>
+      <div className='comments'>
         <ul>
           {this.renderComments()}
         </ul>

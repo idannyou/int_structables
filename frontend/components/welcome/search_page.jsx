@@ -39,7 +39,7 @@ class SearchPage extends React.Component{
 
   render(){
     return(
-      <div id='concept-index-container'>
+      <div className='concept-index-container'>
         <ul id='concept-index'>
           {
             this.publishOrNot()

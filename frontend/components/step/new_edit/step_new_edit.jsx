@@ -41,7 +41,7 @@ class StepNewEdit extends React.Component{
     return(
       stepObj.image_url.map((img, idx) => {
         return <img src={img} key={idx}
-          id='step-edit-img'/>;
+          className='step-edit-img'/>;
       })
 
     );
@@ -50,8 +50,8 @@ class StepNewEdit extends React.Component{
   renderSteps(){
     if (this.state.steps.length === 0) return null;
     return this.state.steps.map((obj, idx) => (
-      <div key={obj.id} id='steps-edit-steps'>
-          <h1 id='steps-edit-text'
+      <div key={obj.id} className='steps-edit-steps'>
+          <h1 className='steps-edit-text'
             >{`Step ${idx + 1}:`}
             <input type='textarea'
               value={this.state.steps[idx].title}
@@ -60,11 +60,11 @@ class StepNewEdit extends React.Component{
               placeholder='Title'
               />
           </h1>
-        <div id='steps-edit-buttons'>
+        <div className='steps-edit-buttons'>
           <Link to={`concepts/${this.props.conceptId}/step/${obj.id}/edit`}
-            id='steps-button'>Edit</Link>
+            className='steps-button'>Edit</Link>
           <button onClick={() => this.handleDelete(obj.id)}
-            id='steps-button'>Remove</button>
+            className='steps-button'>Remove</button>
         </div>
       </div>
     ));
@@ -102,12 +102,12 @@ class StepNewEdit extends React.Component{
   render(){
 
     return (
-      <div id='steps-edit'>
+      <div className='steps-edit'>
         {this.renderSteps()}
         <button
-          id='steps-button-add'
+          className='steps-button-add'
           onClick={this.handleAdd}>
-          <div id='steps-button-add-text'>
+          <div className='steps-button-add-text'>
             Add Step
           </div>
         </button>

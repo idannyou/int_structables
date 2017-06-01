@@ -54,23 +54,23 @@ class ConceptNew extends React.Component{
         >
         <form onSubmit={this.handleSubmit}>
           <img src={window.newheader} />
-          <div id='concept-edit-modal-body'>
-            <h2 id='concept-edit-title'>My Concept is on:</h2>
+          <div className='concept-edit-modal-body'>
+            <h2 className='concept-edit-title'>My Concept is on:</h2>
             <input type='text'
-              id='concept-edit-modal-title'
+              className='concept-edit-modal-title'
               placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
               onChange={this.update('title')} />
             <textarea wrap='hard'
               placeholder= {(this.props.errors && this.props.errors['description']) ? `Description ${this.props.errors['description']}`:'Description'}
-              id='concept-edit-modal-description'
+              className='concept-edit-modal-description'
               onChange={this.update('description')}>
             </textarea>
-            <div id='concept-edit-modal-buttons'>
+            <div className='concept-edit-modal-buttons'>
               <input type='submit'
-                id='concept-edit-modal-submit'
+                className='concept-edit-modal-submit'
                 value= 'Start Concept'/>
               <input type='button'
-                id='concept-edit-modal-submit'
+                className='concept-edit-modal-submit'
                 value= 'Go Back'
                 onClick={browserHistory.goBack}/>
             </div>

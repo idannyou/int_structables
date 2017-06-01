@@ -10,11 +10,11 @@ const toEdit = (id) => {
 
 const ConceptIndexItem = ({concept, pathname}) => {
   return (
-    <li id='concept-index-item'>
+    <li className='concept-index-item'>
       <div>
         <Link to={`/concepts/${concept.id}`}>
           <img src={concept.images_url}
-            id='concept-index-img'/>
+            className='concept-index-img'/>
         </Link>
         {(!pathname)? null:
           <button onClick={()=>toEdit(concept.id)}>
@@ -22,15 +22,15 @@ const ConceptIndexItem = ({concept, pathname}) => {
           </button>}
       </div>
 
-      <div id='concept-index-text'>
+      <div className='concept-index-text'>
         <div>
           <Link to={`/concepts/${concept.id}`}
-            id='concept-index-title'>
+            className='concept-index-title'>
             {concept.title}
           </Link>
         </div>
 
-        <label id='concept-index-username'>
+        <label className='concept-index-username'>
           by
           <a>
             {concept.username}

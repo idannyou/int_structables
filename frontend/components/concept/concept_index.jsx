@@ -31,8 +31,8 @@ class ConceptIndex extends React.Component{
     if(!this.props.concepts) return null;
     return(
       <div>
-        <div id='concept-index-container'>
-            <ul id='concept-index'>
+        <div className='concept-index-container'>
+            <ul className='concept-index'>
               {
                 this.publishOrNot()
               }

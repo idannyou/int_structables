@@ -31,7 +31,7 @@ class Welcome extends React.Component{
     return (
       <div className='right-nav'>
         {
-            <button id='myConcepts'
+            <button className='myConcepts'
               onClick={this.toMyConcepts}>
               My Concepts
             </button>
@@ -40,17 +40,17 @@ class Welcome extends React.Component{
         {
           (this.props.pathname == '/concepts/new') ?
             null :
-            <button id='createConcept'
+            <button className='createConcept'
               onClick={this.toConceptNew}>
               New Concept
             </button>
         }
 
         <button onClick={this.props.logout}
-          id='nav-login'>
+          className='nav-login'>
           Log Out
         </button>
-        <p id='nav-signup'
+        <p className='nav-signup'
           >Welcome {this.props.currentUser.username}</p>
       </div>
     );
@@ -60,11 +60,11 @@ class Welcome extends React.Component{
     return (
       <div className='right-nav'>
         <button onClick={this._handleClick('old')}
-          id='nav-login'>
+          className='nav-login'>
           Log In
         </button>
         <button onClick={this._handleClick('new')}
-          id='nav-signup'>
+          className='nav-signup'>
           Sign Up
         </button>
       </div>
@@ -110,9 +110,9 @@ class Welcome extends React.Component{
 
     return (
       <div>
-        <div id='nav-bar'>
+        <div className='nav-bar'>
           <div className='left-nav'>
-            <img id='navbarlogo-img' src={window.navbarlogoimage}
+            <img className='navbarlogo-img' src={window.navbarlogoimage}
                   onClick={this.backToHomePage}
               />
             <h2>intStructables</h2>

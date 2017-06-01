@@ -1,21 +1,21 @@
 $feature_height: 39px;
 
-#feature-bar{
+.feature-bar{
   width: auto;
   height: $feature_height;
   background-color: white;
   margin-bottom: 10px;
 }
 
-#searchbar-container{
+.searchbar-container{
   display: flex;
   align-self: center;
   align-items: center;
   margin-right: 20px;
 }
 
-#searchbar{
-  border: 1px solid #ccc;
+.searchbar{
+  border: 1px solid ccc;
   width: 150px;
   height: 24px;
   border-radius: 4px;
@@ -24,17 +24,17 @@ $feature_height: 39px;
 
 }
 
-#searchbar-img{
+.searchbar-img{
   width: 34px;
   height: 34px;
 }
 
-#searchbar-word{
+.searchbar-word{
   margin-right: 10px;
   font-family: 'Permanent Marker', cursive;
 }
 
-#nav-bar-right-search{
+.nav-bar-right-search{
   display: flex;
   flex-direction: row;
 }

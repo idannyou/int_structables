@@ -84,41 +84,41 @@ class SessionForm extends React.Component{
   render(){
     return (
       <form onSubmit = {this.handleSubmit}
-        id="form">
+        className="form">
 
           <ul>
             {this.handleErrors()}
           </ul>
 
-        <label id='username'>
+        <label className='username'>
           <input type='text'
             onChange={this.update('username')}
             value={this.state.username}
-            id='textbox'
+            className='textbox'
             placeholder='Username'
             />
         </label>
-        <label id='password'>
+        <label className='password'>
           <input type='password'
             onChange={this.update('password')}
             value={this.state.password}
-            id='textbox'
+            className='textbox'
             placeholder='Password'
             />
         </label>
-        <button id='submit'>
+        <button className='submit'>
           {this.props.formType === 'old' ? 'Login' : 'Sign Up'}
         </button>
-        <button id='signinasguest'
+        <button className='signinasguest'
           onClick={this.signInAsGuest}>
           Sign In As Guest
         </button>
-        <button id='signup'
+        <button className='signup'
           onClick={this.signupToggle}>
           {this.props.formType === 'old' ? "Don't have an account? Sign Up" : 'Login Instead'}
         </button>
 
-        <img id='login-img' src={window.loginimage}/>
+        <img className='login-img' src={window.loginimage}/>
 
       </form>
     );

@@ -5,16 +5,16 @@ and (max-width : 1079px) {
     display: none;
   }
 
-  #make-it-search-bar{
+  .make-it-search-bar{
     display: none;
   }
 
 
-  #category-links{
+  .category-links{
     display: none;
   }
 
-  #searchbar-container{
+  .searchbar-container{
     display: none;
   }
 
@@ -35,7 +35,7 @@ and (min-width : 1080px){
   }
 
 
-  #make-it-search-bar{
+  .make-it-search-bar{
     font-size: 80px;
     color: #eee;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -51,7 +51,7 @@ and (min-width : 1080px){
     width: 85%;
   }
 
-  #category-links{
+  .category-links{
     display: flex;
     flex-direction: column;
     align-self: flex-end;

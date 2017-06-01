@@ -44,11 +44,11 @@ class ConceptPublish extends React.Component{
 
   publishOrNot(){
     return (this.state.publish===false) ?
-      <button id='concept-publish-save'
+      <button className='concept-publish-save'
               onClick={this.handlePublish}>
         Publish Now
       </button> :
-      <button id='concept-publish-save'
+      <button className='concept-publish-save'
               onClick={this.handlePublish}>
         UnPublish
       </button> ;
@@ -82,19 +82,19 @@ class ConceptPublish extends React.Component{
         <label htmlFor='Derivative' className='checkbox'>
           Derivatives
         </label>
-        <input type='checkbox' id= 'Derivative' checked={this.checkCheck('Derivative')}
+        <input type='checkbox' className= 'Derivative' checked={this.checkCheck('Derivative')}
           onChange = {() => this.handleCatClick('Derivative')}
           />
           <label htmlFor='Integral' className='checkbox'>
             Integrals
           </label>
-        <input type='checkbox' id= 'Integral' checked={this.checkCheck('Integral')}
+        <input type='checkbox' className= 'Integral' checked={this.checkCheck('Integral')}
           onChange = {() => this.handleCatClick('Integral')}
           />
           <label htmlFor='Limits' className='checkbox'>
             Limits
           </label>
-        <input type='checkbox' id= 'Limit' checked={this.checkCheck('Limit')}
+        <input type='checkbox' className= 'Limit' checked={this.checkCheck('Limit')}
           onChange = {() => this.handleCatClick('Limit')}
           />
       </div>
@@ -103,20 +103,20 @@ class ConceptPublish extends React.Component{
 
   render(){
     return (
-      <div id='concept-publish'>
-          <div id='concept-publish-item'>
+      <div className='concept-publish'>
+          <div className='concept-publish-item'>
 
-              <img src={this.state.images_url[0]} id='concept-publish-img'/>
+              <img src={this.state.images_url[0]} className='concept-publish-img'/>
 
-            <div id='concept-publish-text'>
+            <div className='concept-publish-text'>
 
               <div>
-                <div id='concept-publish-title'>
+                <div className='concept-publish-title'>
                   {this.state.title}
                 </div>
               </div>
 
-              <label id='concept-publish-username'>
+              <label className='concept-publish-username'>
                 by
                 <a>
                   {this.state.username}

@@ -1,5 +1,5 @@
 
-#footer-bar{
+.footer-bar{
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -12,18 +12,18 @@
   border: 1px solid #c9c9c9;
 }
 
-#footer-bar button{
+.footer-bar button{
   width: 150px;
   height: 150px;
 }
 
-#footer-bar ul{
+.footer-bar ul{
   display: flex;
   list-style: none;
   font-size: 20px;
 }
 
-#footer-bar ul a{
+.footer-bar ul a{
   margin-right: 10px;
   text-decoration: none;
 }

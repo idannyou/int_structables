@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#form{
+.form{
   border: 1px solid #555;
   border-radius: 10px;
   margin: 0 auto;
@@ -18,15 +18,15 @@
   z-index: 100;
 }
 
-#username{
+.username{
   border: 1px solid light-gray;
 }
 
-#password{
+.password{
   border: 1px solid light-gray;
 }
 
-#submit{
+.submit{
 
   padding: 11px 19px;
   font-size: 17.5px;
@@ -47,12 +47,12 @@
   color: #fff;
 }
 
-#submit:hover{
+.submit:hover{
 
   background-color: #cf6000;
 }
 
-#textbox{
+.textbox{
   display: inline-block;
   height: 20px;
   padding: 4px 6px;
@@ -70,18 +70,18 @@
 
 }
 
-#login-img {
+.login-img {
   width: 280px;
   height: auto;
 }
 
-#signinasguest, #signup {
+.signinasguest,  .signup {
   text-align: center;
   padding-bottom: 5px;
 }
 
 
 
-#signinasguest:hover,#signup:hover {
+.signinasguest:hover, .signup:hover {
   text-decoration: underline;
 }

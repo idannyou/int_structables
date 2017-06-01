@@ -32,10 +32,10 @@ class MakeItSearchBar extends React.Component{
 
   render(){
     return (
-      <div id='make-it-search-bar'>
+      <div className='make-it-search-bar'>
         Let's learn
         {this.state.demoInputText}
-        <div id='category-links'>
+        <div className='category-links'>
           <div onClick={() => this.handleClick('integral')}
             className='category-links-items'
             >

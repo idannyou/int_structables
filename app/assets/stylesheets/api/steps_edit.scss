@@ -1,10 +1,10 @@
-#steps-edit{
+.steps-edit{
   display: flex;
   flex-direction: column;
 }
 
 
-#steps-edit-steps{
+.steps-edit-steps{
   margin: auto;
   margin-top: 2.5%;
   margin-left: 14%;
@@ -17,7 +17,7 @@
   min-height: 150px;
 }
 
-#steps-edit-buttons{
+.steps-edit-buttons{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -25,7 +25,7 @@
   margin-right: 5px;
 }
 
-#steps-button{
+.steps-button{
     margin-right: 12px;
     border-radius: 8px;
     color: white;
@@ -38,7 +38,7 @@
     letter-spacing: 1px;
 }
 
-#steps-button-add{
+.steps-button-add{
     margin-right: 12px;
     border-radius: 8px;
     color: white;
@@ -55,7 +55,7 @@
 }
 
 
-#steps-edit-text{
+.steps-edit-text{
   text-align: left;
   font-weight: bold;
   display: flex;
@@ -64,13 +64,13 @@
   width: 90%;
 }
 
-#steps-edit-text input{
+.steps-edit-text input{
   margin-left: 5px;
   text-align: left;
   width: 90%;
 }
 
-#step-edit-img{
+.step-edit-img{
   display: block;
   width: 100px;
   height: 100px;
@@ -78,7 +78,7 @@
   border-radius: 20%;
 }
 
-#stepImgContainer{
+.stepImgContainer{
   display: flex;
   flex-direction: row;
   align-items: center;
