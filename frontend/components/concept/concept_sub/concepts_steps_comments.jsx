@@ -96,14 +96,14 @@ class ConceptsStepsComments extends React.Component{
     return orderedSteps.map((obj, idx) => (
 
       <div key={obj.id}>
-        <h1 id='concept-show-step-heading'
+        <h1 className='concept-show-step-heading'
           >{`Step ${idx + 1}: ${obj.title}`}</h1>
         {(!orderedSteps[idx].images_url[0])? null :
-          <div id='concept-show-concept'>
+          <div className='concept-show-concept'>
             <img src={orderedSteps[idx].images_url[0]}
               onClick={() => this.onModalOpen(orderedSteps[idx].images_url[0])}/>
 
-              <ul id='concept-show-small-imgs'>
+              <ul className='concept-show-small-imgs'>
                 {this.renderSmallImgs(orderedSteps[idx].images_url)}
               </ul>
 
@@ -111,7 +111,7 @@ class ConceptsStepsComments extends React.Component{
           </div>
         }
 
-        <h5 id='concept-show-step-p'
+        <h5 className='concept-show-step-p'
           dangerouslySetInnerHTML={this.renderBody(orderedSteps[idx].body)}/>
       </div>
     ));
@@ -127,9 +127,9 @@ class ConceptsStepsComments extends React.Component{
     let newComment = (this.props.currentUser)? (<CommentNewContainer
       conceptId = {this.props.conceptId}/>) : null;
     return(
-      <div id='concept-show-concept-step'>
+      <div className='concept-show-concept-step'>
         {(!concept[0])? null:
-          <div id='concept-show-concept'>
+          <div className='concept-show-concept'>
             <img src={concept[0]}
               onClick={() => this.onModalOpen(concept[0])}/>
           </div>
@@ -143,18 +143,18 @@ class ConceptsStepsComments extends React.Component{
           {this.renderModalImage()}
         </Modal>
         <div >
-          <ul id='concept-show-small-imgs'>
+          <ul className='concept-show-small-imgs'>
             {this.renderSmallImgs(this.props.images)}
           </ul>
         </div>
-        <div id='concept-show-description'>
+        <div className='concept-show-description'>
           {this.props.description}
         </div>
-        <div id='concept-show-step-comments'>
-          <div id='concept-show-steps'>
+        <div className='concept-show-step-comments'>
+          <div className='concept-show-steps'>
             {this.renderSteps()}
           </div>
-          <div id='concept-show-comments'>
+          <div className='concept-show-comments'>
             {newComment}
             <CommentShowContainer
               conceptId = {this.props.conceptId}/>

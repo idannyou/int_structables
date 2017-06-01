@@ -73,8 +73,8 @@ class StepEdit extends React.Component{
           onClick= {this.handleInsertMath}
           >Insert Math
         </button>
-        <p >Type math here: <span className="math-field"></span></p>
-        <span className="latex" hidden></span>
+        <p >Type math here: <span id="math-field"></span></p>
+        <span id="latex" hidden></span>
       </div>
     );
   }
@@ -135,7 +135,7 @@ class StepEdit extends React.Component{
               <div className='concept-edit-body-buttons'>
               </div>
 
-              <textarea className='concept-edit-body-description'
+              <textarea id='concept-edit-body-description'
                 value={this.state.body}
                 onChange={this.update('body')}
                 placeholder= {(this.props.errors && this.props.errors['body']) ? `Step ${this.props.errors['body']}`:'Step'}
