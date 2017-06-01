@@ -9,6 +9,17 @@ $nav_bar_height: 61px;
   font-family: 'Permanent Marker', cursive;
 }
 
+@media only screen
+and (max-width : 746px) {
+
+  .left-nav{
+    display: none;
+  }
+
+}
+
+
+
 .right-nav{
   display: flex;
   flex-direction: row;

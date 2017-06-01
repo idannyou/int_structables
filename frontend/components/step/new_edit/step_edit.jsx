@@ -73,8 +73,8 @@ class StepEdit extends React.Component{
           onClick= {this.handleInsertMath}
           >Insert Math
         </button>
-        <p >Type math here: <span id="math-field"></span></p>
-        <span id="latex" hidden></span>
+        <p >Type math here: <span className="math-field"></span></p>
+        <span className="latex" hidden></span>
       </div>
     );
   }
@@ -122,20 +122,20 @@ class StepEdit extends React.Component{
     return (
       <div>
         <script type="text/javascript" async src="/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-        <div id='concept-edit-container'>
-          <div id='concept-edit'>
+        <div className='concept-edit-container'>
+          <div className='concept-edit'>
             <ImagesContainer params={this.props.params}
                             submitStep = {this.submitStep}/>
-            <div id='concept-edit-body'>
-              <input type='text' id='concept-edit-body-title'
+            <div className='concept-edit-body'>
+              <input type='text' className='concept-edit-body-title'
                 value= {this.state.title}
                 onChange={this.update('title')}
                 placeholder={(this.props.errors && this.props.errors['title'])? `Title ${this.props.errors['title']}`:'Title'}
                 />
-              <div id='concept-edit-body-buttons'>
+              <div className='concept-edit-body-buttons'>
               </div>
 
-              <textarea id='concept-edit-body-description'
+              <textarea className='concept-edit-body-description'
                 value={this.state.body}
                 onChange={this.update('body')}
                 placeholder= {(this.props.errors && this.props.errors['body']) ? `Step ${this.props.errors['body']}`:'Step'}

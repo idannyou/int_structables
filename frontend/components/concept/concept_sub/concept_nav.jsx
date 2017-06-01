@@ -8,12 +8,12 @@ class ConceptNav extends React.Component{
   render(){
     let concept=this.props;
     return(
-      <div id='concept-nav'>
-        <h1 id='concept-nav-title'>
+      <div className='concept-nav'>
+        <h1 className='concept-nav-title'>
           {concept.title}
         </h1>
-        <div id='concept-nav-text'>
-          <h3 id='concept-nav-author'>
+        <div className='concept-nav-text'>
+          <h3 className='concept-nav-author'>
             by
             <a>
               {concept.username}
@@ -21,7 +21,7 @@ class ConceptNav extends React.Component{
           </h3>
           {
           ( concept.category && concept.category.length > 0)?
-            <h3 id='concept-nav-category'>
+            <h3 className='concept-nav-category'>
               in
               <a>
                 {concept.category[0].name}

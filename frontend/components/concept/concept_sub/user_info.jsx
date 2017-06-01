@@ -34,26 +34,26 @@ class UserInfo extends React.Component{
   render(){
     let concept=this.props;
     return(
-      <div id='concept-show-user-info'>
-        <div id='concept-show-heading'>
+      <div className='concept-show-user-info'>
+        <div className='concept-show-heading'>
           <div>
             About This Concept
           </div>
           {(this.props.currentUser === this.props.username)?
-          <button id='createEdit'
+          <button className='createEdit'
             onClick={this.toEdit}>
             Edit
           </button> :
           null}
         </div>
-        <div id='concept-show-username'>
+        <div className='concept-show-username'>
           {concept.username}
         </div>
-        <div id='concept-show-userconcepts'>
+        <div className='concept-show-userconcepts'>
           <div>
             {`Other Concepts By ${concept.username}`}
           </div>
-          <div id='concept-show-concepts-imgs'>
+          <div className='concept-show-concepts-imgs'>
             {
               this.renderConceptsByGuest()
             }
