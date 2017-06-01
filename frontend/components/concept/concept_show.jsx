@@ -47,6 +47,7 @@ class ConceptShow extends React.Component{
               steps = {concept.steps}
               conceptId = {concept.id}
               currentUser = {this.props.currentUser}
+              publish = {concept.publish}
               />
             : null}
             <UserInfo

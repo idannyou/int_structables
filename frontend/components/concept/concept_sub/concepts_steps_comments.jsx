@@ -124,7 +124,7 @@ class ConceptsStepsComments extends React.Component{
   render(){
     let concept = this.props.images;
 
-    let newComment = (this.props.currentUser)? (<CommentNewContainer
+    let newComment = (this.props.currentUser && this.props.publish)? (<CommentNewContainer
       conceptId = {this.props.conceptId}/>) : null;
     return(
       <div className='concept-show-concept-step'>
